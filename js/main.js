@@ -646,6 +646,99 @@
     update();
   });
 
+  /* ---------------- PREMIUM PASS ---------------- */
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // pointer spotlight that follows the cursor across cards
+  if (fine && !reduceMotion) {
+    $$(".pcard, .member, .story, .prod, .recur > div, .team__stats").forEach((c) => {
+      const g = document.createElement("span");
+      g.className = "spot" + (c.matches(".prod, .team__stats, .pcard--hl") ? " spot--dark" : "");
+      c.classList.add("has-spot");
+      c.appendChild(g);
+      c.addEventListener("pointermove", (e) => {
+        const r = c.getBoundingClientRect();
+        c.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        c.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    });
+    // magnetic primary buttons
+    $$(".hero__ctas .btn, .btn--lime, .nav .btn--dark, .prod__ctas .btn, .cta .btn--dark").forEach((b) => {
+      const xTo = gsap.quickTo(b, "x", { duration: 0.6, ease: "elastic.out(1, .4)" });
+      const yTo = gsap.quickTo(b, "y", { duration: 0.6, ease: "elastic.out(1, .4)" });
+      b.addEventListener("pointermove", (e) => {
+        const r = b.getBoundingClientRect();
+        xTo((e.clientX - r.left - r.width / 2) * 0.25);
+        yTo((e.clientY - r.top - r.height / 2) * 0.35);
+      });
+      b.addEventListener("pointerleave", () => { xTo(0); yTo(0); });
+    });
+  }
+
+  if (!reduceMotion) {
+    // team: the photo uncovers from the bottom, then drifts gently with the scroll
+    $$(".member").forEach((m, k) => {
+      const img = $(".member__photo img", m);
+      gsap.fromTo(img, { clipPath: "inset(100% 0% 0% 0%)", scale: 1.12 }, {
+        clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: 1.4, delay: (k % 3) * 0.12, ease: "expo.out", clearProps: "transform,clipPath",
+        scrollTrigger: { trigger: m, start: "top 85%", once: true },
+      });
+      gsap.fromTo(img, { "--py": "18px" }, { "--py": "-6px", ease: "none", scrollTrigger: { trigger: m, start: "top bottom", end: "bottom top", scrub: true } });
+      gsap.from($$(".member__chips span", m), { opacity: 0, y: 10, scale: 0.9, stagger: 0.06, duration: 0.6, ease: "back.out(2)", scrollTrigger: { trigger: m, start: "top 70%", once: true } });
+    });
+
+    // prices count up when the card shows up
+    $$(".pcard [data-price], .recur [data-price]").forEach((el) => {
+      const v = PRICES[el.dataset.price];
+      if (v == null) return;
+      const o = { v: 0 };
+      el.textContent = money0(0);
+      ScrollTrigger.create({
+        trigger: el, start: "top 92%", once: true,
+        onEnter: () => gsap.to(o, { v, duration: 1.4, ease: "expo.out", onUpdate: () => { el.textContent = money0(Math.round(o.v / 10) * 10); }, onComplete: () => { el.textContent = money0(v); } }),
+      });
+    });
+
+    // CheAI: a tiny live conversation (question → typing → answer), then the stat pops
+    const chat = $(".prod__visual");
+    if (chat) {
+      const qIn = $(".prod__bubble--in", chat), qOut = $(".prod__bubble--out", chat), stat = $(".prod__stat", chat);
+      const typing = document.createElement("span");
+      typing.className = "prod__typing";
+      typing.innerHTML = "<i></i><i></i><i></i>";
+      chat.appendChild(typing);
+      gsap.set(qIn, { opacity: 0, scale: 0.6, y: 14, transformOrigin: "0% 100%" });
+      gsap.set(qOut, { opacity: 0, scale: 0.6, y: 14, transformOrigin: "100% 100%" });
+      gsap.set(stat, { opacity: 0, scale: 0.5, rotate: -8 });
+      gsap.timeline({ scrollTrigger: { trigger: chat, start: "top 70%", once: true }, defaults: { ease: "back.out(1.8)" } })
+        .from($(".prod__win", chat), { y: 40, rotate: 6, opacity: 0, duration: 1.1, ease: "expo.out" })
+        .to(qIn, { opacity: 1, scale: 1, y: 0, duration: 0.6 }, 0.5)
+        .to(typing, { opacity: 1, duration: 0.25, ease: "none" }, 1.2)
+        .to(typing, { opacity: 0, duration: 0.2, ease: "none" }, 2.4)
+        .to(qOut, { opacity: 1, scale: 1, y: 0, duration: 0.6 }, 2.45)
+        .to(stat, { opacity: 1, scale: 1, rotate: 0, duration: 0.7 }, 2.9);
+      gsap.from($$(".prod__channels img"), { opacity: 0, y: 12, scale: 0.6, stagger: 0.07, duration: 0.6, ease: "back.out(2.5)", scrollTrigger: { trigger: ".prod__channels", start: "top 92%", once: true } });
+      gsap.from($$(".prod__feats li"), { opacity: 0, x: -16, stagger: 0.1, duration: 0.8, ease: "expo.out", scrollTrigger: { trigger: ".prod__feats", start: "top 88%", once: true } });
+    }
+
+    // the robot says hi on load
+    gsap.from(".nav .brand__mark", { rotate: -25, scale: 0.4, opacity: 0, duration: 1, ease: "back.out(2.4)", delay: 0.2, transformOrigin: "50% 80%" });
+  }
+
+  // mobile CTA dock: shows after the hero, steps aside near the contact form and while a modal is open
+  const dock = $(".dock");
+  if (dock) {
+    const contact = $("#contatti"), heroEl = $(".hero");
+    const tick = () => {
+      const past = scrollY > heroEl.offsetHeight * 0.7;
+      const nearEnd = contact.getBoundingClientRect().top < innerHeight * 0.9;
+      dock.classList.toggle("is-on", past && !nearEnd && pv.hidden && bk.hidden);
+    };
+    addEventListener("scroll", tick, { passive: true });
+    tick();
+    [pv, bk].forEach((m) => new MutationObserver(tick).observe(m, { attributes: true, attributeFilter: ["hidden"] }));
+  }
+
   /* ---------------- counters (created last, after every section is rendered) ---------------- */
   $$("[data-count]").forEach((el) => {
     const end = +el.dataset.count, suf = el.dataset.suffix || "", o = { v: 0 };
