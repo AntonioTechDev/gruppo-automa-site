@@ -31,7 +31,7 @@
   /* ---------------- smooth scroll + anchors ---------------- */
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   let restoreY = 0;
-  try { restoreY = +sessionStorage.getItem("antipode-y") || 0; sessionStorage.removeItem("antipode-y"); } catch (e) {}
+  try { restoreY = +sessionStorage.getItem("automa-y") || 0; sessionStorage.removeItem("automa-y"); } catch (e) {}
 
   let lenis = null;
   if (!reduceMotion && window.Lenis) {
@@ -281,11 +281,11 @@
   /* ---------------- PROJECTS: groups, viewer, gallery ---------------- */
   const PROJECTS = window.PROJECTS || [];
   $$(".js-pcount").forEach((el) => { el.textContent = PROJECTS.length; });
-  const groupOf = (p) => (p.cat === "pa" ? "pa" : p.cat === "product" ? "product" : "corp");
-  const GROUPS = ["all", "pa", "corp", "product"];
-  const GLABEL = { all: T("gAll", "Tutti"), pa: T("gPa", "Pubblica Amministrazione"), corp: T("gCorp", "Enterprise e aziende"), product: T("gProd", "Startup e prodotti") };
-  const CAT = { pa: T("catPa", "Pubblica Amministrazione"), enterprise: T("catEnt", "Sanità & Enterprise"), business: T("catBiz", "Business & E-commerce"), product: T("catProd", "Startup & prodotti") };
-  const whenLabel = (w) => (w === "client" ? T("_client", "Cliente") : w === "library" ? T("_library", "Libreria") : w === "SMC" ? T("viaSmc", "con SMC") : w);
+  const groupOf = (p) => (p.cat === "business" ? "web" : "corp");
+  const GROUPS = ["all", "web", "corp"];
+  const GLABEL = { all: "Tutti", web: "Siti ed e-commerce", corp: "Portali enterprise e PA" };
+  const CAT = { pa: "Pubblica Amministrazione", enterprise: "Enterprise", business: "Sito aziendale", product: "Prodotto" };
+  const whenLabel = (w) => w;
   const inGroup = (g) => PROJECTS.filter((p) => g === "all" || groupOf(p) === g);
   const host = (u) => { try { return new URL(u).host.replace(/^www\./, ""); } catch { return T("_private", "progetto privato"); } };
   const media = (p, cls = "") => (p.img
@@ -295,7 +295,7 @@
 
   // viewer — full-screen, continuous slider with auto-scrolling site previews
   const pv = $("#pv");
-  const FULL = new Set(["adm", "agenzia-entrate", "axa-lamiasalute", "cheai", "demanio", "federalismo-fiscale", "finanze", "geoportale", "giustizia-tributaria", "mase", "mef", "repubblica-digitale", "scame", "scame-emobility", "sella", "unar"]);
+  const FULL = new Set(["adm", "agenzia-entrate", "armeria", "axa-lamiasalute", "casillo", "cheai", "dema", "demanio", "federalismo-fiscale", "finanze", "geoportale", "giustizia-tributaria", "mase", "meacasa", "mef", "miroma", "muoio", "repubblica-digitale", "scame", "scame-emobility", "sella", "setterre", "unar"]);
   const track = $("#pv-track"), stageEl = $("#pv-stage"), film = $("#pv-thumbs");
   const V = { group: "all", list: PROJECTS, i: 0, pos: 0, slides: [], step: 600, auto: !reduceMotion, scroll: null, nav: null };
   const slideHTML = (p) => {
@@ -485,9 +485,8 @@
 
   // category cards
   const STORIES = [
-    { g: "product", img: "cheai.webp", k: T("st1k", "Startup e prodotti"), big: T("st1b", "4 canali. Un solo assistente AI."), t: T("st1t", "CHEAI e i nostri prodotti"), d: T("st1d", "La piattaforma di customer service con l'AI che abbiamo co-fondato, più progetti e librerie sviluppati in proprio."), chips: [T("st1c1", "Agenti LLM + RAG"), "SaaS"] },
-    { g: "pa", img: "agenzia-entrate.webp", k: T("st2k", "Pubblica Amministrazione"), big: T("st2b", "Portali usati da milioni di cittadini."), t: T("st2t", "Agenzia delle Entrate, MEF, ADM e altri"), d: T("st2d", "Interfacce accessibili secondo le WCAG 2.1 AA, migrazioni e componenti su misura per ministeri e agenzie."), chips: ["WCAG 2.1 AA", "Liferay 7.x"] },
-    { g: "corp", img: "scame-emobility.webp", k: T("st3k", "Enterprise e aziende"), big: T("st3b", "Banche, sanità, industria, retail."), t: T("st3t", "Scame, Banca Sella, AXA, Coop e altri"), d: T("st3d", "Siti di prodotto e portali clienti multilingua, veloci e integrati con i sistemi aziendali."), chips: [T("st3c1", "Multilingua"), "Performance"] },
+    { g: "web", img: "muoio.webp", k: "Siti ed e-commerce", big: "Siti che fanno lavorare le aziende del territorio.", t: "Brand site, cataloghi ed e-commerce", d: "Da Muoio Project Shoes a Mea Casa e Armeria Piccolo: siti veloci, curati nel design e pensati per portare contatti e vendite.", chips: ["Design su misura", "E-commerce"] },
+    { g: "corp", img: "agenzia-entrate.webp", k: "Portali enterprise e PA", big: "Portali usati da milioni di persone.", t: "Agenzia delle Entrate, Banca Sella, Scame", d: "Interfacce accessibili secondo le WCAG 2.1 AA e componenti su misura per enti pubblici, banche e industria.", chips: ["WCAG 2.1 AA", "Enterprise"] },
   ];
   $("#stories").innerHTML = STORIES.map((s) => {
     const n = inGroup(s.g).length;
@@ -556,7 +555,7 @@
     const tipi = d.getAll("tipo").join(", ") || T("_tbd");
     const budget = d.get("budget") || T("_tbd");
     const body = `${T("_mailHello")}\n\n${testo}\n\n${T("_mailNeed")}: ${tipi}\n${T("_budget")}: ${budget}\n\n${nome}${azienda ? " · " + azienda : ""}\n${email}`;
-    location.href = `mailto:antoniodebiase2003@gmail.com?subject=${encodeURIComponent(T("_mailSubject") + " — " + (azienda || nome))}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:info@gruppoautoma.it?subject=${encodeURIComponent(T("_mailSubject") + " — " + (azienda || nome))}&body=${encodeURIComponent(body)}`;
     msg.textContent = T("_formOk");
   });
 

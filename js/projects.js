@@ -1,94 +1,36 @@
-/* Showcase data — edit this list to add/remove projects.
-   cat: pa | enterprise | business | product
-   img: screenshot in assets/shots (omit to get a typographic cover)
-   when: year or label ("SMC" = built by the founder at SMC; "client"/"library" are translated) */
+/* Gruppo Automa — showcase (10 projects).
+   cat: business = siti ed e-commerce · enterprise / pa = portali enterprise e PA
+   img: screenshot in assets/shots (full-page preview in assets/shots/full with the same name)
+   when: label shown next to the category (who built it) */
 window.PROJECTS = [
-  { title: "CHEAI", cat: "product", feature: true, url: "https://cheai.io", img: "cheai.webp", when: "2026",
-    desc: { it: "Piattaforma AI per il customer service: CRM, messaggi, campagne e un assistente che risponde su WhatsApp, Instagram, TikTok e Messenger. Prodotto di Gruppo Automa, dove il nostro fondatore è co-founder e product engineer.",
-            en: "AI customer service platform: CRM, messaging, campaigns and an assistant that replies on WhatsApp, Instagram, TikTok and Messenger. A Gruppo Automa product, where our founder is co-founder and product engineer." },
-    tags: ["LLM agents", "RAG", "Automation", "SaaS"] },
-
-  { title: "Scame E-Mobility", cat: "business", url: "https://www.emobility-scame.com", img: "scame-emobility.webp", when: "SMC",
-    desc: { it: "Sito prodotto per le stazioni di ricarica dei veicoli elettrici.", en: "Product site for electric vehicle charging stations." },
-    tags: ["Product site", "Liferay"] },
-
-  { title: "Banca Sella", cat: "enterprise", url: "https://www.sella.it", img: "sella.webp", when: "SMC",
-    desc: { it: "Portale della banca Sella.", en: "Banca Sella's banking portal." },
-    tags: ["Banking", "Frontend"] },
-
-  { title: "Agenzia delle Entrate", cat: "pa", url: "https://www.agenziaentrate.gov.it", img: "agenzia-entrate.webp", when: "SMC",
-    desc: { it: "Portale istituzionale dell'Agenzia delle Entrate e di Agenzia Entrate-Riscossione.", en: "Official portal of Italy's Revenue Agency and its collection agency." },
-    tags: ["Liferay 7.x", "WCAG 2.1"] },
-
-  { title: "UNAR", cat: "pa", url: "https://www.unar.it", img: "unar.webp", when: "SMC",
-    desc: { it: "Ufficio Nazionale Antidiscriminazioni Razziali: portale accessibile per segnalazioni e servizi.", en: "Italy's national anti-discrimination office: accessible portal for reports and services." },
-    tags: ["Liferay", "WCAG 2.1"] },
-
-  { title: "AXA — La Mia Salute", cat: "enterprise", url: "https://lamiasalute.axa.it", img: "axa-lamiasalute.webp", when: "SMC",
-    desc: { it: "Portale salute di AXA Italia con servizi riservati ai clienti.", en: "AXA Italy's health portal with services for policyholders." },
+  { title: "Muoio Project Shoes", cat: "business", url: "https://www.muoioprojectshoes.it/", img: "muoio.webp", when: "Hype Studio",
+    desc: { it: "Sito per un laboratorio di tranceria e modelleria calzature Made in Italy: racconto del processo artigianale, servizi e contatti." },
+    tags: ["Brand site", "Made in Italy"] },
+  { title: "Mea Casa", cat: "business", url: "https://meacasa.it/", img: "meacasa.webp", when: "Hype Studio",
+    desc: { it: "Sito per servizi immobiliari: presentazione della struttura, servizi e richieste di contatto." },
+    tags: ["Real estate", "Lead generation"] },
+  { title: "Casillo Allestimenti", cat: "business", url: "https://www.casilloallestimenti.eu/", img: "casillo.webp", when: "Hype Studio",
+    desc: { it: "Sito per allestimenti e officina di veicoli industriali ad Afragola: servizi, lavori e contatti." },
+    tags: ["Industria", "Corporate"] },
+  { title: "Miroma Ceramiche", cat: "business", url: "https://www.miromaceramiche.it/", img: "miroma.webp", when: "Hype Studio",
+    desc: { it: "Sito per ceramiche, pavimenti e arredo bagno ad Aversa, con catalogo di ambienti e prodotti." },
+    tags: ["Showroom", "Catalogo"] },
+  { title: "DE.MA. Costruzioni", cat: "business", url: "https://www.ediliziadema.it/", img: "dema.webp", when: "Hype Studio",
+    desc: { it: "Sito per cantieri industriali e civili, ristrutturazioni e impiantistica a Gricignano." },
+    tags: ["Edilizia", "Corporate"] },
+  { title: "Centro Medico Sette Re", cat: "business", url: "https://www.centromedicosettere.it/", img: "setterre.webp", when: "Hype Studio",
+    desc: { it: "Sito per un centro medico con diagnostica e fisioterapia ad Arzano e Grumo Nevano." },
+    tags: ["Sanità", "Prenotazioni"] },
+  { title: "Armeria Piccolo", cat: "business", url: "https://armeriapiccolo.com/", img: "armeria.webp", when: "Hype Studio",
+    desc: { it: "E-commerce per un'armeria dal 1976: catalogo, accessori, ricambi e acquisto online." },
+    tags: ["E-commerce", "Catalogo"] },
+  { title: "Scame E-Mobility", cat: "enterprise", url: "https://www.emobility-scame.com", img: "scame-emobility.webp", when: "Team · SMC",
+    desc: { it: "Sito prodotto per le stazioni di ricarica dei veicoli elettrici di Scame." },
     tags: ["Enterprise", "Liferay"] },
-
-  { title: "Agenzia del Demanio", cat: "pa", url: "https://www.agenziademanio.it", img: "demanio.webp", when: "SMC",
-    desc: { it: "Portale dell'agenzia che gestisce gli immobili dello Stato.", en: "Portal of the agency that manages Italy's state-owned property." },
-    tags: ["Liferay", "UI"] },
-
-  { title: "ADM", cat: "pa", url: "https://www.adm.gov.it", img: "adm.webp", when: "SMC",
-    desc: { it: "Agenzia delle Dogane e dei Monopoli.", en: "Italy's Customs and Monopolies Agency." },
-    tags: ["Liferay", "WCAG 2.1"] },
-
-  { title: "MASE", cat: "pa", url: "https://www.mase.gov.it", img: "mase.webp", when: "SMC",
-    desc: { it: "Ministero dell'Ambiente e della Sicurezza Energetica.", en: "Italy's Ministry of Environment and Energy Security." },
-    tags: ["Liferay", "Custom theme"] },
-
-  { title: "Repubblica Digitale", cat: "pa", url: "https://www.repubblicadigitale.gov.it", img: "repubblica-digitale.webp", when: "SMC",
-    desc: { it: "Iniziativa nazionale per le competenze digitali.", en: "National initiative for digital skills." },
-    tags: ["Liferay", "UI"] },
-
-  { title: "MEF", cat: "pa", url: "https://www.mef.gov.it", img: "mef.webp", when: "SMC",
-    desc: { it: "Ministero dell'Economia e delle Finanze.", en: "Italy's Ministry of Economy and Finance." },
-    tags: ["Liferay", "Frontend"] },
-
-  { title: "Dipartimento delle Finanze", cat: "pa", url: "https://www.finanze.gov.it", img: "finanze.webp", when: "SMC",
-    desc: { it: "Portale del Dipartimento delle Finanze del MEF.", en: "Portal of the Finance Department, Ministry of Economy and Finance." },
-    tags: ["Liferay", "7.4 migration"] },
-
-  { title: "Giustizia Tributaria", cat: "pa", url: "https://www.giustiziatributaria.gov.it", img: "giustizia-tributaria.webp", when: "SMC",
-    desc: { it: "Portale del Dipartimento della Giustizia Tributaria del MEF.", en: "Portal of the tax justice department of Italy's Ministry of Economy and Finance." },
-    tags: ["Liferay", "Custom components"] },
-
-  { title: "Federalismo Fiscale", cat: "pa", url: "https://www.portalefederalismofiscale.gov.it", img: "federalismo-fiscale.webp", when: "SMC",
-    desc: { it: "Dati e analisi sulla finanza locale italiana.", en: "Data and analysis on Italian local government finance." },
-    tags: ["Liferay", "Data"] },
-
-  { title: "Geoportale Catastale", cat: "pa", url: "https://geoportale.cartografia.agenziaentrate.gov.it", img: "geoportale.webp", when: "SMC",
-    desc: { it: "Geoportale cartografico catastale dell'Agenzia delle Entrate.", en: "Land registry map portal of Italy's Revenue Agency." },
-    tags: ["Maps", "Frontend"] },
-
-  { title: "Scame", cat: "business", url: "https://www.scame.com", img: "scame.webp", when: "SMC",
-    desc: { it: "Sito corporate e catalogo prodotti di Scame Parre.", en: "Corporate site and product catalogue for Scame Parre." },
-    tags: ["Catalogue", "Multilingual"] },
-
-  { title: "ASST Nord Milano", cat: "enterprise", url: "https://www.asst-nordmilano.it", when: "SMC",
-    desc: { it: "Portale dell'azienda sanitaria territoriale del nord di Milano.", en: "Portal of the public health authority for northern Milan." },
-    tags: ["Healthcare", "WCAG 2.1"] },
-
-  { title: "Coop", cat: "enterprise", url: "https://www.coop.it", when: "SMC",
-    desc: { it: "Portale della catena Coop.", en: "Portal of the Coop retail chain." },
-    tags: ["Retail", "Frontend"] },
-
-  { title: "Veneto Lavoro", cat: "business", url: "https://www.venetolavoro.it", when: "SMC",
-    desc: { it: "Portale dell'ente regionale per il lavoro del Veneto.", en: "Portal of the Veneto regional employment agency." },
-    tags: ["Liferay", "Portal"] },
-
-  { title: "FutNoStress", cat: "product", url: "https://www.futnostress.com", when: "2025",
-    desc: { it: "Progetto indipendente su EA SPORTS FC e Ultimate Team: sito, contenuti e automazioni.", en: "Independent EA SPORTS FC and Ultimate Team project: website, content and automation." },
-    tags: ["Creator", "Automation"] },
-
-  { title: "Il Vizietto", cat: "product", when: "client",
-    desc: { it: "Web app su misura per gestire operatività e amministrazione, seguita dai requisiti al deploy.", en: "Custom web app for day-to-day operations and admin, from requirements to deployment." },
-    tags: ["Web app", "Back office"] },
-
-  { title: "Accessible Slick", cat: "product", when: "library",
-    desc: { it: "Libreria di caroselli accessibili, riusata in diversi portali enterprise.", en: "Accessible carousel library, reused across several enterprise portals." },
-    tags: ["UI library", "WCAG"] },
+  { title: "Banca Sella", cat: "enterprise", url: "https://www.sella.it", img: "sella.webp", when: "Team · SMC",
+    desc: { it: "Portale della banca Sella." },
+    tags: ["Banking", "Frontend"] },
+  { title: "Agenzia delle Entrate", cat: "pa", url: "https://www.agenziaentrate.gov.it", img: "agenzia-entrate.webp", when: "Team · SMC",
+    desc: { it: "Portale istituzionale dell'Agenzia delle Entrate e di Agenzia Entrate-Riscossione, usato ogni giorno da milioni di cittadini." },
+    tags: ["Liferay 7.x", "WCAG 2.1"] },
 ];

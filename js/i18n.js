@@ -4,7 +4,7 @@
    Language: ?lang= → saved choice → browser language. Switching reloads the page
    (keeps the scroll position) so every animation is rebuilt on the new text. */
 (function () {
-  var KEY = "antipode-lang";
+  var KEY = "automa-lang";
 
   var EN = {
     skip: "Skip to content",
@@ -243,7 +243,7 @@
     _formErr: "Scrivi nome, un'email valida e due righe su cosa ti serve.",
     _formOk: "Apro il tuo programma di posta…",
     _mailSubject: "Nuovo progetto",
-    _mailHello: "Ciao Antipode,",
+    _mailHello: "Ciao Gruppo Automa,",
     _mailNeed: "Mi interessa",
     _tbd: "da definire",
     _newTab: "apre in una nuova scheda",
@@ -252,6 +252,7 @@
   };
 
   function pick() {
+    return "it"; // Gruppo Automa: Italian only
     var q = new URLSearchParams(location.search).get("lang");
     if (q === "it" || q === "en") return q;
     try { var s = localStorage.getItem(KEY); if (s === "it" || s === "en") return s; } catch (e) {}
@@ -272,7 +273,7 @@
     set: function (l) {
       if (l === lang) return;
       try { localStorage.setItem(KEY, l); } catch (e) {}
-      try { sessionStorage.setItem("antipode-y", String(window.scrollY)); } catch (e) {}
+      try { sessionStorage.setItem("automa-y", String(window.scrollY)); } catch (e) {}
       var u = new URL(location.href);
       u.searchParams.set("lang", l);
       u.hash = "";
