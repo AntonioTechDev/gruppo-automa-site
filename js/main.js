@@ -607,7 +607,7 @@
     return () => { navST.kill(); navEl.classList.remove("is-hidden"); tweens.forEach((t) => { t.scrollTrigger?.kill(); t.kill(); }); gsap.set([$("#ba-before"), ...$$(".how__pane")], { clearProps: "scale,opacity,transform" }); };
   });
 
-  // carousels: progress bar + counter, neighbours shrink, a one-time swipe nudge
+  // carousels: progress bar + counter, neighbours shrink (no auto-scroll: they move only when the user swipes)
   $$(".snap").forEach((track) => {
     const two = track.classList.contains("snap--2");
     const bar = document.createElement("div");
@@ -624,11 +624,11 @@
       const pr = max > 0 ? track.scrollLeft / max : 1;
       const visible = track.clientWidth / (track.scrollWidth || 1);
       fillI.style.transform = `translateX(${pr * (1 - visible) * 100}%) scaleX(${Math.max(visible, 0.08)})`;
-      const mid = track.scrollLeft + track.clientWidth / 2;
+      const pad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+      const edge = track.getBoundingClientRect().left + pad, atEnd = track.scrollLeft >= max - 2;
       let best = 0, bestD = Infinity;
       items.forEach((c, k) => {
-        const cMid = c.offsetLeft + c.offsetWidth / 2;
-        const d = Math.abs(cMid - mid);
+        const d = atEnd && k === items.length - 1 ? 0 : Math.abs(c.getBoundingClientRect().left - edge);
         if (d < bestD) { bestD = d; best = k; }
         if (!two) {
           const t = Math.min(1, d / c.offsetWidth);
@@ -644,14 +644,6 @@
     addEventListener("resize", queue);
     new MutationObserver(queue).observe(track, { attributes: true, subtree: true, attributeFilter: ["hidden"] });
     update();
-    ScrollTrigger.create({
-      trigger: track, start: "top 75%", once: true,
-      onEnter: () => {
-        if (getComputedStyle(track).overflowX !== "auto" || reduceMotion) return;
-        setTimeout(() => track.scrollBy({ left: 70, behavior: "smooth" }), 500);
-        setTimeout(() => track.scrollBy({ left: -70, behavior: "smooth" }), 1100);
-      },
-    });
   });
 
   /* ---------------- counters (created last, after every section is rendered) ---------------- */
