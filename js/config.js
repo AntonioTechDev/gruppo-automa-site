@@ -10,7 +10,7 @@
    Change a number here and every price on the page updates. */
 window.ANTIPODE_CONFIG = {
   // full link (the calendar.app.google short link can't be embedded)
-  bookingUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Sl1MKN7JpERfBi0kC3p5_DBoBltO_jV5OAuE0xUyD1SduBWD8S_KgsEMepdKkzyO0v_Bqkt3d",
+  bookingUrl: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2yfcX27sBuf1SBlc29hi0hMSuHtQXm-3-LU9d-4w9ukuuho0QG8kNSTi71ikq7yQqfF9pBjBBa",
 
   prices: {
     aud: { landing: 1290, site: 2790, shop: 4990, auto: 1190, agent: 4490, saas: 5000, care: 99, support: 290, hour: 110 },
