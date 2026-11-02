@@ -67,9 +67,10 @@
   }
   $$("[data-split]").forEach((el) => { el.innerHTML = splitHTML(el); });
 
+  // The mobile LCP is the introduction: keep it visible while the headline and CTA animate.
   gsap.timeline({ defaults: { ease: "power4.out" }, delay: 0.05 })
     .fromTo(".hero__title .w > span", { yPercent: 110 }, { yPercent: 0, duration: 1.1, stagger: 0.045 })
-    .fromTo([".hero .proof-pill", ".hero__sub", ".hero__ctas", ".assure"], { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.25)
+    .fromTo([".hero .proof-pill", ...(matchMedia("(max-width: 860px)").matches ? [] : [".hero__sub"]), ".hero__ctas", ".assure"], { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.25)
     .fromTo(".shot", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2 }, 0.5);
 
   $$("main section:not(.hero) [data-split]").forEach((h) => {
