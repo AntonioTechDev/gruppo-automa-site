@@ -46,3 +46,30 @@ verificare l'evento e le email effettivamente ricevute, poi cancellare le prove.
 La pubblicazione proviene dalla cartella `site/` del branch sorgente
 `gruppo-automa`, attraverso `deploy-automa.sh`. Quel comando pubblica soltanto
 il sito nel repository GitHub Pages. Non usare il comando di deploy Antipode.
+
+## SEO e scoperta tramite ricerca AI
+
+Le cinque pagine hanno canonical, metadati unici, anteprima Open Graph/Twitter
+1200×630 in `assets/og/`, logo raster e favicon serviti da URL pubblici. I dati
+JSON-LD sono nell'HTML: Organization e WebSite condivisi, tipo pagina,
+breadcrumb, servizi e FAQ coerenti con i testi visibili. Anche senza JavaScript
+restano disponibili contenuti e collegamenti; il portfolio completo è statico
+in Progetti. Aggiornare testi e relativo JSON-LD insieme, senza prezzi, rating o
+risultati inventati. Le FAQ non garantiscono risultati avanzati su Google.
+
+`robots.txt` consente ricerca/recupero di OpenAI e Claude, oltre ai crawler
+ordinari. La regola generale preesistente resta permissiva anche per gli altri
+bot: non è stata introdotta una nuova politica sui dati di addestramento.
+Non sono necessari file speciali o markup riservato ai motori AI.
+
+Search Console usa la proprietà `https://gruppoautoma.it/` nell'account Google
+Automa. `sitemap.xml` contiene soltanto le cinque pagine indicizzabili; aggiornare
+`lastmod` quando il contenuto cambia realmente. Privacy e cookie restano noindex.
+Per i motori che partecipano a IndexNow, il file pubblico `indexnow-key.txt`
+consente la verifica dell'host; conservarlo dopo la pubblicazione. L'invio alle
+API usa `keyLocation` alla radice e gli URL canonical delle pagine cambiate.
+Una ricevuta di invio non prova scansione, indicizzazione o citazione AI.
+
+Le verifiche e gli esiti di invio sono conservati nel ticket #6 del repository
+sorgente e nel rapporto SEO/GEO del progetto. Le metriche di laboratorio e i
+dati reali degli utenti sono valutazioni distinte.

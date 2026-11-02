@@ -3,7 +3,7 @@
 .menu-toggle { display: none; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); font-weight: 700; font-size: .8rem; }
 .nav__links a { min-height: 44px; display: inline-flex; align-items: center; }
 .pv__close { color: var(--ink); }
-.tag { color: var(--v1); }
+.tag { color: var(--ink); }
 .booking-fallback { display: block; padding: 6px 20px 12px; font-size: .82rem; color: var(--v1); text-decoration: underline; }
 .bk__panel { display: flex; flex-direction: column; }
 .bk__body { flex: 1; min-height: 0; }
@@ -140,3 +140,6 @@
   .how__card { display: grid; }
   .ba__stage { padding-block: 30px; }
 }
+
+/* Keep anchor destinations below the floating navigation. */
+main section[id] { scroll-margin-top: 110px; }

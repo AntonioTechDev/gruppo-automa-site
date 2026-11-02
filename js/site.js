@@ -109,6 +109,9 @@
   });
 
   if (document.body.dataset.page !== 'home') {
+    $$('.qa').forEach((item) => item.addEventListener('toggle', () => {
+      setTimeout(() => window.ScrollTrigger?.refresh(), 450);
+    }));
     const budget = $('#budget');
     ['< 1.000 €', '1.000 € – 3.000 €', '3.000 € – 10.000 €', '> 10.000 €'].forEach((range) => {
       if (budget) budget.add(new Option(range, range));

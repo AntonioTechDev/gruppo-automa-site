@@ -32,7 +32,7 @@
   try { restoreY = +sessionStorage.getItem("automa-y") || 0; sessionStorage.removeItem("automa-y"); } catch (e) {}
 
   let lenis = null;
-  if (!reduceMotion && window.Lenis) {
+  if (!reduceMotion && matchMedia("(hover: hover) and (pointer: fine)").matches && window.Lenis) {
     lenis = new Lenis({ lerp: 0.11, smoothWheel: true });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis.raf(t * 1000));
@@ -518,10 +518,7 @@
     if (d.open) qas.forEach((o) => { if (o !== d) o.open = false; });
     setTimeout(() => ScrollTrigger.refresh(), 450);
   }));
-  const ld = document.createElement("script");
-  ld.type = "application/ld+json";
-  ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: qas.map((d) => ({ "@type": "Question", name: $("summary span", d).textContent.trim(), acceptedAnswer: { "@type": "Answer", text: $(".qa__a", d).textContent.trim() } })) });
-  document.head.appendChild(ld);
+  // FAQ structured data is delivered in the HTML, also to crawlers without JavaScript.
 
   /* ---------------- PREMIUM MOTION ---------------- */
   // scroll progress bar
@@ -710,6 +707,8 @@
 
   addEventListener("load", () => {
     ScrollTrigger.refresh();
-    if (restoreY) scrollToY(restoreY, { immediate: true });
+    const anchor = location.hash && document.getElementById(location.hash.slice(1));
+    if (anchor) scrollToY(anchor, { immediate: true, offset: -90 });
+    else if (restoreY) scrollToY(restoreY, { immediate: true });
   });
 })();

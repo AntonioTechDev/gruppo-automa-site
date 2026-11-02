@@ -1,3 +1,11 @@
+# Search and user-requested retrieval are allowed. No change to the existing
+# training-crawler policy: the default rule below remains Allow: /.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+Allow: /
+
 User-agent: *
 Allow: /
 
