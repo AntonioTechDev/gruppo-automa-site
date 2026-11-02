@@ -1,43 +1,48 @@
-# Antipode — Studio digitale (Townsville · Aversa)
+# Gruppo Automa
 
-Sito statico, nessun build. Tutto è ospitato in locale (font, GSAP, ScrollTrigger, Lenis, Three.js):
-il sito non contatta servizi esterni, per questo non serve il banner cookie.
+Sito statico italiano di Gruppo Automa S.r.l.s., online su
+[gruppoautoma.it](https://gruppoautoma.it/). HTML, CSS e JavaScript, senza build.
+Font, immagini e librerie di animazione sono locali. Google Calendar viene
+caricato quando il visitatore apre la prenotazione.
 
-## Avvio in locale
-```
-python -m http.server 5173 --directory site
-```
-Apri http://localhost:5173 (serve un server: i moduli JS non funzionano da file://).
+## Pagine
 
-## Lingue (IT / EN)
-- I testi italiani sono nell'HTML (`index.html`), quelli inglesi in `js/i18n.js` (oggetto `EN`, stesse chiavi di `data-i18n`).
-- Per aggiungere un testo: metti `data-i18n="chiave"` sull'elemento e aggiungi `chiave` in `EN`.
-- Lingua scelta: `?lang=it|en` → scelta salvata → lingua del browser.
+- Home: presentazione, servizi in sintesi, CheAI, portfolio, team e contatore ROI.
+- Servizi: consulenza AI, gestionali/CRM/web app, automazioni/API e siti/landing.
+- Progetti: dieci progetti con immagini, descrizioni e attribuzioni.
+- Chi siamo: i tre soci, competenze e metodo.
+- Contatti: telefono, email, sede, calendario e preparazione di un'email.
 
-## Dove modificare
-- **Testimonianze** → `js/testimonials.js`: solo recensioni reali; quelle con `placeholder: true` si vedono SOLO su localhost
-- **FAQ** → sezione `#faq` in `index.html` (+ traduzioni `q1…q8` / `a1…a8` in `js/i18n.js`)
-- **Progetti showcase** → `js/projects.js` (descrizioni `desc: { it, en }`, screenshot `.webp` in `assets/shots/`)
-- **Palette e font** → variabili in cima a `css/style.css`
-- **Oggetto 3D** → `js/key3d.js` · **Animazioni** → `js/main.js`
-- **Privacy / Cookie** → `privacy.html`, `cookie.html`: completare i campi evidenziati in giallo (ragione sociale, P.IVA, ABN, hosting, email)
+Privacy e cookie policy sono collegate dal footer. CheAI rimane una sezione
+nella Home con collegamento a cheai.io; il widget non è ancora integrato.
+Il sito non pubblica un listino prezzi.
+
+## Modifiche
+
+La Home è il riferimento visivo. Nel repository sorgente, leggere `design.md`
+e le istruzioni di progetto prima di aggiungere pagine.
+
+- Stili comuni: `css/style.css` e `css/pages.css`.
+- Menu, popup prenotazioni e modulo: `js/site.js`.
+- Scene e interazioni della Home: `js/main.js`.
+- Calendario pubblico: `bookingUrl` in `js/config.js`.
+- Portfolio: `js/projects.js` e pagina Progetti. Tenere coerenti contenuti,
+  screenshot e attribuzioni se la selezione cambia.
+- Pagine interne: cartelle `servizi`, `progetti`, `chi-siamo`, `contatti`.
+- SEO tecnica: metadati delle singole pagine, `sitemap.xml` e `robots.txt`.
+
+Il modulo contatti apre una bozza nel programma di posta del visitatore:
+non invia direttamente un messaggio e non salva richieste sul sito.
+
+## Verifiche
+
+Controllare navigazione e menu mobile, collegamenti e asset, telefono,
+prenotazione, modulo, portfolio, ROI e movimento ridotto. Il collaudo visivo
+si esegue a 1440 e 390 px e vicino ai breakpoint del menu. Per le prenotazioni,
+verificare l'evento e le email effettivamente ricevute, poi cancellare le prove.
 
 ## Pubblicazione
-Online su **https://antoniotechdev.github.io/antipode/** (GitHub Pages, gratis).
-- Il sorgente resta nel repo privato `AntonioTechDev/antipode-site`.
-- Il repo pubblico `AntonioTechDev/antipode` contiene solo la cartella `site/`.
-- Per aggiornare il sito online: fai commit nel repo privato, poi `bash deploy.sh` (1–2 minuti per vedere le modifiche).
 
-## Struttura della landing (formula)
-1. Logo + tagline + CTA "Preventivo" sempre visibili (nav fissa)
-2. Problema → primo step della storia 3D
-3. Soluzione / servizi → `#servizi`
-4. Portfolio → `#lavori` + CTA
-5. Testimonianze → `#recensioni`
-6. Chi siamo → `#chi-siamo` + "Perché il codice conta"
-7. FAQ → `#faq`
-8. CTA → `#contatti` (modulo con budget)
-9. Footer con servizi, studio, contatti, note legali
-
-## Rollback
-Ogni versione importante ha un tag: `git tag` per vederli, `git checkout <tag>` per tornarci.
+La pubblicazione proviene dalla cartella `site/` del branch sorgente
+`gruppo-automa`, attraverso `deploy-automa.sh`. Quel comando pubblica soltanto
+il sito nel repository GitHub Pages. Non usare il comando di deploy Antipode.

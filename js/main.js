@@ -17,8 +17,6 @@
   const CUR = LANG === "en" ? "aud" : "eur";
   const group = (n, sep) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, sep); // always group, also 4-digit numbers
   const money0 = (n) => (CUR === "aud" ? `A$${group(n, ",")}` : `${group(n, ".")} €`);
-  const PRICES = (CFG.prices || {})[CUR] || {};
-  $$("[data-price]").forEach((el) => { const v = PRICES[el.dataset.price]; if (v != null) el.textContent = money0(v); });
   const budget = $("#budget");
   if (budget) {
     const ranges = CUR === "aud" ? [[0, 2000], [2000, 5000], [5000, 15000], [15000, 0]] : [[0, 1000], [1000, 3000], [3000, 10000], [10000, 0]];
@@ -40,6 +38,7 @@
     gsap.ticker.add((t) => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
   }
+  window.AutomaSite?.setScrollController(lenis);
   const scrollToY = (target, opts = {}) => {
     if (lenis) return lenis.scrollTo(target, opts);
     const y = typeof target === "number" ? target : target.getBoundingClientRect().top + scrollY + (opts.offset || 0);
@@ -201,7 +200,7 @@
     lenis?.start();
     lastFocus?.focus?.();
   }
-  $$(".pv, .bk").forEach((m) => {
+  $$(".pv").forEach((m) => {
     m.addEventListener("click", (e) => { if (e.target.closest("[data-close]")) closeModal(m); });
   });
 
@@ -228,24 +227,8 @@
   }));
   const pickedText = () => `${longDay.format(pick.day)} · ${pick.slot} (${T("itTime", "ora italiana")})`;
 
-  const bk = $("#bk"), bkBody = $("#bk-body");
-  function openBooking() {
-    const u = new URL(CFG.bookingUrl);
-    if (u.hostname.endsWith("google.com")) u.searchParams.set("gv", "true");
-    bkBody.innerHTML = `<iframe src="${esc(u.toString())}" title="${esc(T("bkTitle", "Prenota una call di 30 minuti"))}" loading="lazy"></iframe>`;
-    openModal(bk);
-  }
-  $$("[data-book]").forEach((b) => b.addEventListener("click", (e) => {
-    if (CFG.bookingUrl) { e.preventDefault(); openBooking(); return; }
-    if (b.id === "book-btn") {
-      // no booking page configured yet: propose the chosen slot through the contact form
-      e.preventDefault();
-      const ta = $('#cform textarea[name="messaggio"]');
-      ta.value = fill(T("bkPrefill", "Vorrei prenotare una call conoscitiva: {when}."), { when: pickedText() });
-      scrollToY($("#contatti"), { offset: -60, duration: 1.4 });
-      setTimeout(() => $('#cform input[name="nome"]').focus({ preventScroll: true }), 1500);
-    }
-  }));
+  const bk = $("#bk");
+  const openBooking = () => window.AutomaSite.openBooking();
   if (!CFG.bookingUrl) $("#book-btn span").textContent = T("calCtaAlt", "Proponi questo orario");
   else {
     // real availability comes from Google Calendar: days open the booking page, sample slots are hidden
@@ -474,7 +457,7 @@
       if (e.key === "ArrowRight") vGo(1);
       if (e.key === "ArrowLeft") vGo(-1);
     }
-    if (e.key === "Escape") { if (!pv.hidden) { stopPreview(); closeModal(pv); } if (!bk.hidden) closeModal(bk); }
+    if (e.key === "Escape") { if (!pv.hidden) { stopPreview(); closeModal(pv); } }
   });
   pv.addEventListener("click", (e) => { if (e.target.closest("[data-close]")) stopPreview(); });
 
@@ -540,31 +523,12 @@
   ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: qas.map((d) => ({ "@type": "Question", name: $("summary span", d).textContent.trim(), acceptedAnswer: { "@type": "Answer", text: $(".qa__a", d).textContent.trim() } })) });
   document.head.appendChild(ld);
 
-  /* ---------------- contact form ---------------- */
-  const form = $("#cform"), msg = $("#cform-msg");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const d = new FormData(form);
-    const nome = (d.get("nome") || "").trim(), email = (d.get("email") || "").trim(), testo = (d.get("messaggio") || "").trim();
-    if (!nome || !/^\S+@\S+\.\S+$/.test(email) || !testo) {
-      msg.textContent = T("_formErr");
-      gsap.fromTo(form, { x: -8 }, { x: 0, duration: 0.5, ease: "elastic.out(1, .3)" });
-      return;
-    }
-    const azienda = (d.get("azienda") || "").trim();
-    const tipi = d.getAll("tipo").join(", ") || T("_tbd");
-    const budget = d.get("budget") || T("_tbd");
-    const body = `${T("_mailHello")}\n\n${testo}\n\n${T("_mailNeed")}: ${tipi}\n${T("_budget")}: ${budget}\n\n${nome}${azienda ? " · " + azienda : ""}\n${email}`;
-    location.href = `mailto:info@gruppoautoma.it?subject=${encodeURIComponent(T("_mailSubject") + " — " + (azienda || nome))}&body=${encodeURIComponent(body)}`;
-    msg.textContent = T("_formOk");
-  });
-
   /* ---------------- PREMIUM MOTION ---------------- */
   // scroll progress bar
   gsap.to("#progress", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: 0.3 } });
 
   // extra reveals for supporting copy
-  reveal(".ba__head .lead, .uses__head .lead, .price__head .lead, .cases .tag, .gal__head, .recur > div, .price__note, .cases__note, .faq .lead, .qa, .cta .lead");
+  reveal(".ba__head .lead, .uses__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
 
   // lime band opens from a rounded card to full bleed; integrations card grows in
   gsap.fromTo(".uses__sticky", { clipPath: "inset(2.5% 3.5% round 40px)" }, { clipPath: "inset(0% 0% round 0px)", ease: "none", scrollTrigger: { trigger: "#uses-pin", start: "top 90%", end: "top top", scrub: true } });
@@ -651,9 +615,9 @@
 
   // pointer spotlight that follows the cursor across cards
   if (fine && !reduceMotion) {
-    $$(".pcard, .member, .story, .prod, .recur > div, .team__stats").forEach((c) => {
+    $$(".member, .story, .prod, .team__stats").forEach((c) => {
       const g = document.createElement("span");
-      g.className = "spot" + (c.matches(".prod, .team__stats, .pcard--hl") ? " spot--dark" : "");
+      g.className = "spot" + (c.matches(".prod, .team__stats") ? " spot--dark" : "");
       c.classList.add("has-spot");
       c.appendChild(g);
       c.addEventListener("pointermove", (e) => {
@@ -685,18 +649,6 @@
       });
       gsap.fromTo(img, { "--py": "18px" }, { "--py": "-6px", ease: "none", scrollTrigger: { trigger: m, start: "top bottom", end: "bottom top", scrub: true } });
       gsap.from($$(".member__chips span", m), { opacity: 0, y: 10, scale: 0.9, stagger: 0.06, duration: 0.6, ease: "back.out(2)", scrollTrigger: { trigger: m, start: "top 70%", once: true } });
-    });
-
-    // prices count up when the card shows up
-    $$(".pcard [data-price], .recur [data-price]").forEach((el) => {
-      const v = PRICES[el.dataset.price];
-      if (v == null) return;
-      const o = { v: 0 };
-      el.textContent = money0(0);
-      ScrollTrigger.create({
-        trigger: el, start: "top 92%", once: true,
-        onEnter: () => gsap.to(o, { v, duration: 1.4, ease: "expo.out", onUpdate: () => { el.textContent = money0(Math.round(o.v / 10) * 10); }, onComplete: () => { el.textContent = money0(v); } }),
-      });
     });
 
     // CheAI: a tiny live conversation (question → typing → answer), then the stat pops
@@ -744,6 +696,16 @@
     const end = +el.dataset.count, suf = el.dataset.suffix || "", o = { v: 0 };
     ScrollTrigger.create({ trigger: el, start: "top 95%", once: true, onEnter: () => gsap.to(o, { v: end, duration: 1.6, ease: "power3.out", onUpdate: () => { el.textContent = Math.round(o.v) + suf; } }) });
   });
+  if (reduceMotion) {
+    // Complete existing reveals once, then leave a readable static layout.
+    gsap.globalTimeline.getChildren(true, true, true).forEach((animation) => {
+      if (animation.repeat() !== -1) animation.totalProgress(1);
+      animation.kill();
+    });
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    gsap.set("[data-reveal], .w > span, .lead, .hero__sub, .hero__ctas, .assure, .shot, .stage, .win, .bacard, .how__pane, .utext, .footer__word span", { clearProps: "transform,opacity,visibility,clipPath" });
+    $$("[data-count]").forEach((el) => { el.textContent = el.dataset.count + (el.dataset.suffix || ""); });
+  }
   ScrollTrigger.refresh();
 
   addEventListener("load", () => {

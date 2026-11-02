@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/pjs-n400-l.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
   <link rel="canonical" href="https://gruppoautoma.it/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-12 -16 163 160'%3E%3Crect x='-12' y='-16' width='163' height='160' rx='38' fill='%230B1726'/%3E%3Cpath fill='%2345D0BD' fill-rule='evenodd' d='M56 14a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0ZM63.5 14a6 6 0 1 0 12 0a6 6 0 1 0-12 0ZM35 42h67a22 22 0 0 1 22 22v2h8a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7h-8v4a22 22 0 0 1-22 22H35a22 22 0 0 1-22-22v-4H7a7 7 0 0 1-7-7V73a7 7 0 0 1 7-7h6v-2a22 22 0 0 1 22-22ZM34.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0ZM81.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0Z'/%3E%3Cpath fill='%2345D0BD' d='M66 25h7v20h-7Z'/%3E%3C/svg%3E">
   <script type="application/ld+json">
@@ -21,6 +22,7 @@
     "name": "Gruppo Automa S.r.l.s.",
     "alternateName": "Automa",
     "url": "https://gruppoautoma.it/",
+    "telephone": "+393492331446",
     "email": "info@gruppoautoma.it",
     "vatID": "IT04963130614",
     "description": "Software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI.",
@@ -34,31 +36,12 @@
   }
   </script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
   <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 
   <!-- ============ NAV ============ -->
-  <header class="nav" id="nav">
-    <div class="nav__bar">
-      <a class="brand" href="#top" aria-label="Gruppo Automa, torna all'inizio">
-        <svg class="brand__mark" aria-hidden="true" viewBox="0 0 139 128"><path fill="currentColor" fill-rule="evenodd" d="M56 14a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0ZM63.5 14a6 6 0 1 0 12 0a6 6 0 1 0-12 0ZM35 42h67a22 22 0 0 1 22 22v2h8a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7h-8v4a22 22 0 0 1-22 22H35a22 22 0 0 1-22-22v-4H7a7 7 0 0 1-7-7V73a7 7 0 0 1 7-7h6v-2a22 22 0 0 1 22-22ZM34.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0ZM81.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0Z"/><path fill="currentColor" d="M66 25h7v20h-7Z"/></svg>
-
-        <span class="brand__name">gruppo <b>automa</b></span>
-      </a>
-      <nav class="nav__links" aria-label="Sezioni">
-        <a href="#servizi">Servizi</a>
-        <a href="#prodotti">Prodotti</a>
-        <a href="#casi">Progetti</a>
-        <a href="#team">Team</a>
-        <a href="#prezzi">Prezzi</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="nav__right">
-        <a class="btn btn--dark btn--sm" href="#contatti" data-book data-i18n="navCta">Prenota una call</a>
-      </div>
-    </div>
-  </header>
+  <header class="nav" id="nav"><div class="nav__bar"><a class="brand" href="/" aria-label="Gruppo Automa, Home"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 139 128"><path fill="currentColor" fill-rule="evenodd" d="M56 14a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0ZM63.5 14a6 6 0 1 0 12 0a6 6 0 1 0-12 0ZM35 42h67a22 22 0 0 1 22 22v2h8a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7h-8v4a22 22 0 0 1-22 22H35a22 22 0 0 1-22-22v-4H7a7 7 0 0 1-7-7V73a7 7 0 0 1 7-7h6v-2a22 22 0 0 1 22-22ZM34.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0ZM81.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0Z"/><path fill="currentColor" d="M66 25h7v20h-7Z"/></svg><span class="brand__name">gruppo <b>automa</b></span></a><nav class="nav__links" id="site-menu" aria-label="Navigazione principale"><a href="/" aria-current="page">Home</a><a href="/servizi/">Servizi</a><a href="/progetti/">Progetti</a><a href="/chi-siamo/">Chi siamo</a><a href="/contatti/">Contatti</a></nav><div class="nav__right"><a class="btn btn--dark btn--sm" href="/contatti/" data-book>Prenota una call</a><button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Apri o chiudi il menu">Menu</button></div></div></header>
 
   <main id="main">
     <span id="top"></span>
@@ -497,73 +480,6 @@
       </div>
     </section>
 
-    <!-- ============ PRICING ============ -->
-    <section class="section pricing" id="prezzi" aria-labelledby="price-title">
-      <div class="wrap">
-        <div class="price__head">
-          <p class="tag" data-i18n="prTag">Prezzi</p>
-          <h2 id="price-title" data-split data-i18n="prTitle">Prezzi chiari, <span class="grad">prima di iniziare.</span></h2>
-          <p class="lead" data-i18n="prLead">Questi sono i prezzi di partenza. Dopo la call ricevi un preventivo scritto e fisso, costruito sul tuo progetto.</p>
-        </div>
-        <div class="prices snap" id="prices">
-          <article class="pcard" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><path d="M3.5 9h17M8 13h8M8 16.5h5"/></svg></span><h3 data-i18n="pr1T">Landing page</h3></div>
-            <p class="pcard__d" data-i18n="pr1D">Una pagina pensata per presentare un servizio o una campagna e raccogliere contatti.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="landing"></b></p>
-            <ul class="pcard__inc" data-i18n="pr1L"><li>Design su misura, ottimizzato per mobile</li><li>Struttura e testi orientati ai contatti</li><li>Modulo collegato a email o CRM</li><li>Velocità e SEO di base</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr1W">Fino a 4 giorni</span></p>
-            <a class="btn btn--light btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-          <article class="pcard" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5c-2.5-2.6-3.5-5.4-3.5-8.5s1-5.9 3.5-8.5z"/></svg></span><h3 data-i18n="pr2T">Sito aziendale</h3></div>
-            <p class="pcard__d" data-i18n="pr2D">Fino a 5 pagine per presentare l'azienda, farsi trovare su Google e ricevere richieste.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="site"></b></p>
-            <ul class="pcard__inc" data-i18n="pr2L"><li>Fino a 5 pagine su misura</li><li>Modificabile da te in autonomia</li><li>SEO tecnica e scheda Google</li><li>Accessibilità e prestazioni</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr2W">7–10 giorni</span></p>
-            <a class="btn btn--light btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-          <article class="pcard" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg></span><h3 data-i18n="pr3T">E-commerce</h3></div>
-            <p class="pcard__d" data-i18n="pr3D">Un negozio online pronto a vendere, facile da gestire ogni giorno.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="shop"></b></p>
-            <ul class="pcard__inc" data-i18n="pr3L"><li>Catalogo prodotti e categorie</li><li>Pagamenti online (Stripe, PayPal)</li><li>Spedizioni ed email automatiche</li><li>Gestione ordini semplice</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr3W">14 giorni</span></p>
-            <a class="btn btn--light btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-          <article class="pcard" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg></span><h3 data-i18n="pr4T">Automazione semplice</h3></div>
-            <p class="pcard__d" data-i18n="pr4D">Un flusso automatico che toglie di mezzo un lavoro ripetitivo.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="auto"></b></p>
-            <ul class="pcard__inc" data-i18n="pr4L"><li>1 flusso automatico</li><li>Fino a 3 strumenti collegati</li><li>Test e documentazione</li><li>Assistenza dopo il rilascio</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr4W">5 giorni</span></p>
-            <a class="btn btn--light btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-          <article class="pcard" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5 5 1.9-5 1.9-1.9 5-1.9-5-5-1.9 5-1.9z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><h3 data-i18n="pr5T">Automazione complessa / agente AI</h3></div>
-            <p class="pcard__d" data-i18n="pr5D">Agenti AI e flussi che collegano più sistemi e lavorano al posto tuo.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="agent"></b></p>
-            <ul class="pcard__inc" data-i18n="pr5L"><li>Agente AI su WhatsApp, email o sito</li><li>Risposte basate sui tuoi documenti</li><li>Integrazione con CRM e gestionali</li><li>Passaggio a una persona quando serve</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr5W">14 giorni</span></p>
-            <a class="btn btn--light btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-          <article class="pcard vcard pcard--hl" data-reveal>
-            <div class="pcard__top"><span class="pcard__ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span><h3 data-i18n="pr6T">SaaS / web app</h3></div>
-            <p class="pcard__d" data-i18n="pr6D">Un primo prodotto funzionante da mostrare ai clienti, da far crescere per tappe.</p>
-            <p class="pcard__price"><small data-i18n="from">da</small><b data-price="saas"></b><span class="pcard__then" data-i18n="prThen">poi su preventivo</span></p>
-            <ul class="pcard__inc" data-i18n="pr6L"><li>Login e gestione utenti</li><li>Fino a 3 funzioni principali</li><li>1 integrazione (es. Stripe o CRM)</li><li>Messa online</li></ul>
-            <p class="pcard__time"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="pr6W">2–6 settimane</span></p>
-            <a class="btn btn--white btn--block" href="#contatti" data-book data-i18n="prCta">Prenota una call</a>
-          </article>
-        </div>
-        <div class="recur" data-reveal>
-          <div><span class="recur__ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span><span><b data-i18n="prR1">Manutenzione sito</b><small data-i18n="prR1d">hosting, aggiornamenti e backup</small></span><em><b data-price="care"></b><small data-i18n="perMonth">/mese</small></em></div>
-          <div><span class="recur__ic"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 015 5l-8.5 8.5a2.1 2.1 0 01-3-3z"/><path d="M14.5 6.5L12 4"/></svg></span><span><b data-i18n="prR2">Supporto automazioni</b><small data-i18n="prR2d">monitoraggio e piccole modifiche</small></span><em><b data-price="support"></b><small data-i18n="perMonth">/mese</small></em></div>
-          <div><span class="recur__ic"><svg viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/></svg></span><span><b data-i18n="prR3">Ore extra</b><small data-i18n="prR3d">per richieste fuori preventivo</small></span><em><b data-price="hour"></b><small data-i18n="perHour">/ora</small></em></div>
-        </div>
-        <p class="price__note" data-i18n="prNote">Prezzi IVA esclusa. Il prezzo finale dipende da pagine, contenuti e integrazioni: lo trovi nel preventivo scritto, prima di iniziare qualsiasi lavoro.</p>
-      </div>
-    </section>
-
     <!-- ============ FAQ ============ -->
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap faq__grid">
@@ -573,7 +489,7 @@
         </div>
         <div class="faq__list">
           <details class="qa" open><summary><span data-i18n="q1">Quanto costa un progetto?</span><i aria-hidden="true"></i></summary>
-            <div class="qa__a"><p data-i18n="a1">I prezzi di partenza li trovi nella sezione Prezzi: ad esempio una landing page parte da <b data-price="landing"></b> e un'automazione semplice da <b data-price="auto"></b>. Dopo la call ricevi un preventivo scritto e fisso con costi, tempi e cosa è incluso, prima di iniziare qualsiasi lavoro.</p></div></details>
+            <div class="qa__a"><p data-i18n="a1">Ogni progetto parte dalle tue esigenze. Dopo la call ricevi un preventivo scritto con costi, tempi e attività incluse, prima di iniziare qualsiasi lavoro.</p></div></details>
           <details class="qa"><summary><span data-i18n="q2">Quanto tempo serve?</span><i aria-hidden="true"></i></summary>
             <div class="qa__a"><p data-i18n="a2">Una landing è pronta in pochi giorni, un sito aziendale in 7–10 giorni, un'automazione semplice in circa 5 giorni. Per una web app servono di solito dalle 2 alle 6 settimane. Lavoriamo per tappe, così vedi i progressi e inizi a usare il software prima della fine.</p></div></details>
           <details class="qa"><summary><span data-i18n="q3">Lavorate anche su software esistenti?</span><i aria-hidden="true"></i></summary>
@@ -595,6 +511,7 @@
         <p class="proof-pill"><span class="live"></span><span data-i18n="ctaPill">Rispondiamo personalmente, entro un giorno lavorativo</span></p>
         <h2 id="cta-title" data-split data-i18n="ctaTitle">Hai un'idea o un processo da migliorare? <span class="grad">Parliamone.</span></h2>
         <p class="lead" data-i18n="ctaLead">Raccontaci in due righe di cosa hai bisogno. Ti rispondiamo con qualche domanda e una proposta di call.</p>
+        <p class="contact-direct">Preferisci chiamarci? <a href="tel:+393492331446">+39 349 233 1446</a></p>
         <form class="form" id="cform" novalidate data-reveal>
           <div class="form__row">
             <label class="field"><span data-i18n="fName">Nome</span><input name="nome" autocomplete="name" required></label>
@@ -616,7 +533,7 @@
             <label><input type="checkbox" name="tipo" value="Sito / landing"><span data-i18n="fT4">Sito / landing</span></label>
           </fieldset>
           <label class="field"><span data-i18n="fMsg">Di cosa hai bisogno?</span><textarea name="messaggio" rows="3" required></textarea></label>
-          <button class="btn btn--dark btn--lg btn--block" type="submit" data-i18n="fSend">Invia la richiesta</button>
+          <button class="btn btn--dark btn--lg btn--block" type="submit" data-i18n="fSend">Prepara l’email</button>
           <p class="form__msg mono" id="cform-msg" role="status"></p>
           <p class="form__legal" data-i18n="fLegal">Il modulo apre il tuo programma di posta con il messaggio pronto: questo sito non salva nulla. Leggi la <a href="privacy.html">privacy policy</a>.</p>
         </form>
@@ -629,22 +546,22 @@
     <div class="footer__card">
       <div class="footer__top">
         <div class="footer__brand">
-          <a class="brand brand--light" href="#top"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 139 128"><path fill="currentColor" fill-rule="evenodd" d="M56 14a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0ZM63.5 14a6 6 0 1 0 12 0a6 6 0 1 0-12 0ZM35 42h67a22 22 0 0 1 22 22v2h8a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7h-8v4a22 22 0 0 1-22 22H35a22 22 0 0 1-22-22v-4H7a7 7 0 0 1-7-7V73a7 7 0 0 1 7-7h6v-2a22 22 0 0 1 22-22ZM34.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0ZM81.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0Z"/><path fill="currentColor" d="M66 25h7v20h-7Z"/></svg>
+          <a class="brand brand--light" href="/"><svg class="brand__mark" aria-hidden="true" viewBox="0 0 139 128"><path fill="currentColor" fill-rule="evenodd" d="M56 14a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0ZM63.5 14a6 6 0 1 0 12 0a6 6 0 1 0-12 0ZM35 42h67a22 22 0 0 1 22 22v2h8a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7h-8v4a22 22 0 0 1-22 22H35a22 22 0 0 1-22-22v-4H7a7 7 0 0 1-7-7V73a7 7 0 0 1 7-7h6v-2a22 22 0 0 1 22-22ZM34.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0ZM81.5 82a11.5 11.5 0 1 0 23 0a11.5 11.5 0 1 0-23 0Z"/><path fill="currentColor" d="M66 25h7v20h-7Z"/></svg>
 <span class="brand__name">gruppo <b>automa</b></span></a>
           <p>Software, agenti AI e automazioni su misura per aziende e professionisti. Un'automazione alla volta.</p>
-          <a class="btn btn--white btn--sm" href="#contatti" data-book>Prenota una call</a>
+          <a class="btn btn--white btn--sm" href="/contatti/" data-book>Prenota una call</a>
         </div>
         <nav class="footer__col" aria-labelledby="f1"><h3 id="f1">Servizi</h3>
-          <a href="#servizi">Consulenza e strategia AI</a><a href="#servizi">Gestionali, CRM e web app</a><a href="#servizi">Automazioni e integrazioni API</a><a href="#servizi">Siti e landing</a></nav>
+          <a href="/servizi/">Consulenza e strategia AI</a><a href="/servizi/">Gestionali, CRM e web app</a><a href="/servizi/">Automazioni e integrazioni API</a><a href="/servizi/">Siti e landing</a></nav>
         <nav class="footer__col" aria-labelledby="f2"><h3 id="f2">Automa</h3>
-          <a href="#prodotti">CheAI</a><a href="#casi">Progetti</a><a href="#team">Team</a><a href="#prezzi">Prezzi</a><a href="#faq">FAQ</a></nav>
+          <a href="/#prodotti">CheAI</a><a href="/progetti/">Progetti</a><a href="/chi-siamo/">Team</a><a href="/#faq">FAQ</a></nav>
         <div class="footer__col"><h3>Contatti</h3>
-          <a href="mailto:info@gruppoautoma.it">info@gruppoautoma.it</a><span>Piazza Bernini, Bernini Center</span><span>81031 Aversa (CE)</span>
+          <a href="tel:+393492331446">+39 349 233 1446</a><a href="mailto:info@gruppoautoma.it">info@gruppoautoma.it</a><span>Piazza Bernini, Bernini Center</span><span>81031 Aversa (CE)</span>
           <a href="https://www.instagram.com/automagruppoitalia/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://cheai.io" target="_blank" rel="noopener">cheai.io ↗</a></div>
       </div>
       <div class="footer__bottom mono">
         <span>© 2026 Gruppo Automa S.r.l.s. · P.IVA e C.F. 04963130614 · Capitale sociale 4.000 € i.v.</span>
-        <nav class="footer__legal" aria-label="Note legali"><a href="privacy.html">Privacy policy</a><a href="cookie.html">Cookie policy</a></nav>
+        <nav class="footer__legal" aria-label="Note legali"><a href="/privacy.html">Privacy policy</a><a href="/cookie.html">Cookie policy</a></nav>
       </div>
       <div class="footer__word" aria-hidden="true">automa</div>
     </div>
@@ -705,6 +622,7 @@
   <script src="js/i18n.js"></script>
   <script src="js/projects.js"></script>
   <script src="js/testimonials.js"></script>
+  <script src="js/site.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
