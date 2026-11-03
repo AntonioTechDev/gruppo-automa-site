@@ -49,6 +49,10 @@
 
     const frame = document.createElement('iframe');
     frame.title = 'Scegli un orario e prenota una call con Gruppo Automa';
+    // Use an ephemeral Google session where supported; never send the visitor's
+    // existing Google login cookies. Other browsers keep the standard embed.
+    frame.setAttribute('credentialless', '');
+    frame.referrerPolicy = 'no-referrer';
     frame.loading = 'eager'; // Also load while the dialog is closed.
     frame.tabIndex = -1;
     frame.setAttribute('aria-busy', 'true');
@@ -66,7 +70,11 @@
       frame.removeAttribute('tabindex');
     }, { once: true });
     const address = new URL(url);
-    if (address.hostname === 'calendar.google.com') address.searchParams.set('gv', 'true');
+    if (address.hostname === 'calendar.google.com') {
+      address.searchParams.set('gv', 'true');
+      address.searchParams.set('hl', 'it');
+      address.searchParams.set('ctz', 'Europe/Rome');
+    }
     frame.src = address.href;
     body.append(frame);
     return frame;

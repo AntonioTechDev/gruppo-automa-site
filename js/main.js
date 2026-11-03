@@ -10,6 +10,7 @@
   const T = (k, fallback) => window.I18N?.t(k) ?? fallback;
   const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k]);
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const touchMotion = matchMedia("(hover: none) and (pointer: coarse)").matches;
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const nf = new Intl.NumberFormat(LOCALE);
   const CFG = window.ANTIPODE_CONFIG || {};
@@ -83,8 +84,8 @@
   const reveal = (sel, start = "top 90%") => {
     const els = typeof sel === "string" ? $$(sel) : sel;
     if (!els.length) return;
-    gsap.set(els, { opacity: 0, y: 46, scale: 0.97 });
-    ScrollTrigger.batch(els, { start, once: true, onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, scale: 1, duration: 1.15, stagger: 0.09, ease: "expo.out", clearProps: "transform" }) });
+    gsap.set(els, { opacity: 0, y: touchMotion ? 24 : 46, scale: 0.97 });
+    ScrollTrigger.batch(els, { start, once: true, onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, scale: 1, duration: touchMotion ? .65 : 1.15, stagger: touchMotion ? .05 : .09, ease: "expo.out", clearProps: "transform" }) });
   };
   reveal("[data-reveal]");
 
@@ -556,7 +557,7 @@
     const navEl = $("#nav");
     const navST = ScrollTrigger.create({
       start: 0, end: "max",
-      onUpdate: (st) => navEl.classList.toggle("is-hidden", st.direction === 1 && st.scroll() > 500 && pv.hidden && bk.hidden),
+      onUpdate: (st) => navEl.classList.toggle("is-hidden", st.direction === 1 && st.scroll() > 500 && pv.hidden && bk.hidden && $(".menu-toggle")?.getAttribute("aria-expanded") !== "true"),
     });
 
     // stacks: the card underneath shrinks and dims while the next one slides over it
@@ -682,9 +683,14 @@
     const tick = () => {
       const past = scrollY > heroEl.offsetHeight * 0.7;
       const nearEnd = contact.getBoundingClientRect().top < innerHeight * 0.9;
-      dock.classList.toggle("is-on", past && !nearEnd && pv.hidden && bk.hidden);
+      const typing = document.activeElement?.matches('input, textarea, select');
+      const show = past && !nearEnd && pv.hidden && bk.hidden && !typing;
+      dock.classList.toggle("is-on", show);
+      dock.inert = !show;
     };
     addEventListener("scroll", tick, { passive: true });
+    document.addEventListener("focusin", tick);
+    document.addEventListener("focusout", () => requestAnimationFrame(tick));
     tick();
     [pv, bk].forEach((m) => new MutationObserver(tick).observe(m, { attributes: true, attributeFilter: ["hidden"] }));
   }
