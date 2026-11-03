@@ -1,0 +1,52 @@
+/* Editorial layouts share the Home palette and typography. */
+.post-hero { position: relative; padding: 155px 0 0; }
+.post-hero h1 { font-size: clamp(2.6rem, 5.5vw, 5.1rem); line-height: 1.07; max-width: 22ch; }
+.post-hero .lead { max-width: 69ch; margin-top: 26px; }
+.post-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: .85rem; margin: 26px 0 34px; }
+.post-meta a { color: var(--v1); text-decoration: underline; text-underline-offset: 4px; }
+.post-visual { margin: 0; }
+.post-visual img { width: 100%; height: auto; display: block; border-radius: 30px; }
+.post-visual figcaption { color: var(--muted); font-size: .76rem; margin-top: 12px; }
+.post-layout { display: grid; grid-template-columns: 225px minmax(0, 760px); justify-content: space-between; gap: 56px; padding-top: 70px; padding-bottom: 90px; }
+.post-toc { align-self: start; position: sticky; top: 115px; border-top: 2px solid var(--v1); padding-top: 18px; }
+.post-toc h2 { font: 600 .8rem/1.4 var(--mono); letter-spacing: 0; }
+.post-toc ol { padding-left: 20px; margin: 20px 0; }
+.post-toc li { padding: 5px 0; font-size: .86rem; line-height: 1.5; color: var(--muted); }
+.post-toc a { display: block; padding-block: 5px; text-decoration: underline; text-underline-offset: 4px; }
+.post-copy { font-size: 1.04rem; line-height: 1.8; min-width: 0; }
+.post-copy > p:first-child { margin-top: 0; font-size: 1.18rem; color: var(--ink); }
+.post-copy p { margin: 18px 0; color: var(--muted); }
+.post-copy strong { color: var(--ink); }
+.post-copy h2 { font-size: clamp(1.65rem, 2.8vw, 2.25rem); line-height: 1.17; max-width: 27ch; margin: 54px 0 20px; scroll-margin-top: 120px; }
+.post-copy h3 { font-size: 1.25rem; line-height: 1.35; margin: 28px 0 12px; }
+.post-copy a { color: var(--v1); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.post-copy ul, .post-copy ol { padding-left: 24px; color: var(--muted); }
+.post-copy li + li { margin-top: 10px; }
+.post-copy blockquote { margin: 24px 0; padding: 24px 28px; background: var(--v-tint); border-left: 3px solid var(--v1); border-radius: 0 20px 20px 0; }
+.post-copy blockquote p { margin: 0; color: var(--ink); }
+.post-note { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 24px; font-size: .85rem; }
+.post-note p { line-height: 1.65; }
+.blog-feature { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); border-radius: 30px; overflow: hidden; background: var(--surface); }
+.blog-feature__image { display: flex; background: var(--v-tint); }
+.blog-feature__image img { width: 100%; height: 100%; object-fit: cover; }
+.blog-feature__body { padding: clamp(26px, 4vw, 48px); align-self: center; }
+.blog-feature__body h3 { font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.15; margin: 20px 0; }
+.blog-feature__body p { color: var(--muted); }
+.blog-feature__body .post-meta { margin: 20px 0; font-size: .78rem; }
+@media (max-width: 1080px) { .post-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 32px; } }
+@media (max-width: 860px) {
+ .post-hero { padding-top: 125px; }
+ .post-visual img { border-radius: 22px; }
+ .post-layout { display: block; padding-top: 38px; padding-bottom: 55px; }
+ .post-toc { position: static; margin-bottom: 36px; }
+ .post-toc ol { columns: 2; column-gap: 28px; }
+ .post-toc li { break-inside: avoid; }
+ .post-copy { font-size: 1rem; }
+ .post-copy > p:first-child { font-size: 1.08rem; }
+ .post-copy h2 { margin-top: 40px; }
+ .blog-feature { grid-template-columns: 1fr; }
+ .blog-feature__image img { aspect-ratio: 16/9; }
+}
+@media (max-width: 480px) { .post-toc ol { columns: 1; } .post-meta { column-gap: 14px; } }
+
+.nav__links a[aria-current="location"] { color: var(--ink); background: var(--v-tint); }

@@ -10,7 +10,7 @@ caricato quando il visitatore apre la prenotazione.
 - Home: presentazione, servizi in sintesi, CheAI, portfolio, team e contatore ROI.
 - Servizi: consulenza AI, gestionali/CRM/web app, automazioni/API e siti/landing.
 - Progetti: dieci progetti con immagini, descrizioni e attribuzioni.
-- Blog: indice editoriale degli articoli, con stato vuoto fino alla prima pubblicazione.
+- Blog: indice editoriale con il primo articolo sulle novità AI utili alle PMI.
 - Chi siamo: i tre soci, competenze e metodo.
 - Contatti: telefono, email, sede, calendario e preparazione di un'email.
 
@@ -64,7 +64,7 @@ bot: non è stata introdotta una nuova politica sui dati di addestramento.
 Non sono necessari file speciali o markup riservato ai motori AI.
 
 Search Console usa la proprietà `https://gruppoautoma.it/` nell'account Google
-Automa. `sitemap.xml` contiene le sei pagine principali indicizzabili; aggiornare
+Automa. `sitemap.xml` contiene le sei pagine principali e gli articoli indicizzabili; aggiornare
 `lastmod` quando il contenuto cambia realmente. Privacy e cookie restano noindex.
 Per i motori che partecipano a IndexNow, il file pubblico `indexnow-key.txt`
 consente la verifica dell'host; conservarlo dopo la pubblicazione. L'invio alle
@@ -79,8 +79,8 @@ dati reali degli utenti sono valutazioni distinte.
 ## Pubblicare un articolo nel Blog
 
 Il Blog è statico come il resto del sito: non richiede un nuovo CMS o servizi
-esterni. L’indice è `blog/index.html`, sezione `#articoli`. Al momento non ci
-sono articoli pubblicati: il messaggio di attesa è intenzionale.
+esterni. L’indice è `blog/index.html`, sezione `#articoli`. Il primo articolo è pubblicato: conservare l’elenco dei contenuti reali e aggiungere
+le nuove letture senza reintrodurre lo stato vuoto.
 
 1. Creare `blog/<slug>/index.html` con il contenuto approvato, riutilizzando
    navigazione, footer, font e componenti del sito. Un H1, sezioni leggibili,
@@ -96,3 +96,5 @@ sono articoli pubblicati: il messaggio di attesa è intenzionale.
 
 La pagina indice usa CollectionPage + Blog, non BlogPosting fittizi. La sua
 anteprima è `assets/og/blog.jpg`.
+
+Gli articoli usano `css/editorial.css`, condiviso con l’anteprima nell’indice: testo leggibile senza JS, indice con ancore, immagini con dimensioni e didascalia, autore aziendale e date reali. La rubrica sulle notizie distingue data di annuncio e rilascio, disponibilità italiana e prove proposte da risultati osservati. Fonti primarie vicino alle affermazioni; nessun risparmio inventato o disponibilità dedotta da un titolo. La ricerca e la revisione simulata sono conservate nel repository sorgente, fuori da `site/`. Una revisione simulata non è un test con lettori reali. La cadenza giornaliera resta da concordare dopo la valutazione del primo articolo.
