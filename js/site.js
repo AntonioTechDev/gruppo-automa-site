@@ -23,6 +23,74 @@
   let returnFocus;
   let previousOverflow;
   let inertElements = [];
+  function prepareBooking() {
+    const url = window.ANTIPODE_CONFIG?.bookingUrl;
+    const body = $('#bk-body');
+    if (!url || !booking || !body) return;
+    const existing = $('iframe', body);
+    if (existing) return existing;
+
+    const loading = document.createElement('div');
+    loading.className = 'booking-loading';
+    loading.setAttribute('role', 'status');
+    loading.setAttribute('aria-live', 'polite');
+    loading.innerHTML = '<span class="booking-loading__spinner" aria-hidden="true"></span><strong>Caricamento degli orari…</strong><p>Tra poco potrai scegliere giorno e orario.</p>';
+    body.setAttribute('data-calendar-loading', '');
+    body.append(loading);
+    booking.dataset.calendarState = 'loading';
+
+    const fallback = document.createElement('a');
+    fallback.href = url;
+    fallback.target = '_blank';
+    fallback.rel = 'noopener';
+    fallback.className = 'booking-fallback';
+    fallback.textContent = 'Apri il calendario in una nuova scheda ↗';
+    body.before(fallback);
+
+    const frame = document.createElement('iframe');
+    frame.title = 'Scegli un orario e prenota una call con Gruppo Automa';
+    frame.loading = 'eager'; // Also load while the dialog is closed.
+    frame.tabIndex = -1;
+    frame.setAttribute('aria-busy', 'true');
+    const showLongWait = () => {
+      $('p', loading).textContent = 'Google sta impiegando più del previsto. Puoi aprire il calendario dal link qui sopra.';
+    };
+    const waitTimer = setTimeout(showLongWait, 15000);
+    frame.addEventListener('error', showLongWait, { once: true });
+    frame.addEventListener('load', () => {
+      clearTimeout(waitTimer);
+      body.removeAttribute('data-calendar-loading');
+      frame.setAttribute('aria-busy', 'false');
+      booking.dataset.calendarState = 'loaded';
+      loading.hidden = true;
+      frame.removeAttribute('tabindex');
+    }, { once: true });
+    const address = new URL(url);
+    if (address.hostname === 'calendar.google.com') address.searchParams.set('gv', 'true');
+    frame.src = address.href;
+    body.append(frame);
+    return frame;
+  }
+
+  // The Home's images, fonts and scripts finish first. Only then use idle time
+  // to warm a single iframe; an early click can always start it immediately.
+  function scheduleBookingPreload() {
+    const connection = navigator.connection;
+    if (connection?.saveData || /^(slow-)?2g$/.test(connection?.effectiveType || '')) return;
+    setTimeout(() => {
+      if (document.hidden) return;
+      const preload = () => { if (!document.hidden) prepareBooking(); };
+      if ('requestIdleCallback' in window) requestIdleCallback(preload);
+      else setTimeout(preload, 0);
+    }, 2500);
+  }
+  if (booking) {
+    if (document.readyState === 'complete') scheduleBookingPreload();
+    else window.addEventListener('load', scheduleBookingPreload, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && document.readyState === 'complete') scheduleBookingPreload();
+    });
+  }
   function closeBooking() {
     if (!booking || booking.hidden) return;
     booking.hidden = true;
@@ -39,22 +107,7 @@
     closeMenu();
     returnFocus = document.activeElement;
     previousOverflow = document.documentElement.style.overflow;
-    const body = $('#bk-body');
-    if (!body.querySelector('iframe')) {
-      const frame = document.createElement('iframe');
-      const address = new URL(url);
-      if (address.hostname === 'calendar.google.com') address.searchParams.set('gv', 'true');
-      frame.src = address.href;
-      frame.title = 'Scegli un orario e prenota una call con Gruppo Automa';
-      body.append(frame);
-      const fallback = document.createElement('a');
-      fallback.href = url;
-      fallback.target = '_blank';
-      fallback.rel = 'noopener';
-      fallback.className = 'booking-fallback';
-      fallback.textContent = 'Il calendario non si apre? Aprilo in una nuova scheda ↗';
-      body.before(fallback);
-    }
+    prepareBooking();
     booking.hidden = false;
     inertElements = [...document.body.children].filter((el) => el !== booking && !el.inert && !['SCRIPT', 'STYLE'].includes(el.tagName));
     inertElements.forEach((el) => { el.inert = true; });
@@ -74,7 +127,7 @@
     }
     if (e.key === 'Tab' && booking && !booking.hidden) {
       const first = $('button[data-close]', booking);
-      const last = $('iframe', booking);
+      const last = booking.dataset.calendarState === 'loaded' ? $('iframe', booking) : $('.booking-fallback', booking);
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
     }

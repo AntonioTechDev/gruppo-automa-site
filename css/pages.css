@@ -6,7 +6,15 @@
 .tag { color: var(--ink); }
 .booking-fallback { display: block; padding: 6px 20px 12px; font-size: .82rem; color: var(--v1); text-decoration: underline; }
 .bk__panel { display: flex; flex-direction: column; }
-.bk__body { flex: 1; min-height: 0; }
+.bk__body { flex: 1; min-height: 0; position: relative; }
+.bk__body[data-calendar-loading] iframe { visibility: hidden; }
+.booking-loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 28px; text-align: center; background: var(--surface); }
+.booking-loading[hidden] { display: none; }
+.booking-loading strong { font-size: 1.15rem; color: var(--ink); }
+.booking-loading p { max-width: 38ch; margin: 0; font-size: .9rem; line-height: 1.65; color: var(--muted); }
+.booking-loading__spinner { width: 36px; height: 36px; border: 3px solid var(--v-tint); border-top-color: var(--v1); border-radius: 50%; animation: booking-spin .9s linear infinite; }
+@keyframes booking-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .booking-loading__spinner { animation: none; } }
 .field [aria-invalid="true"] { border-color: var(--ink); outline: 2px solid var(--ink); outline-offset: 2px; }
 .inner-page { --page-space: clamp(70px, 10vw, 130px); }
 .page-hero { position: relative; padding: 160px 0 78px; overflow: clip; }
@@ -178,3 +186,6 @@ main section[id] { scroll-margin-top: 110px; }
   .blog-topic h3 { margin-top: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .blog-cover { transform: none; } }
+
+.booking-privacy-note { margin: 14px 0 0; font-size: .76rem; line-height: 1.6; color: var(--muted); }
+.booking-privacy-note a { text-decoration: underline; text-underline-offset: 3px; }

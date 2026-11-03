@@ -3,7 +3,9 @@
 Sito statico italiano di Gruppo Automa S.r.l.s., online su
 [gruppoautoma.it](https://gruppoautoma.it/). HTML, CSS e JavaScript, senza build.
 Font, immagini e librerie di animazione sono locali. Google Calendar viene
-caricato quando il visitatore apre la prenotazione.
+preparato in background dopo il caricamento della pagina e durante un periodo
+inattivo, quando connessione e risparmio dati lo consentono; può quindi
+collegarsi a Google prima del clic. Un’apertura anticipata lo carica subito.
 
 ## Pagine
 
@@ -98,3 +100,5 @@ La pagina indice usa CollectionPage + Blog, non BlogPosting fittizi. La sua
 anteprima è `assets/og/blog.jpg`.
 
 Gli articoli usano `css/editorial.css`, condiviso con l’anteprima nell’indice: testo leggibile senza JS, indice con ancore, immagini con dimensioni e didascalia, autore aziendale e date reali. La rubrica sulle notizie distingue data di annuncio e rilascio, disponibilità italiana e prove proposte da risultati osservati. Fonti primarie vicino alle affermazioni; nessun risparmio inventato o disponibilità dedotta da un titolo. La ricerca e la revisione simulata sono conservate nel repository sorgente, fuori da `site/`. Una revisione simulata non è un test con lettori reali. La cadenza giornaliera resta da concordare dopo la valutazione del primo articolo.
+
+Il calendario usa un unico iframe riutilizzato. `site.js` avvia il precaricamento dopo `load`, 2,5 secondi di margine e `requestIdleCallback` (con fallback dove assente), solo su pagine visibili e senza risparmio dati/reti 2G segnalati. Il popup mostra un indicatore accessibile finché il frame Google completa il caricamento, un messaggio dopo 15 secondi e un link esterno sempre disponibile. L’evento load non consente di verificare dall’HTML Automa i dati interni del servizio Google: controllare visivamente gli orari e non dichiarare una disponibilità solo perché il frame esiste. Privacy/cookie policy descrivono il collegamento anticipato.
