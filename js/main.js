@@ -68,11 +68,20 @@
   }
   $$("[data-split]").forEach((el) => { el.innerHTML = splitHTML(el); });
 
-  // The mobile LCP is the introduction: keep it visible while the headline and CTA animate.
-  gsap.timeline({ defaults: { ease: "power4.out" }, delay: 0.05 })
-    .fromTo(".hero__title .w > span", { yPercent: 110 }, { yPercent: 0, duration: 1.1, stagger: 0.045 })
-    .fromTo([".hero .proof-pill", ...(matchMedia("(max-width: 860px)").matches ? [] : [".hero__sub"]), ".hero__ctas", ".assure"], { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08 }, 0.25)
-    .fromTo(".shot", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2 }, 0.5);
+  // On phones the message and actions are readable from the first paint.
+  // Keep a subtle settling motion without hiding text behind a word reveal.
+  const heroMotion = gsap.timeline({ defaults: { ease: "power4.out" }, delay: .05 });
+  if (touchMotion || matchMedia("(max-width: 860px)").matches) {
+    heroMotion
+      .fromTo(".hero__title", { y: 8 }, { y: 0, duration: .55, clearProps: "transform" })
+      .fromTo([".hero .proof-pill", ".hero__ctas", ".assure"], { y: 8 }, { y: 0, duration: .45, stagger: .03, clearProps: "transform" }, 0)
+      .fromTo(".shot", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .65 }, .15);
+  } else {
+    heroMotion
+      .fromTo(".hero__title .w > span", { yPercent: 110 }, { yPercent: 0, duration: 1.1, stagger: .045 })
+      .fromTo([".hero .proof-pill", ".hero__sub", ".hero__ctas", ".assure"], { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: .9, stagger: .08 }, .25)
+      .fromTo(".shot", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2 }, .5);
+  }
 
   $$("main section:not(.hero) [data-split]").forEach((h) => {
     const words = $$(".w > span", h);
