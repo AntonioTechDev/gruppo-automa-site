@@ -34,10 +34,10 @@ window.PROJECTS = [
   {
     "title": "Il Vizietto",
     "cat": "gestionali",
-    "url": "",
+    "url": "https://vizietto-demo-automa.pages.dev/",
     "img": "il-vizietto-automa.webp",
     "when": "Gruppo Automa",
-    "label": "Parliamo del progetto",
+    "label": "Esplora la demo",
     "desc": {
       "it": "Gestionale per la biglietteria e le sedi Il Vizietto: ordini, incassi, clienti e convenzioni, con raccolta automatica dei dati operativi."
     },
