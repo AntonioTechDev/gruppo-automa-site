@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generato da scripts/build_seo.py: non modificare a mano. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gruppoautoma.it/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://gruppoautoma.it/servizi/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://gruppoautoma.it/servizi/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://gruppoautoma.it/progetti/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://gruppoautoma.it/chi-siamo/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://gruppoautoma.it/contatti/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://gruppoautoma.it/blog/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://gruppoautoma.it/chi-siamo/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://gruppoautoma.it/contatti/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://gruppoautoma.it/blog/regole-ai-azienda-pmi/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://gruppoautoma.it/blog/scegliere-progetto-ai-pmi/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://gruppoautoma.it/blog/ai-amministrazione-piccole-imprese/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://gruppoautoma.it/blog/adottare-ai-azienda-metodo-shopify/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://gruppoautoma.it/blog/regole-ai-azienda-pmi/</loc><lastmod>2026-11-06</lastmod></url>
 </urlset>

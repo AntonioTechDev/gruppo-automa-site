@@ -1,0 +1,49 @@
+# Gruppo Automa
+
+> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+
+Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center, 81031 Aversa (CE). Sito e contenuti in italiano.
+
+## Pagine principali
+
+- [Home](https://gruppoautoma.it/): Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+- [Servizi](https://gruppoautoma.it/servizi/): Consulenza AI, gestionali e CRM, automazioni API e siti su misura. Scopri come lavora Gruppo Automa, dalla strategia al rilascio.
+- [Progetti](https://gruppoautoma.it/progetti/): EdilManagement, Simulatore Ponteggi, Il Vizietto, Svelalo e CheAI: cinque progetti Gruppo Automa per organizzare il lavoro delle aziende.
+- [Blog](https://gruppoautoma.it/blog/): Il blog di Gruppo Automa: guide, idee e approfondimenti su intelligenza artificiale, software e automazioni per il lavoro delle aziende.
+- [Chi siamo](https://gruppoautoma.it/chi-siamo/): Conosci Nicola Fabozzi, Salvatore Valerio Navarro e Antonio De Biase: i tre soci di Gruppo Automa, tra marketing, vendite e tecnologia ad Aversa.
+- [Contatti](https://gruppoautoma.it/contatti/): Contatta Gruppo Automa: +39 349 233 1446, info@gruppoautoma.it e sede ad Aversa. Prenota una call o prepara una richiesta via email.
+
+## Servizi
+
+- [Consulenza e strategia AI](https://gruppoautoma.it/servizi/#consulenza-ai): Analisi dei processi, degli strumenti e dei dati per definire priorità e roadmap degli interventi.
+- [Gestionali, CRM e web app](https://gruppoautoma.it/servizi/#software): Software su misura per gestire utenti, clienti e attività, integrato con i sistemi esistenti.
+- [Automazioni e integrazioni API](https://gruppoautoma.it/servizi/#automazioni): Collegamenti tra email, CRM e gestionali, flussi con n8n e agenti AI con controllo umano.
+- [Siti e landing](https://gruppoautoma.it/servizi/#siti): Progettazione e sviluppo di siti responsive e landing con contatti, prenotazioni e integrazioni.
+
+## Progetti e prodotti
+
+- [EdilManagement](https://gruppoautoma.it/progetti/#edilmanagement-automa): Gestionale per imprese edili: cantieri, clienti, fornitori, fatture e scadenze riuniti in un unico ambiente di lavoro. Sito: https://edilmanagement-demo.bluepixelstudio.it/
+- [Simulatore Ponteggi](https://gruppoautoma.it/progetti/#simulatore-ponteggi-automa): Configuratore per Noleggio Ponteggi Aversa: dimensioni, facciate e tipologia di ponteggio diventano un riepilogo del preventivo. Sito: https://www.noleggioponteggiaversa.it/simulator/
+- [Il Vizietto](https://gruppoautoma.it/progetti/#il-vizietto-automa): Gestionale per la biglietteria e le sedi Il Vizietto: ordini, incassi, clienti e convenzioni, con raccolta automatica dei dati operativi. Sito: https://vizietto-demo-automa.pages.dev/
+- [Svelalo](https://gruppoautoma.it/progetti/#svelalo-automa): Ricerca di aziende per attività e territorio, con recapiti pubblici e fonti consultabili in un unico elenco di contatti. Sito: https://svelalo.com/
+- [CheAI](https://gruppoautoma.it/progetti/#cheai-automa): La piattaforma Automa che riunisce conversazioni, clienti, appuntamenti e assistenza AI per organizzare il lavoro delle attività. Sito: https://cheai.io/
+
+## Blog
+
+- [I dipendenti usano già l’AI: cinque regole semplici per una PMI](https://gruppoautoma.it/blog/regole-ai-azienda-pmi/) (2026-11-06): Cinque regole per l’uso dell’AI in azienda: strumenti autorizzati, dati, verifica delle risposte, azioni e referente. Con una scheda operativa da adattare.
+- [Contenuti AI tutti uguali: come mantenere la voce dell’azienda](https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/) (2026-11-06): Come scrivere contenuti con AI senza perdere la voce aziendale: scheda di tono, esempio prima/dopo, prompt e controlli prima della pubblicazione.
+- [Raccogliere fatture: cosa automatizzare prima del commercialista](https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/) (2026-11-06): Un flusso pratico per raccogliere fatture, individuare duplicati e documenti mancanti e preparare la consegna al commercialista con controlli chiari.
+- [Come scegliere un progetto AI per una PMI](https://gruppoautoma.it/blog/scegliere-progetto-ai-pmi/) (2026-11-05): Da quale progetto AI partire in una PMI? Un metodo per confrontare impatto, dati, rischio e costo di verifica, con una prova misurabile prima di investire.
+- [AI in amministrazione: da dove iniziare in una piccola impresa](https://gruppoautoma.it/blog/ai-amministrazione-piccole-imprese/) (2026-11-05): Come usare l’AI per preventivi, email e documenti in una piccola impresa: flusso di lavoro, controlli e misure per valutare il tempo davvero recuperato.
+- [Come introdurre l’AI in azienda: cosa imparare dal memo Shopify](https://gruppoautoma.it/blog/adottare-ai-azienda-metodo-shopify/) (2026-11-05): Dal memo AI di Shopify a una prova adatta alle PMI: responsabilità, formazione, regole d’uso e misure per introdurre l’AI nel lavoro quotidiano.
+
+## Contatti
+
+- Telefono: +393492331446
+- Email: info@gruppoautoma.it
+- Call conoscitiva e richiesta via email: https://gruppoautoma.it/contatti/
+- Profili ufficiali: https://www.instagram.com/automagruppoitalia/, https://www.facebook.com/profile.php?id=61579129687485, https://www.tiktok.com/@gruppo.automa, https://www.linkedin.com/in/automagruppo-italia-b2bbab410/
+
+## Optional
+
+- [Testo completo delle pagine](https://gruppoautoma.it/llms-full.txt): contenuto di tutte le pagine pubbliche in un file.

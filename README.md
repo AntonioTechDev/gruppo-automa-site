@@ -32,7 +32,8 @@ e le istruzioni di progetto prima di aggiungere pagine.
 - Portfolio: `js/projects.js` e pagina Progetti. Tenere coerenti contenuti,
   le cinque copertine illustrative e le descrizioni dei progetti Automa.
 - Pagine interne: cartelle `servizi`, `progetti`, `blog`, `chi-siamo`, `contatti`.
-- SEO tecnica: metadati delle singole pagine, `sitemap.xml` e `robots.txt`.
+- SEO tecnica: metadati delle singole pagine e `robots.txt`; `sitemap.xml`, `llms.txt`
+  e `llms-full.txt` sono generati dal deploy (vedi sotto).
 
 Il modulo contatti apre una bozza nel programma di posta del visitatore:
 non invia direttamente un messaggio e non salva richieste sul sito.
@@ -52,49 +53,75 @@ il sito nel repository GitHub Pages. Non usare il comando di deploy Antipode.
 
 ## SEO e scoperta tramite ricerca AI
 
-Le pagine principali hanno canonical, metadati unici, anteprima Open Graph/Twitter
-1200×630 in `assets/og/`, logo raster e favicon serviti da URL pubblici. I dati
-JSON-LD sono nell'HTML: Organization e WebSite condivisi, tipo pagina,
-breadcrumb, servizi e FAQ coerenti con i testi visibili. Anche senza JavaScript
-restano disponibili contenuti e collegamenti; il portfolio completo è statico
-in Progetti. Aggiornare testi e relativo JSON-LD insieme, senza prezzi, rating o
-risultati inventati. Le FAQ non garantiscono risultati avanzati su Google.
+Le pagine pubbliche hanno canonical, title e description unici, anteprima Open
+Graph/Twitter 1200×630 in `assets/og/` (o `assets/blog/` per gli articoli), logo
+raster e favicon serviti da URL pubblici. I dati JSON-LD sono nell'HTML:
+Organization + ProfessionalService condivisa (indirizzo, contatti, soci e profili
+social ufficiali in `sameAs`), WebSite, tipo pagina, BreadcrumbList sulle pagine
+interne, Service in Servizi, Person per i soci in Chi siamo, BlogPosting negli
+articoli e FAQPage solo dove le domande sono visibili nel testo. Orari e
+coordinate non sono pubblicati sul sito e quindi non sono nel markup. Aggiornare
+testi e relativo JSON-LD insieme, senza prezzi, rating o risultati inventati.
+Anche senza JavaScript restano disponibili contenuti e collegamenti.
 
-`robots.txt` consente ricerca/recupero di OpenAI e Claude, oltre ai crawler
-ordinari. La regola generale preesistente resta permissiva anche per gli altri
-bot: non è stata introdotta una nuova politica sui dati di addestramento.
-Non sono necessari file speciali o markup riservato ai motori AI.
+File generati, da non modificare a mano: `sitemap.xml`, `llms.txt` e
+`llms-full.txt`. Li produce `scripts/build_seo.py` (nel repository sorgente)
+leggendo le pagine: sono pubbliche `index.html`, le pagine `*.html` in radice e
+ogni `**/index.html` senza `noindex`. `lastmod` è la data
+`article:modified_time`/`dateModified` della pagina, altrimenti la data
+dell'ultimo commit del file. `llms.txt` (formato llmstxt.org) riassume chi è
+Gruppo Automa, pagine, servizi, progetti, articoli e contatti; `llms-full.txt`
+contiene il testo delle pagine. Lo script blocca la pubblicazione se una pagina
+pubblica non ha title, description, canonical corretto, og:image o JSON-LD
+valido, se title o description si ripetono o se un articolo non è collegato
+dall'indice del Blog. Privacy e cookie restano noindex, fuori dalla sitemap ma
+scansionabili.
 
-Search Console usa la proprietà `https://gruppoautoma.it/` nell'account Google
-Automa. `sitemap.xml` contiene le sei pagine principali e gli articoli indicizzabili; aggiornare
-`lastmod` quando il contenuto cambia realmente. Privacy e cookie restano noindex.
-Per i motori che partecipano a IndexNow, il file pubblico `indexnow-key.txt`
-consente la verifica dell'host; conservarlo dopo la pubblicazione. L'invio alle
-API usa `keyLocation` alla radice e gli URL canonical delle pagine cambiate.
-Una ricevuta di invio non prova scansione, indicizzazione o citazione AI.
+`robots.txt` consente tutto a motori di ricerca (Googlebot, Bingbot), ricerca e
+recupero AI (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User,
+PerplexityBot, Perplexity-User) e crawler di addestramento (GPTBot, ClaudeBot,
+Google-Extended, Applebot-Extended), per scelta del titolare del 6/11/2026. Un
+crawler con un gruppo dedicato ignora `*`: un eventuale `Disallow` va ripetuto
+in ogni gruppo.
 
-Le verifiche e gli esiti di invio sono conservati nel ticket #6 del repository
-sorgente e nel rapporto SEO/GEO del progetto. Le metriche di laboratorio e i
-dati reali degli utenti sono valutazioni distinte.
+IndexNow (Bing, Copilot e gli altri motori aderenti): la chiave pubblica è in
+`indexnow-key.txt` e nello stesso file con nome `<chiave>.txt`; conservarli
+entrambi. Dopo il push `scripts/indexnow.py` aspetta che GitHub Pages serva la
+nuova sitemap e invia gli URL nuovi, modificati o rimossi rispetto all'ultima
+sitemap notificata. Se non è cambiato nulla non invia niente; un errore di rete
+non blocca la pubblicazione e il comando da ripetere compare nel log. Google
+non ha un'API di notifica per pagine normali: legge la sitemap, già registrata
+nella proprietà Search Console `https://gruppoautoma.it/` dell'account Google
+Automa. Una ricevuta di invio non prova scansione, indicizzazione o citazione AI.
+
+Le verifiche e gli esiti di invio sono nei ticket #6 e #14 del repository
+sorgente. Le metriche di laboratorio e i dati reali degli utenti sono
+valutazioni distinte.
 
 
 ## Pubblicare un articolo nel Blog
 
-Il Blog è statico come il resto del sito: non richiede un nuovo CMS o servizi
-esterni. L’indice è `blog/index.html`, sezione `#articoli`. Il primo articolo è pubblicato: conservare l’elenco dei contenuti reali e aggiungere
-le nuove letture senza reintrodurre lo stato vuoto.
+Il Blog è statico come il resto del sito: non richiede un CMS o servizi esterni.
+L’indice è `blog/index.html`, sezione `#articoli`.
 
-1. Creare `blog/<slug>/index.html` con il contenuto approvato, riutilizzando
-   navigazione, footer, font e componenti del sito. Un H1, sezioni leggibili,
-   autore reale e data di pubblicazione visibili.
-2. Aggiungere title, description, canonical, anteprima social e JSON-LD
-   BlogPosting con gli stessi dati reali; niente prezzi, rating o date inventati.
-3. Alla prima pubblicazione sostituire `.blog-empty` con l’elenco degli articoli
-   reali: titolo/link, breve estratto, autore/data e immagine se disponibile.
-   Ordinare dal più recente; mantenere l’elenco e i link nell’HTML, senza
-   dipendere da JavaScript. Il Blog può riferire i post pubblicati con `blogPost`.
-4. Inserire l’URL nella sitemap con lastmod reale, verificare link/asset e
-   desktop/mobile, pubblicare con `deploy-automa.sh` e notificare IndexNow.
+1. Scrivere l'articolo in `blog/<slug>/index.html` con il contenuto approvato,
+   riutilizzando navigazione, footer, font e componenti del sito. Un H1, sezioni
+   leggibili, autore reale e data di pubblicazione visibili.
+2. Nella testata: title e description unici, canonical
+   `https://gruppoautoma.it/blog/<slug>/`, anteprima social,
+   `article:published_time`/`article:modified_time` e JSON-LD BlogPosting con
+   gli stessi dati reali; FAQPage solo se l'articolo ha domande visibili. Niente
+   prezzi, rating o date inventati.
+3. Aggiungere l'articolo in cima all'elenco di `blog/index.html` (titolo/link,
+   estratto, autore/data, immagine) e nel `blogPost` del JSON-LD Blog. L'elenco
+   resta nell'HTML, senza dipendere da JavaScript.
+4. Controllare link, asset, desktop e mobile, fare commit e lanciare
+   `bash deploy-automa.sh`. Sitemap, `llms.txt`, `llms-full.txt` e la notifica
+   IndexNow sono automatici; se il controllo trova un errore il deploy si
+   ferma prima di pubblicare e dice cosa correggere.
+
+Per correggere un articolo già pubblicato aggiornare `article:modified_time` e
+`dateModified`: così cambia il `lastmod` e IndexNow riceve l'URL.
 
 La pagina indice usa CollectionPage + Blog, non BlogPosting fittizi. La sua
 anteprima è `assets/og/blog.jpg`.

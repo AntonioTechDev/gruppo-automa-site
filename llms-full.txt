@@ -1,0 +1,1388 @@
+# Gruppo Automa
+
+> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+
+Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center, 81031 Aversa (CE). Sito e contenuti in italiano.
+
+Testo delle pagine pubbliche di gruppoautoma.it, estratto dall'HTML pubblicato.
+
+---
+
+URL: https://gruppoautoma.it/
+Titolo: Gruppo Automa — Software, AI e automazioni su misura · Aversa
+Aggiornato: 2026-11-06
+
+Software e AI su misura · Aversa (CE)
+
+# Il futuro della tua azienda, un'automazione alla volta.
+
+Siamo un team giovane di Aversa che sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Abbiamo creato CheAI, il chatbot che sembra umano. Dall'idea al rilascio, senza giri di parole.
+
+Prenota una call di 30 minuti Scopri CheAI
+
+- Preventivo scritto prima di iniziare
+- Codice e account intestati a te
+- Un team in sede ad Aversa
+
+EdilManagement Svelalo cheai.io Sfoglia tutti i progetti5
+
+Aziende ed enti per cui il nostro team ha lavorato
+
+Agenzia delle Entrate, Banca Sella, Casillo Allestimenti, AXA, Miroma Ceramiche, Scame, Mea Casa, MEF, Muoio Project Shoes, Coop, Centro Medico Sette Re, Brecos
+
+## La tua azienda: prima e dopo Automa.
+
+Meno fornitori da coordinare, meno lavoro ripetitivo, più tempo per far crescere l'azienda.
+
+Senza un partner tecnico
+
+### Idee ferme, ore perse
+
+- Non sai da dove partire con l'AI
+- Cinque fornitori, nessun responsabile
+- Ore di lavoro ripetitivo ogni settimana
+- Strumenti che non parlano tra loro
+
+Con Gruppo Automa
+
+### Un solo partner, dall'idea al rilascio
+
+- Una roadmap chiara con priorità e costi
+- Un referente per strategia e sviluppo
+- Processi automatizzati su misura
+- Strumenti collegati e dati in ordine
+
+Parliamo del tuo progetto
+
+## Cosa costruiamo per te.
+
+Quattro servizi, un unico team. Scegli da dove partire, al resto pensiamo noi.
+
+01
+
+### Consulenza e strategia AI
+
+Analizziamo processi, dati e strumenti e ti diciamo dove l'AI fa risparmiare davvero. Ricevi una roadmap con priorità, costi e ritorno atteso.
+
+02
+
+### Gestionali, CRM e web app
+
+Piattaforme su misura per organizzare clienti, processi e dati in modo semplice e scalabile. Dall'MVP al prodotto in produzione.
+
+03
+
+### Automazioni e integrazioni API
+
+Colleghiamo email, CRM, fogli e gestionali con flussi n8n e agenti AI. Il lavoro ripetitivo lo fanno loro, il tuo team si occupa del resto.
+
+04
+
+### Siti e landing che vendono
+
+Veloci, accessibili, pensati per farsi trovare su Google e trasformare le visite in contatti. Già collegati ai tuoi strumenti.
+
+Parliamone in una call Consulenza e strategia AI1/4
+
+Come lavoriamo
+
+## Lavorare con noi è più semplice di quanto pensi.
+
+Niente progetti infiniti né gergo tecnico. Tre fasi, un referente, risultati che puoi misurare.
+
+- 01Call conoscitiva
+- 02Progettazione e sviluppo
+- 03Consegna e crescita
+
+Gruppo AutomaCall conoscitiva · 30 minuti 30 minGoogle MeetAversa o online Scegli un giorno
+
+Ricevi l'invito con il link Meet per email
+
+Per ridurre l’attesa, il calendario Google può caricarsi in background prima del clic. Informativa privacy.
+
+/01
+
+### Call conoscitiva
+
+Scegli giorno e ora: in 30 minuti capiamo obiettivi, processi e strumenti che usi. Poi ricevi un preventivo scritto con costi, tempi e risultati attesi.
+
+Piano di lavoroEsempio: una web app di media complessità S1S2S3S4S5S6 Workshop e requisiti UX/UI e prototipo Frontend Backend e integrazioni AI e automazioni Test e rilascio Prototipo approvato da teOnline
+
+/02
+
+### Progettazione e sviluppo
+
+Lavoriamo per tappe e ti mostriamo i progressi ogni settimana. Approvi il design prima di scrivere una riga di codice.
+
+Pacchetto di consegnaTutto intestato a te, nessun vincoloPronto
+
+- Software online sul tuo dominio
+- Codice, account e accessi a tuo nome
+- Formazione al tuo team
+- Documentazione e guida d'uso
+
+Dopo il lancio, se vuoi
+
+Report mensilerisultati misurati Manutenzioneaggiornamenti e backup Nuove funzioniquando servono
+
+/03
+
+### Consegna e crescita
+
+Mettiamo online il progetto, formiamo il tuo team e ti consegniamo tutto. Poi, se vuoi, restiamo al tuo fianco per farlo crescere.
+
+Tecnologie e integrazioni
+
+## Lavoriamo con gli strumenti migliori. E con quelli che usi già.
+
+- OpenAI
+- Claude
+- Gemini
+- n8n
+- Make
+- Zapier
+- React
+- Next.js
+- TypeScript
+- Node.js
+- Python
+- Supabase
+- PostgreSQL
+- Docker
+- WhatsApp
+- Instagram
+- Gmail
+- Google Sheets
+- HubSpot
+- Salesforce
+- Notion
+- Slack
+- Stripe
+- Shopify
+- WordPress
+- Webflow
+
+… e qualsiasi altro strumento
+
+I nostri prodotti
+
+## Non solo progetti su misura. Prodotti nostri.
+
+Quello che impariamo lavorando con le aziende lo trasformiamo in software pronto all'uso.
+
+Disponibile ora
+
+### CheAI
+
+Il chatbot che sembra umano.
+
+Risponde ai tuoi clienti 24 ore su 24, gestisce prenotazioni e richieste e passa al tuo team le conversazioni delicate. CRM, campagne e assistente AI in un'unica piattaforma.
+
+- Risponde 24/7Risposte immediate e precise, a qualsiasi ora.
+- Riduce i costiLe richieste standard le gestisce lui, il team si occupa del resto.
+- Si integra facilmenteCon CRM, gestionali ed e-commerce che usi già.
+
+Funziona su Richiedi una demo gratuita Vai su cheai.io ↗ Nuovi prodotti in arrivoStiamo costruendo nuovi strumenti AI per PMI e professionisti. Vuoi provarli in anteprima? Scrivici
+
+Calcola il risparmio
+
+## Quanto vale automatizzare il lavoro ripetitivo?
+
+Persone che fanno lavoro ripetitivo5 Ore a settimana a persona su quelle attività6 Quota che si può automatizzare50% Costo orario medio di una persona25 € 0ore liberate al mese 0di costo del lavoro risparmiato al mese
+
+Come lo calcoliamo
+
+4,33 sono le settimane medie in un mese. La quota automatizzabile dipende dal processo: nell'audit la misuriamo attività per attività. Verifichiamo i tuoi numeri
+
+Progetti
+
+## Il lavoro parla per noi.
+
+### 5 progetti Automa
+
+Cinque progetti Gruppo Automa. Le copertine sono illustrazioni create con AI per raccontarne le funzioni, non schermate delle applicazioni. Esplora il portfolio →
+
+Il team
+
+## Tre soci, un'unica squadra.
+
+Marketing, vendite e tecnologia sotto lo stesso tetto, ad Aversa. Gruppo Automa nasce dall'incontro di tre percorsi diversi con un obiettivo comune: portare l'intelligenza artificiale nelle aziende in modo concreto.
+
+Amministratore
+
+### Nicola Fabozzi
+
+Co-fondatore · Direttore generale
+
+Imprenditore nel marketing e nella comunicazione. Dal 2019 guida Hype Studio Creativo e ha co-fondato Hype Palace, l'hub creativo di Aversa. In Automa cura brand, strategia e crescita.
+
+Brand e marketingStrategiaManagement LinkedIn Vendite
+
+### Salvatore Valerio Navarro
+
+Co-fondatore · Direttore vendite
+
+Trasforma le esigenze di business in soluzioni tecnologiche. Ha lavorato con clienti e team tra Italia, Regno Unito e Australia. In Automa segue vendite e rapporto con i clienti.
+
+VenditeRelazione clientiEnglish LinkedIn Tecnologia
+
+### Antonio De Biase
+
+Co-fondatore · Product & Tech
+
+Sviluppa software da sei anni: oltre 15 portali enterprise per PA, sanità e banche. In Automa guida architettura e sviluppo, a partire da CheAI.
+
+AI e agentiSoftware su misuraArchitettura LinkedIn 0soci fondatori 0portali enterprise sviluppati 0anni di agenzia digitale 0canali collegati da CheAI
+
+## Le domande che ci fanno più spesso.
+
+Non trovi la tua? Scrivici: risponde una persona, non un bot.
+
+**Quanto costa un progetto?**
+
+Ogni progetto parte dalle tue esigenze. Dopo la call ricevi un preventivo scritto con costi, tempi e attività incluse, prima di iniziare qualsiasi lavoro.
+
+**Quanto tempo serve?**
+
+Una landing è pronta in pochi giorni, un sito aziendale in 7–10 giorni, un'automazione semplice in circa 5 giorni. Per una web app servono di solito dalle 2 alle 6 settimane. Lavoriamo per tappe, così vedi i progressi e inizi a usare il software prima della fine.
+
+**Lavorate anche su software esistenti?**
+
+Sì. Possiamo partire da un audit di quello che hai, migliorarlo, collegarlo a nuovi strumenti o migrarlo. Non serve ripartire da zero.
+
+**L'AI è sicura per i dati della mia azienda?**
+
+Usiamo solo i dati che scegli tu e li trattiamo secondo il GDPR. Prima di iniziare ti spieghiamo quali servizi usiamo, dove passano i dati e come li proteggiamo.
+
+**Codice, account e dati di chi sono?**
+
+Tuoi. Domini, account e servizi sono intestati a te e alla consegna ricevi codice e credenziali. Se un giorno vuoi cambiare fornitore, puoi farlo senza chiedere permesso.
+
+**Dove siete? Lavorate anche fuori Campania?**
+
+Siamo ad Aversa, in Piazza Bernini (Bernini Center): puoi venirci a trovare per una consulenza. Lavoriamo anche da remoto con aziende in tutta Italia, con call e aggiornamenti ogni settimana.
+
+Rispondiamo personalmente, entro un giorno lavorativo
+
+## Hai un'idea o un processo da migliorare? Parliamone.
+
+Raccontaci in due righe di cosa hai bisogno. Ti rispondiamo con qualche domanda e una proposta di call.
+
+Preferisci chiamarci? +39 349 233 1446
+
+---
+
+URL: https://gruppoautoma.it/servizi/
+Titolo: Servizi software, AI e automazioni ad Aversa — Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Servizi
+
+I servizi di Automa
+
+# Meno lavoro ripetitivo. Più spazio alle idee.
+
+Software, AI e automazioni costruiti attorno al tuo modo di lavorare. Analizziamo il problema, colleghiamo gli strumenti e sviluppiamo quello che manca.
+
+Parliamone in una call ↗Esplora i servizi ↓Un team, dalla strategia al rilascioAversa · Progetti su misuraIDEA → SOFTWARE → IMPATTOStrumenti che si parlano
+
+Cosa possiamo fare insieme
+
+## Quattro ambiti. Un unico team.
+
+Puoi partire da un processo che rallenta il lavoro, da un software da migliorare o da un'idea da realizzare. Scegliamo insieme il punto di partenza.
+
+01
+
+### Consulenza e strategia AI
+
+Capire dove intervenire, prima di costruire.
+
+Quando le possibilità sono tante, serve una priorità chiara. Guardiamo processi, dati e strumenti per individuare dove l’AI può essere utile e dove basta semplificare il lavoro.
+
+COSA COSTRUIAMO CON TE
+
+- Analisi dei processi e degli strumenti in uso
+- Priorità e roadmap degli interventi
+- Valutazione di integrazioni e vincoli
+
+Raccontaci il tuo progetto ↗02
+
+### Gestionali, CRM e web app
+
+Un software che segue il tuo lavoro.
+
+Se fogli e strumenti separati non bastano più, progettiamo un’interfaccia che raccolga dati e attività. Dal primo prodotto funzionante alla sua evoluzione, procediamo per tappe verificabili.
+
+COSA COSTRUIAMO CON TE
+
+- Flussi e interfacce progettati sui tuoi processi
+- Gestione di utenti, clienti e attività
+- Integrazione con i sistemi già presenti
+
+Raccontaci il tuo progetto ↗03
+
+### Automazioni e integrazioni API
+
+I passaggi ripetitivi, collegati tra loro.
+
+Copi gli stessi dati tra email, CRM e fogli? Colleghiamo gli strumenti con flussi automatici e agenti AI, definendo dove il sistema può procedere e quando deve intervenire una persona.
+
+COSA COSTRUIAMO CON TE
+
+- Collegamenti tra email, CRM e gestionali
+- Flussi con n8n e integrazioni API
+- Test dei casi reali e passaggio al team
+
+Raccontaci il tuo progetto ↗04
+
+### Siti e landing
+
+Una presenza digitale che porta al contatto.
+
+Diamo forma alla tua offerta con pagine chiare, curate e accessibili. Dalla struttura dei contenuti alle integrazioni, il sito diventa una parte del tuo lavoro quotidiano.
+
+COSA COSTRUIAMO CON TE
+
+- Struttura e design coerenti con il marchio
+- Sviluppo responsive e attenzione all’accessibilità
+- Collegamenti a contatti, prenotazioni e strumenti
+
+Raccontaci il tuo progetto ↗
+
+Il metodo
+
+## Dall’idea al rilascio, con le persone giuste.
+
+Ci confrontiamo sulle scelte, rendiamo visibili i progressi e proviamo il risultato nel contesto in cui verrà usato.
+
+01 / CAPIRE
+
+### Analisi e priorità.
+
+Una call per conoscere obiettivi e strumenti. Poi una proposta scritta con attività, costi e tempi.
+
+02 / COSTRUIRE
+
+### Progettare e provare.
+
+Prototipi, sviluppo e integrazioni per tappe. Confrontiamo quello che costruiamo con il lavoro reale.
+
+03 / FAR FUNZIONARE
+
+### Rilascio e continuità.
+
+Verifiche, messa online e passaggio al team. Concordiamo come seguire il software dopo il rilascio.
+
+IL PUNTO DI PARTENZA È IL TUO LAVORO
+
+## La tecnologia serve quando ti semplifica la giornata.
+
+Un unico processo da migliorare è già un buon punto da cui partire. Guardiamo insieme come funziona oggi e cosa può cambiare.
+
+Guarda i progetti ↗
+
+Prima di iniziare
+
+## Le domande sui servizi.
+
+Il punto di partenza è il lavoro della tua azienda. Qui trovi le prime risposte; in una call entriamo nel tuo caso.
+
+**Da dove parte un progetto di automazione?**
+
+Partiamo dai processi e dagli strumenti che usi: email, fogli, CRM o gestionali. Valutiamo quali passaggi collegare, dove può servire l’AI e dove è necessario il controllo di una persona. Prima dello sviluppo definiamo attività, costi e tempi in una proposta scritta.
+
+**Potete integrare un gestionale o un sito già esistente?**
+
+Sì. Possiamo analizzare il software esistente, migliorarlo e collegarlo ad altri strumenti tramite API, quando disponibili. La scelta tra integrazione, aggiornamento e nuovo sviluppo dipende dai vincoli emersi nell’analisi.
+
+**Che differenza c’è tra CheAI e un progetto su misura?**
+
+CheAI è il prodotto di Gruppo Automa per le conversazioni con i clienti e l’organizzazione del lavoro. Un progetto su misura parte invece dai processi e dalle integrazioni specifiche della tua azienda. In una call valutiamo quale percorso risponde alle tue esigenze.
+
+**Dove lavorate e come possiamo incontrarci?**
+
+La nostra sede è ad Aversa, in Piazza Bernini, Bernini Center. Lavoriamo anche da remoto con aziende in tutta Italia. Puoi contattarci al +39 349 233 1446, scrivere a info@gruppoautoma.it o prenotare una call dal sito.
+
+## Hai un progetto in mente?
+
+Partiamo da una call: ci racconti come lavori e capiamo insieme dove intervenire.
+
+Prenota una call ↗
+
+---
+
+URL: https://gruppoautoma.it/progetti/
+Titolo: Progetti Automa: gestionali, configuratori e prodotti
+Aggiornato: 2026-11-06
+
+Home / Progetti
+
+Progetti
+
+# Il lavoro prende forma.
+
+Gestionali, configuratori e prodotti nati in Gruppo Automa. Cinque modi concreti di trasformare un processo in uno strumento di lavoro.
+
+Gruppo Automa · Gestionali
+
+## EdilManagement
+
+Gestionale per imprese edili: cantieri, clienti, fornitori, fatture e scadenze riuniti in un unico ambiente di lavoro.
+
+Esplora la demo ↗Gruppo Automa · Configuratori
+
+## Simulatore Ponteggi
+
+Configuratore per Noleggio Ponteggi Aversa: dimensioni, facciate e tipologia di ponteggio diventano un riepilogo del preventivo.
+
+Prova il simulatore ↗Gruppo Automa · Gestionali
+
+## Il Vizietto
+
+Gestionale per la biglietteria e le sedi Il Vizietto: ordini, incassi, clienti e convenzioni, con raccolta automatica dei dati operativi.
+
+Demo navigabile con dati fittizi, senza credenziali.
+
+Esplora la demo ↗Prodotto Automa · Prodotti Automa
+
+## Svelalo
+
+Ricerca di aziende per attività e territorio, con recapiti pubblici e fonti consultabili in un unico elenco di contatti.
+
+Scopri Svelalo ↗Prodotto Automa · Prodotti Automa
+
+## CheAI
+
+La piattaforma Automa che riunisce conversazioni, clienti, appuntamenti e assistenza AI per organizzare il lavoro delle attività.
+
+Scopri CheAI ↗
+
+Copertine illustrative create con AI nello stile Automa: raccontano le funzioni dei progetti e non riproducono le loro interfacce.
+
+## La prossima idea può essere la tua.
+
+Dal sito aziendale al software che organizza il lavoro: raccontaci che cosa vuoi realizzare.
+
+Prenota una call ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/
+Titolo: Blog: idee su AI, software e automazioni — Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Blog
+
+Idee dal team Automa
+
+# Il blog di Automa.
+
+Idee, guide e appunti su intelligenza artificiale, software e automazioni. Dal lavoro di ogni giorno alle scelte che fanno la differenza per un’azienda.
+
+Scopri il blog ↓ Il nostro punto di vista, un articolo alla volta.
+
+Dal blog
+
+## Uno spazio per le idee concrete.
+
+Qui raccogliamo tutti gli articoli di Gruppo Automa: approfondimenti, guide e riflessioni per capire la tecnologia e usarla nel proprio lavoro.
+
+Comunicazione e AI
+
+### Contenuti AI tutti uguali: come mantenere la voce dell’azienda
+
+Se togli il logo, il testo potrebbe essere di chiunque? Una scheda pratica e un esempio per usare l’AI senza rendere anonima la tua comunicazione.
+
+Gruppo Automa6 novembre 20265 minLeggi l’articolo ↗ Automazioni in ufficio
+
+### Raccogliere fatture: cosa automatizzare prima del commercialista
+
+Email, portali e allegati sparsi: come preparare un fascicolo ordinato, gestire le eccezioni e misurare il lavoro risparmiato prima della contabilità.
+
+Gruppo Automa6 novembre 20265 minLeggi l’articolo ↗ Persone e processi
+
+### I dipendenti usano già l’AI: cinque regole semplici per una PMI
+
+Una policy utile deve aiutare a lavorare. Ecco cinque regole, un esempio concreto e una scheda per chiarire cosa si può fare con l’AI in una PMI.
+
+Gruppo Automa6 novembre 20266 minLeggi l’articolo ↗ Strategia AI
+
+### Come scegliere un progetto AI per una PMI
+
+Prima di scegliere uno strumento, scegli il lavoro da migliorare. Una guida per confrontare le idee e capire se la prima prova merita un investimento.
+
+Gruppo Automa5 novembre 20265 minLeggi l’articolo ↗ Automazioni in ufficio
+
+### AI in amministrazione: da dove iniziare in una piccola impresa
+
+Preventivi lasciati in bozza, allegati da cercare, richieste incomplete. Dove provare l’AI in ufficio e come evitare che la revisione assorba il beneficio.
+
+Gruppo Automa5 novembre 20264 minLeggi l’articolo ↗ Persone e processi
+
+### Come introdurre l’AI in azienda: cosa imparare dal memo Shopify
+
+Dire al team di usare l’AI non basta. Dal memo Shopify ricaviamo domande pratiche su formazione, responsabilità e risultati da misurare in una PMI.
+
+Gruppo Automa5 novembre 20265 minLeggi l’articolo ↗
+
+Di cosa parliamo
+
+## Tecnologia, dalla parte di chi la usa.
+
+01 / CAPIRE
+
+### Intelligenza artificiale.
+
+Possibilità, limiti e domande da farsi prima di portare l’AI nei processi di un’azienda.
+
+02 / COSTRUIRE
+
+### Software e prodotti.
+
+Dall’idea alle scelte di progetto: cosa serve per creare strumenti utili alle persone che li useranno.
+
+03 / COLLEGARE
+
+### Automazioni.
+
+Processi, integrazioni e modi per ridurre i passaggi ripetitivi nel lavoro quotidiano.
+
+## Hai una domanda da cui partire?
+
+Raccontaci cosa vuoi capire o migliorare nella tua azienda. Il confronto è un buon punto di partenza.
+
+Parliamone ↗
+
+---
+
+URL: https://gruppoautoma.it/chi-siamo/
+Titolo: Chi siamo: il team ad Aversa — Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Chi siamo
+
+Chi siamo
+
+# Tre percorsi. Una squadra.
+
+Marketing, vendite e tecnologia: competenze diverse che lavorano insieme, dalla nostra sede ad Aversa.
+
+Gruppo Automa
+
+## Vicini al lavoro delle aziende.
+
+Gruppo Automa nasce dall’incontro di tre soci con esperienze complementari. Conosciamo il valore di una comunicazione chiara, di un progetto sostenibile e di un software che deve funzionare nell’uso quotidiano.
+
+Partiamo da come lavori e dagli strumenti che utilizzi. Ci confrontiamo sulle priorità e seguiamo il percorso dalla proposta al rilascio, mettendo in relazione la parte commerciale con quella tecnica.
+
+Da questa esperienza nasce anche CheAI, il prodotto di Gruppo Automa per le conversazioni con i clienti e l’organizzazione del lavoro.
+
+Scopri CheAI ↗
+
+Il team
+
+## Tre soci, un'unica squadra.
+
+Marketing, vendite e tecnologia sotto lo stesso tetto, ad Aversa. Gruppo Automa nasce dall'incontro di tre percorsi diversi con un obiettivo comune: portare l'intelligenza artificiale nelle aziende in modo concreto.
+
+Amministratore
+
+### Nicola Fabozzi
+
+Co-fondatore · Direttore generale
+
+Imprenditore nel marketing e nella comunicazione. Dal 2019 guida Hype Studio Creativo e ha co-fondato Hype Palace, l'hub creativo di Aversa. In Automa cura brand, strategia e crescita.
+
+Brand e marketingStrategiaManagement LinkedIn Vendite
+
+### Salvatore Valerio Navarro
+
+Co-fondatore · Direttore vendite
+
+Trasforma le esigenze di business in soluzioni tecnologiche. Ha lavorato con clienti e team tra Italia, Regno Unito e Australia. In Automa segue vendite e rapporto con i clienti.
+
+VenditeRelazione clientiEnglish LinkedIn Tecnologia
+
+### Antonio De Biase
+
+Co-fondatore · Product & Tech
+
+Sviluppa software da sei anni: oltre 15 portali enterprise per PA, sanità e banche. In Automa guida architettura e sviluppo, a partire da CheAI.
+
+AI e agentiSoftware su misuraArchitettura LinkedIn 3soci fondatori 15+portali enterprise sviluppati 7+anni di agenzia digitale 5canali collegati da CheAI
+
+## Prima del progetto, conosciamoci.
+
+Una call per raccontarci quello che vuoi migliorare e capire se possiamo lavorare insieme.
+
+Prenota una call ↗
+
+---
+
+URL: https://gruppoautoma.it/contatti/
+Titolo: Contatti — telefono e appuntamenti — Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Contatti
+
+Contatti
+
+# Da un’idea, a una conversazione.
+
+Chiamaci, scrivici o scegli un orario per una call. Partiamo dal tuo progetto e dalle domande che vuoi farci.
+
+01 / AL TELEFONO
+
+## +39 349 233 1446
+
+Il cellulare aziendale di Gruppo Automa.
+
+02 / VIA EMAIL
+
+## info@gruppoautoma.it
+
+Raccontaci di cosa hai bisogno, anche con un messaggio breve.
+
+03 / IN CALL
+
+## Facciamo il punto.
+
+Scegli un orario dal nostro calendario per una call conoscitiva.
+
+Prenota una call ↗
+
+LA NOSTRA SEDE
+
+## Ci trovi ad Aversa.
+
+Piazza Bernini, Bernini Center 81031 Aversa (CE)
+
+Conosciamoci in una call ↗
+
+Rispondiamo personalmente, entro un giorno lavorativo
+
+## Hai un'idea o un processo da migliorare? Parliamone.
+
+Raccontaci in due righe di cosa hai bisogno. Ti rispondiamo con qualche domanda e una proposta di call.
+
+Preferisci chiamarci? +39 349 233 1446
+
+---
+
+URL: https://gruppoautoma.it/blog/regole-ai-azienda-pmi/
+Titolo: AI in azienda: 5 regole pratiche per le PMI | Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Blog / Persone e processi
+
+Persone e processi · La guida Automa
+
+# I dipendenti usano già l’AI: cinque regole semplici per una PMI
+
+Per usare l’AI in azienda con regole chiare, definite quali strumenti sono approvati, quali dati possono ricevere, chi verifica i risultati e quali azioni richiedono conferma. Aggiungete un referente raggiungibile: quando il caso non è previsto, il dipendente deve sapere a chi chiedere.
+
+A cura di Gruppo Automa6 novembre 20266 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Prima delle regole, scopri come viene già usata
+
+Una persona riscrive le email con un assistente personale. Un’altra riassume un documento. Un collega ha collegato un’estensione del browser perché prometteva di fare prima. Il titolare può non conoscere nessuno di questi passaggi, anche se sono già entrati nel lavoro quotidiano.
+
+Con Shadow AI si indica l’uso di strumenti AI che l’organizzazione non ha approvato o non gestisce. In un post dedicato al tema, Antonio Grasso collega il fenomeno alla distanza tra ciò che serve alle persone e gli strumenti messi a loro disposizione. Propone alternative approvate e indicazioni comprensibili, oltre a un canale per fare domande.
+
+Per capire la situazione nella tua PMI, chiedi al team tre cose: quale compito svolgi, con quale strumento e quali informazioni inserisci? Raccogli una descrizione del lavoro, senza chiedere di inoltrare intere conversazioni personali o documenti dei clienti. L’obiettivo iniziale è conoscere il processo e individuare un’alternativa praticabile dove serve.
+
+Le cinque regole seguenti sono una proposta organizzativa da adattare. Non sono un modello che, compilato, certifica la conformità normativa dell’azienda.
+
+## 1. Approva uno strumento per uno scopo preciso
+
+“Potete usare l’AI” lascia aperte troppe domande. Indica il servizio, l’account o spazio di lavoro aziendale e il compito consentito: per esempio, preparare bozze da materiale pubblico. Specifica anche chi gestisce gli accessi e cosa succede quando una persona cambia ruolo o lascia l’azienda.
+
+L’approvazione di una chat non autorizza automaticamente ogni estensione o collegamento alla posta. Un’integrazione può richiedere accesso a più informazioni di quelle necessarie al lavoro. Prima di abilitarla, verifica i permessi effettivi e se possono essere limitati.
+
+Regola da comunicare: usa gli strumenti e gli account dell’elenco approvato, soltanto per gli impieghi indicati. Per un nuovo servizio o collegamento, chiedi al referente prima di inserire dati di lavoro.
+
+## 2. Decidi quali dati possono entrare
+
+“Non caricare dati sensibili” può significare cose diverse per chi legge. Servono esempi riconoscibili: un testo già pubblico, una bozza di offerta riservata, una lista clienti, un documento del personale, una password.
+
+Una possibile istruzione iniziale è lavorare con materiale pubblico o fittizio, lasciando i documenti riservati fuori dal flusso finché l’impresa non ha valutato quello specifico uso. Per gli usi approvati, inserisci solo le informazioni necessarie e verifica condizioni del servizio, conservazione dei dati, accessi e impostazioni applicabili all’account scelto.
+
+Togliere il nome da un documento non lo rende automaticamente anonimo: dettagli, indirizzi o riferimenti possono ancora ricondurre a una persona o a un cliente. Analogamente, il fatto che uno strumento sia a pagamento non basta a stabilire che sia adatto a qualsiasi documento.
+
+Regola da comunicare: prima di caricare un file, controlla che quel tipo di dato sia ammesso per quel compito. Password, codici di accesso e segreti tecnici non vanno inseriti nei prompt. Se il caso è dubbio, fermati e chiedi.
+
+## 3. Assegna la verifica a qualcuno che conosce il lavoro
+
+Una risposta ben scritta può contenere un numero sbagliato, omettere una condizione o trasformare una proposta in un impegno. La verifica deve essere concreta: confrontare date, importi, nomi, fonti e condizioni con i documenti corretti.
+
+Chi controlla deve avere competenza sul contenuto e tempo per correggerlo. Una persona che non conosce il listino non può validare un’offerta soltanto perché la bozza sembra plausibile. Se mancano informazioni, il lavoro torna a chi può fornirle.
+
+Regola da comunicare: ogni risultato destinato a clienti, fornitori o decisioni operative ha un responsabile della verifica. Il testo generato resta una bozza finché quel controllo non è concluso.
+
+## 4. Separa la preparazione dalle azioni che producono effetti
+
+Scrivere una risposta e inviarla sono due passaggi distinti. Lo stesso vale per proporre una modifica al gestionale e salvarla, oppure preparare un elenco di fatture e disporre un pagamento.
+
+Per la prima adozione, puoi limitare l’assistente alla lettura e alla preparazione. Introduci azioni automatiche soltanto dopo aver definito il perimetro, le autorizzazioni e come interrompere il flusso. Prima di un invio, chi approva deve poter vedere contenuto, destinatario e allegati, non solo un pulsante generico di conferma.
+
+Regola da comunicare: l’autorizzazione a preparare non vale come autorizzazione a inviare, pubblicare, cancellare o pagare. Le azioni consentite e i relativi limiti devono essere espliciti.
+
+## 5. Dai un referente e un percorso per gli imprevisti
+
+Se nessuno sa chi decide, una scadenza può spingere a usare la prima soluzione disponibile. Nomina una persona e un sostituto, indica il canale da usare e concorda tempi di risposta sostenibili. Il referente raccoglie anche le richieste ricorrenti: sono un segnale dei processi da migliorare.
+
+Prevedi cosa fare quando un documento finisce nello strumento sbagliato o parte un’azione inattesa: interrompere l’attività, avvisare il referente e conservare i dettagli necessari per capire l’accaduto senza diffondere ulteriormente il contenuto. Il seguito dipende dal caso e dalle procedure dell’azienda; cancellare una chat non dimostra da solo che il problema sia risolto.
+
+Regola da comunicare: segnala subito errori e dubbi attraverso il canale concordato. Le regole si aggiornano quando cambiano strumenti, permessi o usi.
+
+## Un caso concreto: la risposta a un reclamo
+
+Esempio ipotetico: un’impiegata vuole preparare una risposta a un cliente insoddisfatto. Nella conversazione ci sono dati personali, un ordine e una richiesta di rimborso.
+
+Con le regole sopra, verifica prima lo strumento e i dati ammessi. Se quell’uso non è approvato, può lavorare su una situazione fittizia e sulla procedura pubblica, senza incollare la conversazione reale. La bozza non inventa rimborsi o condizioni. Il responsabile del caso controlla la risposta, decide l’eventuale impegno e autorizza l’invio al destinatario corretto.
+
+Il punto è rendere possibile un lavoro utile senza affidare all’assistente decisioni che l’azienda non gli ha assegnato.
+
+## La scheda da compilare con il team
+
+Per ogni primo uso approvato, basta una scheda leggibile. Questo è un promemoria operativo, da affiancare alle valutazioni necessarie per l’azienda.
+
+Campo
+
+Decisione da scrivere
+
+Attività
+
+Quale compito vogliamo semplificare?
+
+Ambiente
+
+Quale servizio, account e configurazione usiamo?
+
+Dati
+
+Quali informazioni sono ammesse e quali escluse?
+
+Verifica
+
+Chi controlla il risultato e su quali fonti?
+
+Azioni
+
+Cosa può preparare il sistema e cosa richiede approvazione?
+
+Referente
+
+Chi risponde ai dubbi e chi lo sostituisce?
+
+Revisione
+
+Quando rivediamo la scheda e chi la mantiene aggiornata?
+
+Provatela su una normale attività e su un caso ambiguo. Se due persone danno risposte opposte su cosa è consentito, chiarite l’esempio nella scheda prima di estendere l’uso al resto del team.
+
+### Cinque regole bastano per essere conformi?
+
+No. Sono un punto di partenza organizzativo, non una certificazione o una valutazione legale. Gli obblighi dipendono da attività, dati e strumenti. Il NIST AI Risk Management Framework è un riferimento volontario per approfondire la gestione dei rischi AI; non sostituisce gli obblighi applicabili in Italia.
+
+### Conviene vietare completamente l’AI?
+
+La scelta dipende dal contesto. Per una prima prova si può individuare un compito circoscritto, con dati pubblici o fittizi, strumenti approvati e revisione del risultato. Per gli altri usi resta necessario valutare il caso prima di autorizzarlo.
+
+## Parti da un’attività già presente in azienda
+
+Scegli un uso che il team sta già provando e descrivi strumenti, dati e passaggi. Gruppo Automa può aiutarti a valutare il processo e a progettare una prima adozione AI con responsabilità chiare. Per decidere quale attività affrontare, trovi anche la guida su come scegliere un progetto AI per una PMI.
+
+Guida preparata con supporto AI e verifica delle fonti indicate. Regole, scheda ed esempio sono proposte operative Automa; non costituiscono una policy legale completa né un test con dipendenti reali.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/
+Titolo: Contenuti AI e voce aziendale: guida pratica | Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Blog / Comunicazione e AI
+
+Comunicazione e AI · La guida Automa
+
+# Contenuti AI tutti uguali: come mantenere la voce dell’azienda
+
+Per mantenere la voce dell’azienda nei contenuti AI servono materiali propri: domande dei clienti, esempi verificati e scelte di linguaggio riconoscibili. Parti da questi elementi, fai preparare una bozza e controlla che ogni promessa corrisponda a ciò che offri davvero.
+
+A cura di Gruppo Automa6 novembre 20265 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Il test del logo: questo testo potrebbe essere di chiunque?
+
+Apri l’ultimo post della tua azienda e nascondi il nome. Frasi come “soluzioni innovative”, “qualità senza compromessi” e “il partner ideale” aiutano a riconoscervi? Spiegano a un cliente perché dovrebbe chiamare proprio voi?
+
+Il problema si vede prima ancora di capire se il testo sia stato scritto con AI: manca qualcosa che appartenga all’azienda. Può essere una domanda che vi fanno spesso, una scelta sul modo di lavorare o un limite che spiegate con chiarezza.
+
+In un post su LinkedIn, Ethan Mollick critica i contenuti generici pubblicati come se esprimessero il pensiero personale dell’autore. La sua posizione lascia spazio all’AI come aiuto alla scrittura, ma chiede un contributo reale da parte di chi firma. È uno spunto editoriale, non uno studio sull’efficacia commerciale dei post.
+
+La nostra proposta per una PMI è partire dal lavoro che conoscete. Se il materiale iniziale è vuoto, cambiare aggettivi nella bozza difficilmente lo renderà interessante.
+
+## Una scheda di voce aziendale in sei righe
+
+La voce aziendale è il modo riconoscibile con cui spiegate, rispondete e prendete posizione. Il tono può cambiare: una risposta a un reclamo richiede un registro diverso da un post su un nuovo servizio. Per dare una direzione alla scrittura, compilate questa scheda prima di chiedere una bozza.
+
+Campo
+
+Cosa scrivere
+
+Lettore
+
+Un ruolo e una situazione: “titolare che perde tempo a ricopiare richieste di preventivo”.
+
+Domanda
+
+Una domanda ricevuta davvero, riscritta senza dati del cliente.
+
+Punto di vista
+
+La risposta che dareste a voce e il motivo della vostra scelta.
+
+Prova disponibile
+
+Un passaggio del processo, una schermata autorizzata, una condizione del servizio o un esempio verificabile.
+
+Linguaggio
+
+Tre indicazioni concrete: frasi brevi, termini spiegati, niente superlativi.
+
+Confini
+
+Cosa non promettere, quali dati non pubblicare e quale azione proporre al lettore.
+
+Allegate due o tre testi aziendali che vi rappresentano e spiegate che cosa funziona: l’apertura diretta, la precisione delle condizioni, una risposta comprensibile. Inserire dieci testi discordanti e chiedere di imitarli lascia irrisolta la scelta del tono.
+
+## Prima e dopo: dalla frase generica a una risposta utile
+
+Questo è un esempio inventato, non una testimonianza o una promessa di servizio di un cliente Automa. Immaginiamo un laboratorio che realizza mobili su misura e che raccolga foto e misure indicative prima di organizzare un sopralluogo.
+
+Bozza generica:
+
+Trasformiamo i tuoi sogni in realtà con soluzioni innovative e personalizzate, garantendo qualità e attenzione a ogni dettaglio.
+
+Riscrittura basata sul processo descritto:
+
+Vuoi un mobile su misura ma non sai da dove partire? Mandaci una foto dello spazio e le misure indicative. Le usiamo per capire la richiesta; prima di definire il progetto, verifichiamo le misure durante il sopralluogo.
+
+La seconda versione risponde a una domanda, spiega il prossimo passaggio e rende visibile un limite. Non aggiunge numeri, tempi o garanzie che il laboratorio non ha fornito. Se il sopralluogo fosse a pagamento, il testo dovrebbe chiarire anche quella condizione prima di invitare a prenotarlo.
+
+## Un prompt da usare con materiali approvati
+
+Prima raccogli la scheda e i fatti; poi puoi provare questa istruzione:
+
+Scrivi una bozza per il lettore indicato nella scheda. Rispondi alla sua domanda usando soltanto i fatti forniti. Mantieni il tono dei due esempi approvati, senza copiarne le frasi. Non aggiungere clienti, risultati, prezzi, tempi o garanzie. Se manca un’informazione necessaria, elencala nelle domande da verificare. Proponi un solo passo successivo coerente con il servizio. Dopo la bozza, indica quali affermazioni richiedono controllo.
+
+Provalo su contenuti pubblici o autorizzati. L’istruzione non impedisce da sola errori o invenzioni: chi pubblica deve confrontare il risultato con i materiali iniziali. Per definire quali informazioni usare negli strumenti, trovi anche le cinque regole AI per una PMI.
+
+## Tre controlli prima di pubblicare
+
+Fatti. Ogni promessa è dimostrabile? Il servizio esiste, le condizioni sono aggiornate e l’esempio può essere pubblicato? Se la fonte non c’è, la frase va verificata o tolta.
+
+Voce. Il titolare o la persona che risponde ai clienti direbbe davvero queste parole? Leggere la bozza ad alta voce aiuta a individuare frasi gonfie, passaggi distanti dal vostro lessico e spiegazioni troppo lunghe.
+
+Utilità. Il lettore capisce qualcosa in più e sa cosa fare dopo? Un post può risolvere una sola domanda. Non deve riassumere tutta l’azienda né finire sempre con una richiesta di acquisto.
+
+Per valutare il processo, confronta il tempo necessario a ottenere un testo approvato, comprese le correzioni. Poi annota le richieste pertinenti che arrivano citando quel contenuto. I like possono suggerire interesse; non dimostrano da soli che il testo generi clienti.
+
+## Contenuti AI, SEO e risposte dei motori di ricerca
+
+La guida di Google sui contenuti generati con AI mette l’accento su accuratezza, qualità e rilevanza e avverte contro la produzione di molte pagine senza valore aggiunto. Sostituire sinonimi in un testo generico non aggiunge un’esperienza o una risposta originale.
+
+Per una pagina aziendale, conviene rendere espliciti la domanda, la risposta, le condizioni e la fonte delle informazioni. Un esempio concreto deve rimanere comprensibile anche fuori dal contesto del resto del sito. Questa struttura aiuta la lettura e rende il contenuto più facile da interpretare; non garantisce posizionamento su Google o citazioni nelle risposte di ChatGPT e Claude.
+
+### Devo far sembrare il testo scritto senza AI?
+
+Il criterio utile è che il testo sia accurato e vi rappresenti. Evita di inventare esperienze personali o testimonianze. Quando è pertinente, spiega come è stato preparato il contenuto; non cercare di “battere” un rilevatore automatico.
+
+### Posso riutilizzare lo stesso contenuto su blog e LinkedIn?
+
+Puoi partire dallo stesso materiale, adattando la lettura: sul blog sviluppi il processo, sul social puoi presentare una domanda e un esempio. Controlla che condizioni e invito all’azione restino coerenti.
+
+## Parti da un contenuto che non vi rappresenta
+
+Scegli una pagina o un post che oggi sembra troppo generico. Porta il testo, la domanda del cliente a cui dovrebbe rispondere e i materiali che lo sostengono: sono una base concreta per valutare un processo di scrittura e revisione. Gruppo Automa può aiutarti a collegare questo lavoro ai tuoi strumenti attraverso consulenza AI e automazioni.
+
+Guida preparata con supporto AI e verifica delle fonti indicate. Scheda, prompt ed esempio sono proposte operative Automa; non risultati di un test con clienti.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/
+Titolo: Automatizzare la raccolta fatture nelle PMI | Gruppo Automa
+Aggiornato: 2026-11-06
+
+Home / Blog / Automazioni in ufficio
+
+Automazioni in ufficio · La guida Automa
+
+# Raccogliere fatture: cosa automatizzare prima del commercialista
+
+Puoi automatizzare la raccolta delle fatture, l’estrazione dei dati e la segnalazione di duplicati o documenti mancanti. Parti da una fonte e da un elenco controllabile. Conserva gli originali e lascia a chi gestisce la contabilità la verifica delle classificazioni e degli adempimenti.
+
+A cura di Gruppo Automa6 novembre 20265 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Il lavoro che si ripete prima di ogni consegna
+
+Una fattura è nell’email del titolare, un’altra nel portale di un fornitore. Il PDF scaricato ieri ha lo stesso nome di quello del mese scorso. Arriva la richiesta del commercialista e qualcuno deve ricostruire quali documenti ci sono, quali mancano e quali sono già stati inviati.
+
+È un processo preciso su cui lavorare: portare i documenti da fonti diverse a un elenco verificabile. Il risultato utile è poter rispondere alla domanda “che cosa manca?” senza riaprire tutte le caselle e tutti i portali.
+
+In un thread Reddit del luglio 2025, un utente racconta di usare un agente AI con Xero per raccogliere e abbinare documenti. Specifica anche che controlla il lavoro, incontra siti non accessibili all’agente e deve ancora copiare alcuni allegati manualmente. È una testimonianza individuale: non dimostra che lo stesso flusso funzioni con i tuoi strumenti o soddisfi gli adempimenti italiani.
+
+## Prima domanda: i documenti sono già nel gestionale?
+
+Prima di aggiungere un agente, verifica con chi segue l’amministrazione quali fatture arrivano già nel software in uso e quali esportazioni sono disponibili. Se una funzione esistente produce l’elenco necessario, può bastare configurarla e definire chi la usa.
+
+Una possibile automazione diventa interessante nei passaggi rimasti scoperti: allegati autorizzati da raccogliere, documenti da portali, nomi incoerenti, controlli ripetuti e consegne incomplete. Le integrazioni disponibili vanno verificate sul servizio effettivo, senza presumere che ogni portale permetta scaricamenti automatici.
+
+Per le fatture elettroniche che transitano dal Sistema di Interscambio, parti dai file XML e dai canali già gestiti dal software o dall’intermediario, senza trattare un PDF di cortesia come un loro sostituto. La guida dell’Agenzia delle Entrate alla fatturazione elettronica descrive formato e servizi. Il percorso va concordato con il commercialista, soprattutto quando comprende documenti esteri o casi particolari.
+
+## Un flusso in cinque passaggi
+
+Passaggio
+
+Cosa può fare il flusso
+
+Quando interviene una persona
+
+Raccogliere
+
+Acquisire documenti dalle fonti autorizzate e registrarne la provenienza.
+
+Accesso scaduto, allegato assente o portale non supportato.
+
+Estrarre
+
+Leggere i campi strutturati; proporre dati dai PDF quando necessario.
+
+Campo illeggibile, mancante o ambiguo.
+
+Confrontare
+
+Segnalare possibili duplicati e documenti senza corrispondenza nell’elenco atteso.
+
+Due documenti simili ma diversi, nota di credito o importi discordanti.
+
+Ordinare
+
+Collegare ogni riga al suo file originale e separare i casi da verificare.
+
+Correggere una proposta senza sovrascrivere la fonte.
+
+Consegnare
+
+Preparare il pacchetto nel formato concordato con lo studio.
+
+Approvare la consegna e risolvere le eccezioni contabili.
+
+Non tutti questi passaggi richiedono AI. Un XML ha campi strutturati che si possono leggere con regole; il confronto di due file identici può essere deterministico. L’AI può essere utile dove formati e descrizioni variano, ma i dati estratti restano da verificare.
+
+Per ogni documento, l’elenco di lavoro dovrebbe contenere almeno: riferimento al file, fonte, fornitore, numero e data del documento, importo, valuta, stato della verifica e nota sull’eventuale problema. Sono campi per organizzare il lavoro, non una specifica fiscale completa.
+
+## L’esempio che mette alla prova l’automazione
+
+Esempio illustrativo: nella cartella ci sono dodici file, ma due sono copie della stessa fattura e uno è un preventivo. Contare dodici allegati non significa aver raccolto dodici fatture valide.
+
+Il flusso dovrebbe segnalare la copia, distinguere il documento da verificare e mostrare quali file sostengono ogni riga. Due importi uguali non bastano per dichiarare un duplicato: potrebbero riguardare fornitori diversi o acquisti distinti. Anche il solo nome del file è un indizio debole.
+
+Una regola prudente per la prima prova è segnalare senza cancellare. La persona che verifica decide come trattare il caso e lascia una nota. Se l’automazione non trova un documento atteso, produce una richiesta da controllare: non inventa una fattura per far tornare il totale.
+
+## Raccolta, contabilità e conservazione hanno compiti diversi
+
+Una cartella ordinata aiuta a lavorare, ma non sostituisce la conservazione a norma. L’Agenzia delle Entrate chiarisce che la conservazione elettronica non coincide con la semplice memorizzazione dei file sul computer.
+
+Questa guida riguarda la preparazione dei documenti. Non propone di delegare al modello la detraibilità dell’IVA, il trattamento fiscale di una spesa o l’invio di dichiarazioni. Per questi aspetti valgono il caso specifico e il confronto con il professionista che segue l’impresa.
+
+Anche il pagamento è un passaggio distinto. Raccogliere una fattura non autorizza il flusso a pagarla; per il primo progetto bastano accessi adeguati alla lettura delle fonti necessarie. Evita di consegnare a un assistente credenziali generiche con poteri più ampi del compito.
+
+## Una prova piccola che dia una risposta utile
+
+Scegli una fonte e un periodo già chiuso, con un elenco di riferimento verificato dall’ufficio. Prepara un campione autorizzato che includa documenti normali e casi difficili: un duplicato, una nota di credito, un allegato illeggibile e un documento che non è una fattura. All’inizio tieni disattivati cancellazioni, registrazioni contabili e invii automatici.
+
+Confronta il risultato con l’elenco verificato. Annota:
+
+- Documenti presenti nella fonte ma non raccolti.
+- Campi sbagliati o lasciati senza una segnalazione.
+- Falsi duplicati e duplicati non riconosciuti.
+- Tempo totale di raccolta, revisione e correzione.
+- Numero di domande ancora necessarie prima della consegna.
+
+Se il controllo richiede più lavoro del processo attuale, restringi il compito. Può essere utile automatizzare soltanto il recupero e l’indice dei file, mantenendo manuale la classificazione. La misura da migliorare è il tempo per una consegna completa e controllata, non il numero di documenti “letti” dal modello.
+
+### Serve cambiare software di contabilità?
+
+Non necessariamente. Parti da esportazioni, importazioni e integrazioni già disponibili. La scelta dipende da ciò che il gestionale consente e dal formato che lo studio è disposto a ricevere.
+
+### Come sapere quali fatture mancano?
+
+Serve una fonte di confronto: per esempio l’elenco di documenti attesi concordato dall’ufficio. La sola cartella dei file ricevuti non può dimostrare di contenere tutto. Un movimento da riconciliare può essere un indizio, non la prova automatica dell’esistenza o della natura di una fattura.
+
+## Porta un percorso documentale da semplificare
+
+Per valutare un intervento, prepara la lista delle fonti, il gestionale usato, il formato richiesto dal commercialista e il passaggio che assorbe più tempo. Non occorre inviare documenti riservati nel primo contatto: bastano una descrizione ed esempi fittizi. Gruppo Automa può aiutarti a progettare automazioni e integrazioni tra strumenti.
+
+Se il problema comprende anche richieste, preventivi e email, leggi la guida più generale all’AI in amministrazione nelle piccole imprese.
+
+Guida preparata con supporto AI e verifica delle fonti indicate. L’esempio e il piano di prova sono proposte operative, non un collaudo di Xero o un parere fiscale.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/scegliere-progetto-ai-pmi/
+Titolo: Come scegliere un progetto AI per una PMI | Gruppo Automa
+Aggiornato: 2026-11-05
+
+Home / Blog / Strategia AI
+
+Strategia AI · La guida Automa
+
+# Come scegliere un progetto AI per una PMI
+
+Per scegliere il primo progetto AI della tua PMI, cerca un’attività frequente, con dati disponibili e un risultato facile da controllare. Misura il lavoro attuale, prova su pochi casi e valuta il tempo risparmiato dopo le correzioni.
+
+A cura di Gruppo Automa5 novembre 20265 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Da quale problema aziendale conviene partire?
+
+Il lunedì mattina arrivano richieste da email, telefono e messaggi. Qualcuno le ricopia nel gestionale, qualcuno cerca un allegato e il titolare interviene per capire chi deve rispondere. Prima di chiedersi quale assistente AI comprare, conviene descrivere quel passaggio: chi lo esegue, quanto spesso e dove si ferma.
+
+In Shaping the build, pubblicato l’11 settembre 2026, Andrew Ng mette al centro la scelta del problema, il confronto con gli utenti e le prove rapide. È una proposta di metodo, non una dimostrazione di ritorno economico per le piccole imprese.
+
+Il nostro adattamento è semplice: raccogli tre problemi reali prima di valutare tre strumenti. Scrivi ciascuno come un lavoro osservabile: «classificare le richieste ricevute» è abbastanza preciso; «rendere l’azienda più intelligente» non permette di misurare nulla.
+
+## Come confrontare impatto, fattibilità e rischio
+
+Per ogni idea, compila questa scheda con la persona che svolge il lavoro. Le risposte sconosciute sono informazioni da raccogliere, non caselle da riempire con una stima ottimistica.
+
+Criterio
+
+Domanda da verificare
+
+Frequenza
+
+Quante volte si ripete il lavoro in un mese normale?
+
+Impatto
+
+Quale attesa, errore o costo vogliamo ridurre?
+
+Dati
+
+Gli input necessari sono disponibili e aggiornati?
+
+Controllo
+
+Chi riconosce un risultato sbagliato e in quanto tempo?
+
+Rischio
+
+Che cosa succede se il risultato è errato?
+
+Integrazione
+
+In quale strumento deve finire il lavoro approvato?
+
+Un’attività frequente, circoscritta e reversibile è spesso una candidata più gestibile per una prima prova. Se un errore comporta un pagamento o un impegno contrattuale, serve invece un controllo adeguato prima dell’azione. Un punteggio alto sul tempo risparmiato non annulla questo problema.
+
+Chiedi anche se basta una regola nel software esistente. Se tutti i messaggi con un certo codice devono andare allo stesso reparto, potresti non avere bisogno di un modello generativo. La scelta della soluzione viene dopo la descrizione del lavoro.
+
+## Un esempio: classificare le richieste dei clienti
+
+Esempio ipotetico, non risultato di un cliente Automa. Un’azienda di manutenzione valuta tre idee: rispondere automaticamente a tutte le email, preparare un report mensile e proporre il reparto a cui assegnare ogni richiesta.
+
+Per la prima prova sceglie la classificazione. Ha esempi già assegnati, categorie definite e una persona in grado di controllare la proposta. Il sistema suggerisce una categoria e segnala i casi incerti; non invia risposte e non modifica appuntamenti.
+
+La prova usa un gruppo di richieste non riservate o trattate in un ambiente autorizzato. Chi controlla annota categoria proposta, correzione necessaria e tempo impiegato. Se le eccezioni richiedono più lavoro della gestione attuale, il progetto va rivisto, anche se la dimostrazione iniziale sembrava convincente.
+
+## Come valutare il ROI senza confondere ore ed euro
+
+Per cominciare, calcola il tempo netto recuperato:
+
+Tempo del processo attuale − tempo del nuovo processo, compresi controllo e correzioni.
+
+Esempio ipotetico: se il metodo attuale richiede 100 minuti e quello nuovo ne richiede 40 di preparazione più 35 di revisione, il tempo recuperato è 25 minuti, non 60. È un confronto illustrativo, non un risultato ottenuto su un cliente.
+
+Confronta casi simili e includi le attività meno visibili: preparare i dati, aggiornare le istruzioni, gestire gli errori e trasferire il risultato nel gestionale. Una prova con soli esempi facili rischia di nascondere il costo delle eccezioni.
+
+Le ore recuperate non diventano automaticamente risparmio di cassa. Possono ridurre arretrati, accelerare le risposte o liberare capacità per altro lavoro. Per una valutazione economica confronta il valore di quel beneficio con costi iniziali, abbonamenti, integrazione e manutenzione, sullo stesso periodo. Evita di contare due volte lo stesso vantaggio.
+
+## Che cosa chiedere a un fornitore prima di partire
+
+Porta un esempio del lavoro attuale e concorda questi cinque punti:
+
+- Il risultato atteso e i casi esclusi dalla prima prova.
+- I dati necessari, chi può accedervi e dove vengono trattati.
+- La persona che approva l’output e il percorso delle eccezioni.
+- Il confronto con il metodo attuale, includendo il tempo di revisione.
+- La condizione per continuare, correggere o interrompere il progetto.
+
+Chiedi di vedere anche un esempio in cui la soluzione sbaglia. È un modo concreto per capire se l’errore sarà riconoscibile e gestibile da chi lavora in azienda.
+
+## Domande frequenti sul primo progetto AI
+
+### Da dove iniziare con l’AI in una piccola impresa?
+
+Da un’attività che si ripete e di cui conosci già il risultato corretto: preparare una bozza, cercare informazioni in documenti approvati o classificare richieste. Scegli un responsabile e misura il processo prima della prova.
+
+### Serve un software AI personalizzato fin dall’inizio?
+
+Non necessariamente. Una funzione del gestionale o uno strumento già disponibile può bastare. Una soluzione su misura diventa valutabile quando servono integrazioni, controlli o passaggi che gli strumenti esistenti non coprono.
+
+### Quanti casi servono per capire se funziona?
+
+Non c’è un numero valido per ogni attività. La prova deve includere casi normali ed eccezioni rappresentative. Pochi esempi possono far emergere problemi evidenti; non bastano da soli a dimostrare affidabilità su ogni situazione futura.
+
+## Porta un processo concreto alla prima call
+
+Gruppo Automa si occupa di consulenza AI, automazioni e software aziendale. Per discutere un possibile progetto, prepara un esempio non riservato, il volume indicativo di lavoro e il passaggio che oggi richiede più attenzione. Contattaci per prenotare una call per discutere quale processo provare, quali dati servono e come valutarne la convenienza.
+
+Se il problema è nell’ufficio, continua con AI e amministrazione nelle piccole imprese. Per coinvolgere le persone nella prova, leggi come introdurre l’AI in azienda.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/ai-amministrazione-piccole-imprese/
+Titolo: AI in amministrazione: da dove iniziare | Gruppo Automa
+Aggiornato: 2026-11-05
+
+Home / Blog / Automazioni in ufficio
+
+Automazioni in ufficio · La guida Automa
+
+# AI in amministrazione: da dove iniziare in una piccola impresa
+
+Per usare l’AI in amministrazione, parti da un passaggio ripetitivo: raccogliere informazioni, preparare una bozza o segnalare dati mancanti. Mantieni l’approvazione di prezzi, obblighi e invii a una persona, poi misura il tempo totale necessario a chiudere il lavoro.
+
+A cura di Gruppo Automa5 novembre 20264 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Il problema è spesso il lavoro che resta a metà
+
+La richiesta del cliente è arrivata, ma manca una misura. Il preventivo esiste, però usa una versione vecchia del listino. Un allegato è nella casella del titolare e chi prepara l’offerta deve aspettare. In una piccola impresa questi passaggi possono occupare più attenzione della scrittura del documento finale.
+
+Un thread Reddit dell’8 ottobre 2026 racconta l’uso dell’AI per attività amministrative, requisiti di gara e documenti. Il titolo attribuisce all’AI la redditività dell’impresa; nelle risposte l’autore parla invece di pareggio e di un obiettivo di redditività futuro. Non presenta tempi verificati o bilanci che dimostrino il risultato.
+
+La domanda utile che resta è concreta: quale passaggio impedisce all’ufficio di completare una pratica? Da lì possiamo progettare una prova, senza trasformare una testimonianza in una promessa.
+
+## Quali attività amministrative valutare per prime
+
+Queste sono possibilità da verificare sul proprio processo, non funzioni garantite da qualunque assistente AI.
+
+Attività
+
+Aiuto da provare
+
+Controllo da conservare
+
+Richiesta di preventivo
+
+Estrarre dati e segnalare ciò che manca
+
+Conferma dei requisiti
+
+Bozza di offerta
+
+Riordinare informazioni in un modello
+
+Prezzi, condizioni e invio
+
+Email ricorrenti
+
+Preparare una risposta da materiali approvati
+
+Verifica del caso specifico
+
+Documenti ricevuti
+
+Proporre una classificazione
+
+Eccezioni e destinazione finale
+
+Conviene distinguere estrazione, calcolo e approvazione. Un modello può aiutare a individuare le informazioni in una richiesta; il totale di un’offerta dovrebbe essere ricavato da dati e regole controllabili. Se mancano quantità o condizioni, l’output deve evidenziare il vuoto, non completarlo per supposizione.
+
+## Esempio: una richiesta di preventivo diventa una bozza controllabile
+
+Esempio ipotetico, non un risultato osservato da Gruppo Automa. Una piccola azienda di manutenzione riceve richieste con descrizioni, foto e allegati in formati diversi. Il responsabile commerciale perde tempo a ricostruire il lavoro prima di preparare l’offerta.
+
+Una prima prova può prevedere cinque passaggi:
+
+- Raccogliere la richiesta in un punto definito, conservando il riferimento alla fonte.
+- Estrarre sede dell’intervento, attività richiesta, quantità indicate e scadenza.
+- Segnalare dati mancanti o contraddittori, senza inventarli.
+- Preparare la bozza nel modello aziendale usando soltanto informazioni approvate.
+- Far verificare al responsabile contenuti, importi, condizioni e destinatario prima dell’invio.
+
+La prova può fermarsi alla bozza. Collegare subito l’invio automatico aggiungerebbe un rischio che non serve per capire se la raccolta delle informazioni fa risparmiare lavoro.
+
+## Un’istruzione di prova per estrarre le informazioni
+
+Su un documento fittizio o utilizzabile nell’ambiente scelto, puoi partire da questa richiesta:
+
+Estrai attività richiesta, quantità, luogo e scadenza. Per ogni dato indica il passaggio del documento da cui lo ricavi. Se un’informazione manca, scrivi “non presente”. Se due passaggi si contraddicono, riportali entrambi. Non aggiungere prezzi, condizioni o impegni. Prepara alla fine le domande da far verificare al responsabile.
+
+È un punto di partenza da collaudare. Le istruzioni non garantiscono che il modello le rispetti: confronta l’output con il documento originale e annota ciò che omette o interpreta male.
+
+## Che cosa preparare prima di collegare i documenti aziendali
+
+Servono un modello aggiornato, una fonte riconoscibile per listini e condizioni e una persona responsabile dell’approvazione. Se esistono tre versioni diverse dello stesso documento, conviene chiarire prima quale vale.
+
+Definisci anche quali dati sono necessari, quali account possono usarli e dove vengono trattati. Per la prova iniziale usa esempi fittizi o dati che l’azienda ha autorizzato a utilizzare nel servizio scelto. I documenti dei clienti non diventano adatti a qualsiasi strumento solo perché è possibile caricarli.
+
+Per obblighi contrattuali, adempimenti e valutazioni professionali, la bozza deve arrivare a chi ha competenza sul caso. In questa guida l’AI organizza informazioni: non certifica la correttezza legale o contabile di una pratica.
+
+## Come misurare il tempo recuperato in ufficio
+
+Confronta il tempo completo, dall’arrivo della richiesta alla bozza approvata. Registra preparazione, revisione, correzioni e ricerca delle informazioni mancanti. Tieni separati anche i tempi di attesa: una risposta più rapida del modello non risolve un’approvazione ferma per giorni.
+
+Per ogni pratica annota tre cose: minuti impiegati, errori da correggere e domande ancora aperte. Confronta pratiche simili, includendo casi incompleti. Se la bozza richiede troppe verifiche, restringi il compito: per esempio, limita l’assistente alla lista dei dati mancanti.
+
+## Domande frequenti sull’AI in amministrazione
+
+### L’AI può inviare da sola i preventivi?
+
+Tecnicamente un flusso può essere collegato all’invio, ma la prima prova può fermarsi alla preparazione. Prezzi, condizioni, destinatario e contenuto vanno controllati prima di introdurre azioni automatiche verso i clienti.
+
+### Bisogna cambiare il gestionale?
+
+Non è una condizione di partenza. Occorre verificare quali esportazioni, importazioni e integrazioni consente il sistema attuale. L’obiettivo è ridurre i passaggi manuali senza creare un secondo archivio incoerente.
+
+### Come capisco se l’automazione conviene davvero?
+
+Misura il tempo netto dopo revisione e confrontalo con costi di configurazione, gestione e manutenzione. Considera anche qualità e tempi di risposta. Una bozza più veloce, da sola, non dimostra un risparmio complessivo.
+
+## Individua una pratica da semplificare
+
+Porta a Gruppo Automa un esempio non riservato di richiesta, documento o preventivo e descrivi i passaggi attuali. Contattaci per prenotare una call sulle possibili automazioni e integrazioni aziendali.
+
+Se hai più idee, usa la guida per scegliere il primo progetto AI. Se il processo coinvolge più persone, approfondisci come introdurre l’AI in azienda.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
+
+---
+
+URL: https://gruppoautoma.it/blog/adottare-ai-azienda-metodo-shopify/
+Titolo: Come introdurre l’AI in azienda | Gruppo Automa
+Aggiornato: 2026-11-05
+
+Home / Blog / Persone e processi
+
+Persone e processi · La guida Automa
+
+# Come introdurre l’AI in azienda: cosa imparare dal memo Shopify
+
+Per introdurre l’AI in azienda servono un processo da migliorare, un responsabile e regole condivise su dati e approvazioni. Forma le persone su quel lavoro, misura anche errori e correzioni e decidi se estendere la prova in base ai risultati.
+
+A cura di Gruppo Automa5 novembre 20265 minuti di lettura
+
+Copertina generata con AI per Gruppo Automa, ispirata alla sua identità visiva.
+
+## Che cosa diceva il memo AI di Shopify
+
+Il 7 aprile 2025 Tobi Lütke pubblicò un memo sull’uso dell’AI in Shopify. La direzione chiedeva di inserirla nel lavoro, condividere gli apprendimenti e valutarne l’impiego prima di richiedere nuove risorse. L’aspettativa coinvolgeva anche i vertici aziendali.
+
+Il memo è un caso di organizzazione aziendale, non uno studio che dimostra produttività o risparmi. Shopify ha dimensioni, competenze e processi diversi da quelli di una piccola impresa italiana. Copiare la direttiva senza preparare le persone rischia di lasciare a ciascuno la scelta di strumenti, dati e controlli.
+
+Il punto che vale la pena riprendere è la responsabilità della direzione. Se il titolare chiede di sperimentare, deve anche chiarire dove, con quali risorse e come verrà valutato il risultato. Il percorso seguente è una proposta di Gruppo Automa per una PMI, non la procedura adottata da Shopify.
+
+## Da dove iniziare per introdurre l’AI in azienda
+
+Scegli un’attività circoscritta con chi la esegue. Preparare risposte a domande frequenti può essere una prova definita; «aumentare la produttività di tutti» è un obiettivo troppo largo per capire che cosa cambia.
+
+Prima di attivare nuovi strumenti, scrivi in una pagina:
+
+- il lavoro incluso nella prova e quello escluso;
+- il responsabile operativo e chi controlla l’output;
+- i dati e gli strumenti autorizzati;
+- le azioni che richiedono approvazione;
+- il modo in cui registrare risultati ed errori;
+- la data in cui decidere se continuare.
+
+La scadenza serve a prendere una decisione, non a promettere che l’AI produrrà un beneficio entro quel giorno. Se il lavoro si presenta raramente, servirà più tempo per raccogliere esempi significativi.
+
+## Come formare il team su un lavoro reale
+
+Una dimostrazione utile parte dallo stesso documento o dalla stessa richiesta che una persona deve gestire ogni giorno. Mostra come preparare l’input, quali informazioni fornire e come confrontare il risultato con la fonte.
+
+Poi usa un caso incompleto o ambiguo. Il team deve poter riconoscere un output che sembra convincente ma manca di un dato essenziale. Saper interrompere una procedura e chiedere un controllo è parte della formazione, non un fallimento dell’adozione.
+
+Evita di misurare l’impegno con il numero di messaggi inviati a un assistente. Una persona potrebbe usare meno l’AI e ottenere un risultato migliore perché ha capito quando non serve. Raccogli invece esempi di lavoro completato, correzioni ricorrenti e passaggi ancora manuali.
+
+## Esempio: preparare risposte al servizio clienti
+
+Esempio ipotetico, non un caso cliente Automa. Un’azienda con un piccolo ufficio commerciale riceve domande ricorrenti su documenti da inviare e stato delle richieste. Decide di provare un assistente che prepara bozze usando procedure approvate.
+
+Il responsabile sceglie un gruppo di domande e controlla che le informazioni di riferimento siano aggiornate. Due persone preparano le risposte con il nuovo metodo; un referente verifica contenuti e tempi. Le bozze restano interne fino all’approvazione e i casi fuori perimetro seguono il percorso già esistente.
+
+Se l’assistente inventa una scadenza, il gruppo registra l’errore e cerca la causa: mancava l’informazione? Il documento era ambiguo? Il controllo lo ha individuato? Correggere il singolo testo è necessario; capire perché è successo serve a migliorare la prova.
+
+## Quali risultati misurare prima di estendere l’uso
+
+Misura
+
+Che cosa osservare
+
+Tempo completo
+
+Preparazione, verifica e correzione della risposta
+
+Qualità
+
+Errori, omissioni e casi da riaprire
+
+Autonomia
+
+Aiuto necessario per usare correttamente la procedura
+
+Continuità
+
+Capacità di lavorare quando lo strumento non è disponibile
+
+Confronta casi simili al metodo precedente. Una risposta più rapida ma meno corretta non basta; nemmeno una risposta perfetta su un unico esempio dimostra che il processo sia pronto per tutti i clienti.
+
+Alla revisione finale scegli tra estendere il perimetro, correggere la prova o fermarla. Documenta la decisione e conserva una procedura alternativa. Una prova interrotta può evitare un investimento sbagliato: non va nascosta per far sembrare riuscita l’iniziativa.
+
+## Chi deve essere responsabile dell’adozione AI
+
+Il titolare definisce l’obiettivo e rende disponibili tempo e risorse. Chi conosce il processo stabilisce che cosa significa un buon risultato. Chi configura gli strumenti deve rendere chiari accessi, collegamenti e limiti. Nelle realtà piccole una persona può coprire più ruoli, ma le responsabilità devono restare riconoscibili.
+
+Raccogli le istruzioni approvate in un luogo condiviso e aggiornabile. Se il metodo resta soltanto nella cronologia della chat di un dipendente, diventa difficile mantenerlo o trasferirlo a un collega.
+
+## Domande frequenti sull’adozione dell’AI nelle PMI
+
+### Serve formare tutti i dipendenti prima di iniziare?
+
+Per una prova circoscritta puoi coinvolgere prima le persone del processo scelto. Chi partecipa deve conoscere strumenti, dati utilizzabili, controlli e gestione degli errori. L’estensione ad altri reparti richiede un adattamento ai loro compiti.
+
+### Una piccola impresa ha bisogno di regole scritte sull’AI?
+
+Un promemoria operativo condiviso aiuta a chiarire quali strumenti usare, quali dati inserire e chi approva il lavoro. Deve corrispondere al processo reale e restare aggiornato; non sostituisce le valutazioni specifiche richieste dall’attività.
+
+### Adottare l’AI significa ridurre il personale?
+
+Una prova dovrebbe misurare il lavoro, non partire da una riduzione già decisa. Il tempo eventualmente recuperato può essere impiegato per arretrati, qualità o servizio ai clienti. Un memo di un’altra azienda non dimostra quali scelte siano corrette per la propria.
+
+## Prepara una prova che il team possa valutare
+
+Gruppo Automa offre consulenza AI e sviluppo di automazioni. Contattaci per prenotare una call portando un’attività concreta, chi la svolge e un esempio non riservato: sono informazioni utili per discutere perimetro e controlli di una prima prova.
+
+Per decidere da quale attività partire, leggi come scegliere un progetto AI per una PMI. Per un’applicazione nell’ufficio, trovi la guida su AI e amministrazione nelle piccole imprese.
+
+Prenota una call di 30 minutiScrivici il tuo caso ↗
