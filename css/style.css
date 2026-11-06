@@ -548,6 +548,9 @@ html[data-lang="it"] :is(.legal, .legal-foot) [lang="en"], html[data-lang="en"] 
 /* =========================================================
    project viewer + booking modals
    ========================================================= */
+/* Keep the external chat host below the site's active overlays, including when
+   its script finishes loading after a dialog opens. The chat itself stays intact. */
+body:has(.bk:not([hidden]), .pv:not([hidden]), .menu-toggle[aria-expanded="true"]) > [id^="cheai-widget-"] { display: none; }
 .pv, .bk { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; padding: 20px; }
 .pv[hidden], .bk[hidden] { display: none; }
 .pv__backdrop { position: absolute; inset: 0; background: rgba(11,23,38,.55); backdrop-filter: blur(6px); }
