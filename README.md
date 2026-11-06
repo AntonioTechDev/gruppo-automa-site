@@ -11,8 +11,8 @@ collegarsi a Google prima del clic. Un’apertura anticipata lo carica subito.
 
 - Home: presentazione, servizi in sintesi, CheAI, portfolio, team e contatore ROI.
 - Servizi: consulenza AI, gestionali/CRM/web app, automazioni/API e siti/landing.
-- Progetti: dieci progetti con immagini, descrizioni e attribuzioni.
-- Blog: indice editoriale con il primo articolo sulle novità AI utili alle PMI.
+- Progetti: cinque progetti Automa con immagini, descrizioni e accesso alle demo.
+- Blog: indice editoriale con sei guide pratiche per le PMI.
 - Chi siamo: i tre soci, competenze e metodo.
 - Contatti: telefono, email, sede, calendario e preparazione di un'email.
 
@@ -77,8 +77,8 @@ ogni `**/index.html` senza `noindex`. `lastmod` è la data
 dell'ultimo commit del file. `llms.txt` (formato llmstxt.org) riassume chi è
 Gruppo Automa, pagine, servizi, progetti, articoli e contatti; `llms-full.txt`
 contiene il testo delle pagine. Lo script blocca la pubblicazione se una pagina
-pubblica non ha title, description, canonical corretto, og:image o JSON-LD
-valido, se title o description si ripetono o se un articolo non è collegato
+pubblica non ha lingua italiana, un solo H1, contenuto statico nel main, title,
+description, canonical corretto, og:image o JSON-LD valido, se ha link locali mancanti, se title o description si ripetono o se un articolo non è collegato
 dall'indice del Blog. Privacy e cookie restano noindex, fuori dalla sitemap ma
 scansionabili.
 
@@ -92,8 +92,11 @@ in ogni gruppo.
 IndexNow (Bing, Copilot e gli altri motori aderenti): la chiave pubblica è in
 `indexnow-key.txt` e nello stesso file con nome `<chiave>.txt`; conservarli
 entrambi. Dopo il push `scripts/indexnow.py` aspetta che GitHub Pages serva la
-nuova sitemap e invia gli URL nuovi, modificati o rimossi rispetto all'ultima
-sitemap notificata. Se non è cambiato nulla non invia niente; un errore di rete
+nuova sitemap e il manifest generato `indexnow-manifest.json`, poi invia gli URL
+nuovi, modificati o rimossi rispetto all’ultimo invio riuscito. Le impronte dei
+contenuti rilevano anche modifiche nello stesso giorno senza falsificare le date
+editoriali. Una modifica alle risorse condivise segnala tutte le pagine. Un invio
+esplicito di singoli URL aggiorna solo il loro stato; gli altri restano in attesa. Se non è cambiato nulla non invia niente; un errore di rete
 non blocca la pubblicazione e il comando da ripetere compare nel log. Google
 non ha un'API di notifica per pagine normali: legge la sitemap, già registrata
 nella proprietà Search Console `https://gruppoautoma.it/` dell'account Google
@@ -138,3 +141,12 @@ Il calendario usa un unico iframe riutilizzato. `site.js` avvia il precaricament
 ### Sessione del calendario e touch (v16)
 
 L’iframe ha `credentialless` e `referrerpolicy="no-referrer"`, impostati prima del src. I browser compatibili usano storage temporaneo isolato; gli altri ignorano credentialless e mantengono l’embed standard. Google resta il gestore di modulo, cookie temporanei, controlli e conferme; non filtrare i suoi errori o simulare le sue disponibilità. URL con hl=it e ctz=Europe/Rome. Menu, popup e feedback al tocco sono in pages.css, con riduzione del movimento e fallback statici.
+
+Il deploy richiede sorgenti e script committati: si ferma se trova modifiche locali
+in `site/`, `scripts/` o `deploy-automa.sh`, prima di generare o pubblicare.
+Prove di regressione (nessun accesso di rete):
+`python3 -m unittest discover -s scripts -p "test_*.py"`.
+
+I file llms sono un formato supplementare per la lettura dei contenuti, non una
+registrazione a ChatGPT o Claude. Google non richiede file AI né markup speciale.
+L’accesso dei crawler di addestramento è distinto dalla presenza nella ricerca.
