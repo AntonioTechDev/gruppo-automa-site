@@ -17,7 +17,10 @@ collegarsi a Google prima del clic. Un’apertura anticipata lo carica subito.
 - Contatti: telefono, email, sede, calendario e preparazione di un'email.
 
 Privacy e cookie policy sono collegate dal footer. CheAI rimane una sezione
-nella Home con collegamento a cheai.io; il widget non è ancora integrato.
+nella Home con collegamento a cheai.io. Il widget CHEAI è caricato dal file condiviso
+`js/site.js`, una volta per pagina, per l’attività «Gruppo Automa · Sito».
+Nome, immagine, colore, tema, saluto, posizione e domini si gestiscono in CHEAI,
+Assistente → Sul tuo sito: non aggiungere stili o una seconda chat nelle pagine.
 Il sito non pubblica un listino prezzi.
 
 ## Modifiche
@@ -26,7 +29,9 @@ La Home è il riferimento visivo. Nel repository sorgente, leggere `design.md`
 e le istruzioni di progetto prima di aggiungere pagine.
 
 - Stili comuni: `css/style.css` e `css/pages.css`.
-- Menu, popup prenotazioni e modulo: `js/site.js`.
+- Menu, popup prenotazioni, modulo e incorporamento del widget CHEAI: `js/site.js`.
+  Ogni nuova pagina, compresi gli articoli, deve includerlo una sola volta;
+  non copiare anche lo snippet CHEAI nell’HTML.
 - Scene e interazioni della Home: `js/main.js`.
 - Calendario pubblico: `bookingUrl` in `js/config.js`.
 - Portfolio: `js/projects.js` e pagina Progetti. Tenere coerenti contenuti,
