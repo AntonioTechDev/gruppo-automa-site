@@ -1,5 +1,14 @@
-/* Navigation, appointments and contact behavior shared by every Automa page. */
+/* Navigation, appointments, contact and CHEAI widget shared by every Automa page. */
 (() => {
+  const widgetUrl = 'https://cheai.io/cheai-widget.js';
+  if (!document.querySelector(`script[src="${widgetUrl}"]`)) {
+    const widget = document.createElement('script');
+    widget.src = widgetUrl;
+    widget.dataset.agent = '9e88cd5f-effe-4691-ba49-7108a5ce8076';
+    widget.defer = true;
+    document.body.append(widget);
+  }
+
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
