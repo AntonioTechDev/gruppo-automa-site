@@ -1,6 +1,6 @@
 # Gruppo Automa
 
-> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, l'assistente AI che risponde come faresti tu. Sede ad Aversa (CE).
 
 Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center, 81031 Aversa (CE). Sito e contenuti in italiano.
 
@@ -16,7 +16,7 @@ Software e AI su misura · Aversa (CE)
 
 # Il futuro della tua azienda, un'automazione alla volta.
 
-Siamo un team giovane di Aversa che sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Abbiamo creato CheAI, il chatbot che sembra umano. Dall'idea al rilascio, senza giri di parole.
+Siamo un team giovane di Aversa che sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Abbiamo creato CheAI, l'assistente AI che risponde come faresti tu. Dall'idea al rilascio, senza giri di parole.
 
 Prenota una call di 30 minuti Scopri CheAI
 
@@ -174,7 +174,7 @@ Disponibile ora
 
 ### CheAI
 
-Il chatbot che sembra umano.
+L'assistente AI che risponde come faresti tu.
 
 Risponde ai tuoi clienti 24 ore su 24, gestisce prenotazioni e richieste e passa al tuo team le conversazioni delicate. CRM, campagne e assistente AI in un'unica piattaforma.
 

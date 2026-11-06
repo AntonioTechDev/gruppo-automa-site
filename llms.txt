@@ -1,12 +1,12 @@
 # Gruppo Automa
 
-> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+> Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, l'assistente AI che risponde come faresti tu. Sede ad Aversa (CE).
 
 Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center, 81031 Aversa (CE). Sito e contenuti in italiano.
 
 ## Pagine principali
 
-- [Home](https://gruppoautoma.it/): Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, il chatbot che sembra umano. Sede ad Aversa (CE).
+- [Home](https://gruppoautoma.it/): Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, l'assistente AI che risponde come faresti tu. Sede ad Aversa (CE).
 - [Servizi](https://gruppoautoma.it/servizi/): Consulenza AI, gestionali e CRM, automazioni API e siti su misura. Scopri come lavora Gruppo Automa, dalla strategia al rilascio.
 - [Progetti](https://gruppoautoma.it/progetti/): EdilManagement, Simulatore Ponteggi, Il Vizietto, Svelalo e CheAI: cinque progetti Gruppo Automa per organizzare il lavoro delle aziende.
 - [Blog](https://gruppoautoma.it/blog/): Il blog di Gruppo Automa: guide, idee e approfondimenti su intelligenza artificiale, software e automazioni per il lavoro delle aziende.
