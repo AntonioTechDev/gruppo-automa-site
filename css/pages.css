@@ -250,3 +250,10 @@ main section[id] { scroll-margin-top: 110px; }
   .hero__ctas .btn { white-space: normal; line-height: 1.3; padding-inline: 1.1em; }
   .proof-pill__bot { flex: none; }
 }
+
+/* Portfolio illustrations retain their complete titles on touch and desktop. */
+.project-card__image { background: var(--ink); }
+.project-card__image img { aspect-ratio: 16 / 9; object-fit: contain; object-position: center; }
+.project-card__image:hover img { transform: none; }
+.project-note { margin-top: 28px; color: var(--muted); font-size: .875rem; }
+.project-card__access { font-size: .875rem; }

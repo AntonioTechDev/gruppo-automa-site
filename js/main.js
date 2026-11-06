@@ -275,21 +275,21 @@
   /* ---------------- PROJECTS: groups, viewer, gallery ---------------- */
   const PROJECTS = window.PROJECTS || [];
   $$(".js-pcount").forEach((el) => { el.textContent = PROJECTS.length; });
-  const groupOf = (p) => (p.cat === "business" ? "web" : "corp");
-  const GROUPS = ["all", "web", "corp"];
-  const GLABEL = { all: "Tutti", web: "Siti ed e-commerce", corp: "Portali enterprise e PA" };
-  const CAT = { pa: "Pubblica Amministrazione", enterprise: "Enterprise", business: "Sito aziendale", product: "Prodotto" };
+  const groupOf = (p) => p.cat;
+  const GROUPS = ["all", "gestionali", "configuratori", "prodotti"];
+  const GLABEL = { all: "Tutti", gestionali: "Gestionali", configuratori: "Configuratori", prodotti: "Prodotti Automa" };
+  const CAT = { gestionali: "Gestionale", configuratori: "Configuratore", prodotti: "Prodotto Automa" };
   const whenLabel = (w) => w;
   const inGroup = (g) => PROJECTS.filter((p) => g === "all" || groupOf(p) === g);
   const host = (u) => { try { return new URL(u).host.replace(/^www\./, ""); } catch { return T("_private", "progetto privato"); } };
   const media = (p, cls = "") => (p.img
-    ? `<img src="assets/shots/${p.img}" alt="" loading="lazy" decoding="async" width="1200" height="750">`
+    ? `<img src="assets/shots/${p.img}" srcset="assets/shots/${p.img.replace(".webp", "-800.webp")} 800w, assets/shots/${p.img} 1600w" sizes="(max-width: 860px) 85vw, 600px" alt="" loading="lazy" decoding="async" width="1600" height="900">`
     : `<div class="cover cover--${groupOf(p)} ${cls}"><span>${esc(p.title)}</span></div>`);
   const chipsHTML = (active) => GROUPS.map((g) => `<button type="button" class="fchip${g === active ? " on" : ""}" data-g="${g}" aria-pressed="${g === active}">${esc(GLABEL[g])}<small>${inGroup(g).length}</small></button>`).join("");
 
   // viewer — full-screen, continuous slider with auto-scrolling site previews
   const pv = $("#pv");
-  const FULL = new Set(["adm", "agenzia-entrate", "armeria", "axa-lamiasalute", "casillo", "cheai", "dema", "demanio", "federalismo-fiscale", "finanze", "geoportale", "giustizia-tributaria", "mase", "meacasa", "mef", "miroma", "muoio", "repubblica-digitale", "scame", "scame-emobility", "sella", "setterre", "unar"]);
+  const FULL = new Set(); // Copertine concettuali: nessuna simulazione di schermata scorrevole.
   const track = $("#pv-track"), stageEl = $("#pv-stage"), film = $("#pv-thumbs");
   const V = { group: "all", list: PROJECTS, i: 0, pos: 0, slides: [], step: 600, auto: !reduceMotion, scroll: null, nav: null };
   const slideHTML = (p) => {
@@ -363,8 +363,11 @@
       $("#pv-desc").textContent = p.desc[LANG] || p.desc.it;
       $("#pv-tags").innerHTML = p.tags.map((t) => `<span>${esc(t)}</span>`).join("");
       const link = $("#pv-link");
-      link.hidden = !p.url;
-      if (p.url) link.href = p.url;
+      link.hidden = false;
+      link.href = p.url || "/contatti/";
+      link.textContent = p.label + (p.url ? " ↗" : " →");
+      if (p.url) { link.target = "_blank"; link.rel = "noopener"; }
+      else { link.removeAttribute("target"); link.removeAttribute("rel"); }
       $("#pv-play").hidden = !(p.img && FULL.has(p.img.replace(".webp", "")));
     };
     const nEl = $("#pv-n"), nTxt = String(V.i + 1).padStart(2, "0");
@@ -479,13 +482,13 @@
 
   // category cards
   const STORIES = [
-    { g: "web", img: "muoio.webp", k: "Siti ed e-commerce", big: "Siti che fanno lavorare le aziende del territorio.", t: "Brand site, cataloghi ed e-commerce", d: "Da Muoio Project Shoes a Mea Casa e Armeria Piccolo: siti veloci, curati nel design e pensati per portare contatti e vendite.", chips: ["Design su misura", "E-commerce"] },
-    { g: "corp", img: "agenzia-entrate.webp", k: "Portali enterprise e PA", big: "Portali usati da milioni di persone.", t: "Agenzia delle Entrate, Banca Sella, Scame", d: "Interfacce accessibili secondo le WCAG 2.1 AA e componenti su misura per enti pubblici, banche e industria.", chips: ["WCAG 2.1 AA", "Enterprise"] },
+    { g: "gestionali", img: "edilmanagement-automa.webp", k: "Gestionali su misura", big: "Il lavoro quotidiano, organizzato.", t: "EdilManagement e Il Vizietto", d: "Cantieri, documenti, biglietti e incassi: strumenti costruiti attorno ai processi delle aziende.", chips: ["Processi reali", "Dati collegati"] },
+    { g: "prodotti", img: "cheai-automa.webp", k: "Prodotti Automa", big: "Dalle aziende da trovare ai clienti da seguire.", t: "Svelalo e CheAI", d: "Ricerca di aziende, conversazioni e appuntamenti: due prodotti Automa per il lavoro commerciale e la relazione con i clienti.", chips: ["Ricerca aziende", "Relazioni con i clienti"] },
   ];
   $("#stories").innerHTML = STORIES.map((s) => {
     const n = inGroup(s.g).length;
     return `<button type="button" class="story" data-g="${s.g}" data-reveal>
-      <div class="vcard story__top"><span class="story__count">${n} ${esc(T("projectsWord", "progetti"))}</span><span class="story__k">${esc(s.k)}</span><span class="story__big">${esc(s.big)}</span><img class="story__img" src="assets/shots/${s.img}" alt="" loading="lazy" width="1200" height="750"></div>
+      <div class="vcard story__top"><span class="story__count">${n} ${esc(T("projectsWord", "progetti"))}</span><span class="story__k">${esc(s.k)}</span><span class="story__big">${esc(s.big)}</span><img class="story__img" src="assets/shots/${s.img}" alt="" loading="lazy" width="1600" height="900"></div>
       <h3>${esc(s.t)}</h3><p>${esc(s.d)}</p>
       <div class="story__chips">${s.chips.map((c) => `<span>${esc(c)}</span>`).join("")}</div>
       <span class="story__link">${esc(fill(T("seeN", "Vedi i {n} progetti"), { n }))} →</span>

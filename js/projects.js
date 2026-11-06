@@ -1,36 +1,80 @@
-/* Gruppo Automa — showcase (10 projects).
-   cat: business = siti ed e-commerce · enterprise / pa = portali enterprise e PA
-   img: screenshot in assets/shots (full-page preview in assets/shots/full with the same name)
-   when: label shown next to the category (who built it) */
+/* Gruppo Automa — cinque progetti approvati dal titolare.
+   Copertine illustrative generate con AI, non screenshot dell’app. */
 window.PROJECTS = [
-  { title: "Muoio Project Shoes", cat: "business", url: "https://www.muoioprojectshoes.it/", img: "muoio.webp", when: "Hype Studio",
-    desc: { it: "Sito per un laboratorio di tranceria e modelleria calzature Made in Italy: racconto del processo artigianale, servizi e contatti." },
-    tags: ["Brand site", "Made in Italy"] },
-  { title: "Mea Casa", cat: "business", url: "https://meacasa.it/", img: "meacasa.webp", when: "Hype Studio",
-    desc: { it: "Sito per servizi immobiliari: presentazione della struttura, servizi e richieste di contatto." },
-    tags: ["Real estate", "Lead generation"] },
-  { title: "Casillo Allestimenti", cat: "business", url: "https://www.casilloallestimenti.eu/", img: "casillo.webp", when: "Hype Studio",
-    desc: { it: "Sito per allestimenti e officina di veicoli industriali ad Afragola: servizi, lavori e contatti." },
-    tags: ["Industria", "Corporate"] },
-  { title: "Miroma Ceramiche", cat: "business", url: "https://www.miromaceramiche.it/", img: "miroma.webp", when: "Hype Studio",
-    desc: { it: "Sito per ceramiche, pavimenti e arredo bagno ad Aversa, con catalogo di ambienti e prodotti." },
-    tags: ["Showroom", "Catalogo"] },
-  { title: "DE.MA. Costruzioni", cat: "business", url: "https://www.ediliziadema.it/", img: "dema.webp", when: "Hype Studio",
-    desc: { it: "Sito per cantieri industriali e civili, ristrutturazioni e impiantistica a Gricignano." },
-    tags: ["Edilizia", "Corporate"] },
-  { title: "Centro Medico Sette Re", cat: "business", url: "https://www.centromedicosettere.it/", img: "setterre.webp", when: "Hype Studio",
-    desc: { it: "Sito per un centro medico con diagnostica e fisioterapia ad Arzano e Grumo Nevano." },
-    tags: ["Sanità", "Prenotazioni"] },
-  { title: "Armeria Piccolo", cat: "business", url: "https://armeriapiccolo.com/", img: "armeria.webp", when: "Hype Studio",
-    desc: { it: "E-commerce per un'armeria dal 1976: catalogo, accessori, ricambi e acquisto online." },
-    tags: ["E-commerce", "Catalogo"] },
-  { title: "Scame E-Mobility", cat: "enterprise", url: "https://www.emobility-scame.com", img: "scame-emobility.webp", when: "Team · SMC",
-    desc: { it: "Sito prodotto per le stazioni di ricarica dei veicoli elettrici di Scame." },
-    tags: ["Enterprise", "Liferay"] },
-  { title: "Banca Sella", cat: "enterprise", url: "https://www.sella.it", img: "sella.webp", when: "Team · SMC",
-    desc: { it: "Portale della banca Sella." },
-    tags: ["Banking", "Frontend"] },
-  { title: "Agenzia delle Entrate", cat: "pa", url: "https://www.agenziaentrate.gov.it", img: "agenzia-entrate.webp", when: "Team · SMC",
-    desc: { it: "Portale istituzionale dell'Agenzia delle Entrate e di Agenzia Entrate-Riscossione, usato ogni giorno da milioni di cittadini." },
-    tags: ["Liferay 7.x", "WCAG 2.1"] },
+  {
+    "title": "EdilManagement",
+    "cat": "gestionali",
+    "url": "https://edilmanagement-demo.bluepixelstudio.it/",
+    "img": "edilmanagement-automa.webp",
+    "when": "Gruppo Automa",
+    "label": "Esplora la demo",
+    "desc": {
+      "it": "Gestionale per imprese edili: cantieri, clienti, fornitori, fatture e scadenze riuniti in un unico ambiente di lavoro."
+    },
+    "tags": [
+      "Gestione cantieri",
+      "Amministrazione"
+    ]
+  },
+  {
+    "title": "Simulatore Ponteggi",
+    "cat": "configuratori",
+    "url": "https://www.noleggioponteggiaversa.it/simulator/",
+    "img": "simulatore-ponteggi-automa.webp",
+    "when": "Gruppo Automa",
+    "label": "Prova il simulatore",
+    "desc": {
+      "it": "Configuratore per Noleggio Ponteggi Aversa: dimensioni, facciate e tipologia di ponteggio diventano un riepilogo del preventivo."
+    },
+    "tags": [
+      "Configuratore",
+      "Preventivi"
+    ]
+  },
+  {
+    "title": "Il Vizietto",
+    "cat": "gestionali",
+    "url": "",
+    "img": "il-vizietto-automa.webp",
+    "when": "Gruppo Automa",
+    "label": "Parliamo del progetto",
+    "desc": {
+      "it": "Gestionale per la biglietteria e le sedi Il Vizietto: ordini, incassi, clienti e convenzioni, con raccolta automatica dei dati operativi."
+    },
+    "tags": [
+      "Biglietteria",
+      "Controllo incassi"
+    ]
+  },
+  {
+    "title": "Svelalo",
+    "cat": "prodotti",
+    "url": "https://svelalo.com/",
+    "img": "svelalo-automa.webp",
+    "when": "Prodotto Automa",
+    "label": "Scopri Svelalo",
+    "desc": {
+      "it": "Ricerca di aziende per attività e territorio, con recapiti pubblici e fonti consultabili in un unico elenco di contatti."
+    },
+    "tags": [
+      "Ricerca aziende",
+      "Contatti B2B"
+    ]
+  },
+  {
+    "title": "CheAI",
+    "cat": "prodotti",
+    "url": "https://cheai.io/",
+    "img": "cheai-automa.webp",
+    "when": "Prodotto Automa",
+    "label": "Scopri CheAI",
+    "desc": {
+      "it": "La piattaforma Automa che riunisce conversazioni, clienti, appuntamenti e assistenza AI per organizzare il lavoro delle attività."
+    },
+    "tags": [
+      "Conversazioni",
+      "Appuntamenti",
+      "Assistente AI"
+    ]
+  }
 ];

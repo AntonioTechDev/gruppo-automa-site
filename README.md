@@ -30,7 +30,7 @@ e le istruzioni di progetto prima di aggiungere pagine.
 - Scene e interazioni della Home: `js/main.js`.
 - Calendario pubblico: `bookingUrl` in `js/config.js`.
 - Portfolio: `js/projects.js` e pagina Progetti. Tenere coerenti contenuti,
-  screenshot e attribuzioni se la selezione cambia.
+  le cinque copertine illustrative e le descrizioni dei progetti Automa.
 - Pagine interne: cartelle `servizi`, `progetti`, `blog`, `chi-siamo`, `contatti`.
 - SEO tecnica: metadati delle singole pagine, `sitemap.xml` e `robots.txt`.
 

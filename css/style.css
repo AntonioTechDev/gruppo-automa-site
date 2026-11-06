@@ -1302,3 +1302,9 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .phone-label, .ui--book .day.sel { background: var(--v1); }
 .day.sel small { color: #fff; }
 .gt__wk i { color: var(--muted); }
+
+/* Portfolio Automa v18: illustrative covers, full composition. */
+.win img, .gcard__img img, .vw__base { object-fit: contain; object-position: center; background: var(--ink); }
+.gcard__img, .story__img { aspect-ratio: 16 / 9; }
+.story__img { object-fit: contain; background: var(--ink); }
+.gcard:hover .gcard__img img { transform: none; }
