@@ -225,6 +225,21 @@
   const frameMarkup = '<svg class="scroll-frame" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><rect class="scroll-frame__track" x="1" y="1" width="98" height="98" rx="4"/><rect class="scroll-frame__line" x="1" y="1" width="98" height="98" rx="4" pathLength="1"/></svg>';
   const frameTargets = [...utexts, ...$$(".how__pane")];
   frameTargets.forEach((el) => el.insertAdjacentHTML("beforeend", frameMarkup));
+  // Match the SVG coordinate system to the box: uniform strokes and accurate dash lengths.
+  const frameObserver = new ResizeObserver((entries) => {
+    entries.forEach(({target}) => {
+      const svg = $(".scroll-frame", target);
+      const {width, height} = svg.getBoundingClientRect();
+      if (!width || !height) return;
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      $$("rect", svg).forEach((rect) => {
+        rect.setAttribute("width", Math.max(0, width - 2));
+        rect.setAttribute("height", Math.max(0, height - 2));
+        rect.setAttribute("rx", "20");
+      });
+    });
+  });
+  frameTargets.forEach((el) => frameObserver.observe(el));
   $$(".uses__hint, .how__hint").forEach((el) => {
     el.innerHTML = '<span class="scroll-orbit" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle class="scroll-orbit__progress" cx="22" cy="22" r="19" pathLength="1"/></svg><span>↓</span></span><span>Scorri per esplorare</span>';
   });
