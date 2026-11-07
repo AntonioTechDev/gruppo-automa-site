@@ -1,4 +1,4 @@
-/* The whole composition is built from a wireframe. Scroll is its only clock. */
+/* Build each scene once on arrival; scrolling only selects what to read. */
 (() => {
   const {gsap, ScrollTrigger} = window;
   if (!gsap || !ScrollTrigger) return;
@@ -6,9 +6,16 @@
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const clamp = gsap.utils.clamp(0, 1);
   const ease = gsap.parseEase('power2.inOut');
+  // Keep visit history across responsive rebuilds, for this page visit only.
+  const seenScenes = new WeakSet(), seenIntros = new WeakSet();
+  const buildDuration = 1.05;
   const media = gsap.matchMedia();
   media.add({mobile: '(max-width: 860px)', desktop: '(min-width: 861px)', motion: '(prefers-reduced-motion: no-preference)'}, ({conditions}) => {
-    if (!conditions.motion) return;
+    if (!conditions.motion) {
+      $$('.utext, .how__pane').forEach(el => seenScenes.add(el));
+      $$('.uses__head, .how__copy').forEach(el => seenIntros.add(el));
+      return;
+    }
     const cleanups = [];
     const howCopy = $('.how__copy'), howStage = $('.how__sticky');
     if (conditions.mobile) $('#come-lavoriamo').insertBefore(howCopy, $('#how-pin'));
@@ -99,18 +106,32 @@
       return {measure, draw, clear, timelines};
     }
 
-    // Section introductions also start as empty blocks, then receive their copy.
+    // Introductions also finish without requiring any further scroll.
     [$('.uses__head'), ...(conditions.mobile ? [howCopy] : [])].forEach(intro => {
       intro.classList.add('build-intro');
       const pieces = [...intro.children].filter(el => !el.matches('.how__hint'));
       const build = builder(intro, [pieces.map((el, i) => part(el, .13 + i * .08))], true);
-      const clock = {value: 0}; let disposed = false;
+      const clock = {value: seenIntros.has(intro) ? 1 : 0};
+      let disposed = false, started = seenIntros.has(intro), playback;
       const render = () => {if (!disposed) build.draw(0, clock.value);};
+      const finish = () => {
+        if (disposed) return;
+        playback?.kill(); started = true; seenIntros.add(intro); clock.value = 1; render();
+      };
+      const play = () => {
+        if (disposed || started) return;
+        started = true; seenIntros.add(intro);
+        playback = gsap.to(clock, {value: 1, duration: buildDuration, ease: 'none', onUpdate: render});
+      };
       const measure = () => {if (!disposed) {build.measure(); render();}};
       measure();
-      gsap.to(clock, {value: 1, ease: 'none', onUpdate: render, scrollTrigger: {trigger: intro, start: 'top 92%', end: 'top 26%', scrub: .25, onRefresh: measure}});
+      ScrollTrigger.create({trigger: intro, start: 'top 80%', end: 'bottom top',
+        onEnter: play, onEnterBack: finish, onLeave: finish,
+        onLeaveBack: () => {if (started) finish();},
+        onRefresh: self => {if (self.progress > 0) {if (intro.getBoundingClientRect().bottom <= 0) finish(); else play();}},
+      });
       const observer = new ResizeObserver(measure); observer.observe(intro);
-      cleanups.push(() => {disposed = true; observer.disconnect(); build.clear(); intro.classList.remove('build-intro');});
+      cleanups.push(() => {disposed = true; playback?.kill(); observer.disconnect(); build.clear(); intro.classList.remove('build-intro');});
     });
 
     [
@@ -124,7 +145,7 @@
         slot.className = 'build-ui-slot'; ui.before(slot); slot.append(ui); slots.push(slot);
       });
       const guide = document.createElement('div'); guide.className = 'build-guide';
-      guide.innerHTML = '<span class="build-guide__arrow" aria-hidden="true">↓</span><span>Scorri: la sezione prende forma</span><span class="build-guide__count"></span><span class="build-guide__track" aria-hidden="true"><i class="build-guide__fill"></i></span>';
+      guide.innerHTML = '<span class="build-guide__arrow" aria-hidden="true">↓</span><span>Scorri per esplorare</span><span class="build-guide__count"></span><span class="build-guide__track" aria-hidden="true"><i class="build-guide__fill"></i></span>';
       stage.append(guide);
       const plans = scenes.map((scene, i) => {
         if (type === 'services') return [
@@ -154,20 +175,20 @@
         tween('.chk__b svg', {strokeDashoffset: 24}, {strokeDashoffset: 0}, .45);
         tl.to({}, {duration: .01}, .99); return tl;
       });
-      const clock = {value: 0}; let disposed = false;
+      const clock = {value: 0};
+      let disposed = false, index = 0, entered = false, playback;
       const render = () => {
         if (disposed) return;
-        const index = Math.min(scenes.length - 1, Math.floor(clock.value)), p = Math.min(1, clock.value - index);
         scenes.forEach((scene, k) => {
           const selected = k === index;
           gsap.set(scene, {autoAlpha: selected ? 1 : 0}); scene.classList.toggle('is-active', selected);
           scene.inert = !selected; scene.setAttribute('aria-hidden', String(!selected));
           if (visuals[k] !== scene) {gsap.set(visuals[k], {autoAlpha: selected ? 1 : 0}); visuals[k].classList.toggle('is-active', selected);}
         });
-        build.draw(index, p); detailTimelines[index].progress(p);
+        build.draw(index, clock.value); detailTimelines[index].progress(clock.value);
         $$('.how__steps li', section).forEach((el, k) => el.classList.toggle('is-active', k === index));
         $('.build-guide__count', guide).textContent = `${String(index + 1).padStart(2, '0')} / ${String(scenes.length).padStart(2, '0')}`;
-        $('.build-guide__fill', guide).style.transform = `scaleX(${clock.value / scenes.length})`;
+        $('.build-guide__fill', guide).style.transform = `scaleX(${(index + 1) / scenes.length})`;
       };
       const measure = () => {
         if (disposed) return;
@@ -180,12 +201,47 @@
         });
         build.measure(); render();
       };
+      const finish = () => {
+        playback?.kill(); clock.value = 1; render();
+      };
+      const sync = (progress, direction) => {
+        if (disposed) return;
+        const next = Math.min(scenes.length - 1, Math.floor(progress * scenes.length));
+        if (next !== index) {
+          playback?.kill(); index = next; entered = false;
+          clock.value = seenScenes.has(scenes[index]) ? 1 : 0;
+          render();
+        }
+        const r = pin.getBoundingClientRect();
+        const inView = r.top <= innerHeight * .55 && r.bottom > 0;
+        if (inView && !entered) {
+          entered = true;
+          const complete = seenScenes.has(scenes[index]) || direction < 0;
+          seenScenes.add(scenes[index]);
+          if (type === 'method') seenIntros.add(howCopy);
+          if (complete) finish();
+          else {
+            clock.value = 0; render();
+            playback = gsap.to(clock, {value: 1, duration: buildDuration, ease: 'none', onUpdate: render});
+          }
+        } else if (!inView && entered) finish();
+      };
       measure();
-      gsap.to(clock, {value: scenes.length - .0001, ease: 'none', onUpdate: render, scrollTrigger: {trigger: pin, start: 'top top', end: 'bottom bottom', scrub: .3, invalidateOnRefresh: true, onRefresh: measure}});
+      const selection = ScrollTrigger.create({trigger: pin, start: 'top top', end: 'bottom bottom',
+        onUpdate: self => sync(self.progress, self.direction),
+        onRefresh: self => {measure(); sync(self.progress, self.direction);},
+      });
+      // The first scene starts as it arrives, before the sticky area reaches the top.
+      ScrollTrigger.create({trigger: pin, start: 'top 55%', end: 'bottom top',
+        onEnter: self => sync(selection.progress, self.direction),
+        onEnterBack: self => sync(selection.progress, self.direction),
+        onLeave: () => {if (entered) finish();},
+        onLeaveBack: () => {if (entered) finish();},
+      });
       const observer = new ResizeObserver(measure); observer.observe(stage);
       document.fonts.ready.then(measure);
       cleanups.push(() => {
-        disposed = true; observer.disconnect(); build.clear();
+        disposed = true; playback?.kill(); observer.disconnect(); build.clear();
         scenes.forEach((el, i) => {el.inert = false; el.removeAttribute('aria-hidden'); el.classList.toggle('is-active', i === 0);});
         gsap.set([...scenes, ...visuals, ...visuals.flatMap(el => $$('.rep__bar i, .wa__line, .gt__bar, .gt__ms, .chk__b svg', el))], {clearProps: 'opacity,visibility,transform,clipPath,strokeDashoffset'});
         slots.forEach(slot => {slot.before(slot.firstElementChild); slot.remove();});
