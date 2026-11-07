@@ -83,7 +83,7 @@
       .fromTo(".shot", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2 }, .5);
   }
 
-  $$("main section:not(.hero) [data-split]").forEach((h) => {
+  $$("main section:not(.hero) [data-split]:not(#uses-title):not(#how-title)").forEach((h) => {
     const words = $$(".w > span", h);
     gsap.set(words, { yPercent: 110 });
     ScrollTrigger.create({ trigger: h, start: "top 86%", once: true, onEnter: () => gsap.to(words, { yPercent: 0, duration: 1, stagger: 0.035, ease: "power4.out" }) });
@@ -474,7 +474,7 @@
   gsap.to("#progress", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: 0.3 } });
 
   // extra reveals for supporting copy
-  reveal(".ba__head .lead, .uses__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
+  reveal(".ba__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
 
   // lime band opens from a rounded card to full bleed; integrations card grows in
   gsap.fromTo(".integ", { scale: 0.9, borderRadius: 48 }, { scale: 1, borderRadius: 30, ease: "none", scrollTrigger: { trigger: ".integ", start: "top 95%", end: "top 45%", scrub: true } });
