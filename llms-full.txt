@@ -3,6 +3,9 @@
 > Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, l'assistente AI che risponde come faresti tu. Sede ad Aversa (CE).
 
 Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center snc, 81031 Aversa (CE). Sito e contenuti in italiano.
+REA: CE-369545.
+Registro Imprese di Caserta: 04963130614.
+PEC: automagruppoitalia@legalmail.it.
 
 Testo delle pagine pubbliche di gruppoautoma.it, estratto dall'HTML pubblicato.
 
@@ -657,6 +660,8 @@ LA NOSTRA SEDE
 ## Ci trovi ad Aversa.
 
 Piazza Bernini, Bernini Center snc 81031 Aversa (CE)
+
+Registro Imprese di Caserta n. 04963130614 · REA CE-369545 PEC automagruppoitalia@legalmail.it
 
 Conosciamoci in una call ↗
 
