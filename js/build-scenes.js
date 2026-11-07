@@ -38,13 +38,13 @@
         overlay.prepend(box);
         return {...p, box, rect: null};
       }));
-      const timelines = layers.map((parts, i) => {
+      const timelines = layers.map(parts => {
         const tl = gsap.timeline({paused: true});
         parts.forEach(p => tl.fromTo(p.el,
           {autoAlpha: 0, clipPath: 'inset(0 100% 0 0)'},
           {autoAlpha: 1, clipPath: 'inset(0 0% 0 0)', duration: p.duration, ease: 'power2.out'}, p.start));
-        // Finished state remains readable for the final third of the scene.
-        if (!compact && i < plans.length - 1) tl.to(parts.map(p => p.el), {autoAlpha: 0, duration: .045}, .955);
+        // Hold the finished composition right up to the next scene's wireframe.
+        // Fading it to zero leaves an empty viewport at the boundary on reverse scroll.
         tl.to({}, {duration: .01}, .99);
         return tl;
       });
@@ -70,7 +70,10 @@
           const r = p.rect, appear = Math.max(0, p.start - .15);
           const build = clamp((progress - p.start) / p.duration);
           const outline = clamp((progress - appear) / .035) * clamp((p.start + p.duration + .1 - progress) / .1);
-          gsap.set(p.box, {x: r.x, y: r.y, width: r.w, height: r.h, opacity: outline, scaleX: .96 + .04 * clamp((progress - appear) / .1)});
+          // Major blocks are present even at progress zero. Detail selections still
+          // enter with their agent; the scaffold gives way only as real content arrives.
+          const scaffold = p.kind === 'detail' ? 0 : .65 * (1 - build);
+          gsap.set(p.box, {x: r.x, y: r.y, width: r.w, height: r.h, opacity: Math.max(scaffold, outline), scaleX: .96 + .04 * clamp((progress - appear) / .1)});
           p.box.style.setProperty('--placeholder-opacity', 1 - build);
           p.box.style.setProperty('--placeholder-cut', `${build * 100}%`);
         });
