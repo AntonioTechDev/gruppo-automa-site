@@ -9,6 +9,12 @@
     document.body.append(widget);
   }
 
+  // Reserve the dock's measured height through the widget's public CSS property.
+  const dock = document.querySelector('.dock');
+  if (dock) new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--automa-dock-height', `${dock.offsetHeight}px`);
+  }).observe(dock);
+
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
