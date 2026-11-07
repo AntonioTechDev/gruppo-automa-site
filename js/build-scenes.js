@@ -8,7 +8,7 @@
   const ease = gsap.parseEase('power2.inOut');
   // Keep visit history across responsive rebuilds, for this page visit only.
   const seenScenes = new WeakSet(), seenIntros = new WeakSet();
-  const buildDuration = 1.05;
+  const buildDuration = 2;
   const media = gsap.matchMedia();
   media.add({mobile: '(max-width: 860px)', desktop: '(min-width: 861px)', motion: '(prefers-reduced-motion: no-preference)'}, ({conditions}) => {
     if (!conditions.motion) {

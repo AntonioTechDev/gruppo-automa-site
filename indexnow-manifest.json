@@ -1,17 +1,17 @@
 {
   "pages": {
-    "https://gruppoautoma.it/": "d5665893421cca869da3cac10c290c3657329085e64642e422350c0fc1ca863e",
-    "https://gruppoautoma.it/blog/": "06f75b1c93021692b2ac1b8870bb27f17b8add85831f7063f8b972d2892abb51",
-    "https://gruppoautoma.it/blog/adottare-ai-azienda-metodo-shopify/": "6e875352bc6d172f663cabec0ecc2a5ea9069eb35ee84b002bf057b85a96b999",
-    "https://gruppoautoma.it/blog/ai-amministrazione-piccole-imprese/": "62b6c4b515011f8c4dc8420038bb1b9fb92eadf6bcf1a58d6a2be7b4ac91e25f",
-    "https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/": "75ee6b900bcf95fbe0c81f5b503ee69f5ca5b113e09abd70bf19b960da055ed2",
-    "https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/": "600f4eb1291e6569f59f4d1553335c63c8fce8c91e32df1c3d6f709eae2fb32e",
-    "https://gruppoautoma.it/blog/regole-ai-azienda-pmi/": "15010f0580568fa8f8f71c9de80b1f1897ec8c7b0ea21bcf3ccd105d4d4368db",
-    "https://gruppoautoma.it/blog/scegliere-progetto-ai-pmi/": "9a79b447e8a44605aa51a5e886ebfccfdb730a3642c50dad2d0a1a0fc6d9c38d",
-    "https://gruppoautoma.it/chi-siamo/": "740dcaf649849c35eb44ce00850beb85f751c41307c7d81103d22b7675d24f77",
-    "https://gruppoautoma.it/contatti/": "27e12a50e94f283034b8ebedf7f536841c1ce9d02b0a28074b20519217f0d658",
-    "https://gruppoautoma.it/progetti/": "9d06b733de515c5b29fbc10230cc981546066807b932b88cb4101a20c9453ee1",
-    "https://gruppoautoma.it/servizi/": "11be8c57e0df71d5bdcac933bc609c5e82d1f558a8fc517e75cbefcc9b9a1ae6"
+    "https://gruppoautoma.it/": "26480b972a4dcc9e0759c3b0120a69ad1bf98246f2b79585306f1a07c59d646e",
+    "https://gruppoautoma.it/blog/": "0033034bbdb5db1106866ff3556fd5738a8531beeed7ea38ae0d47b6757b372b",
+    "https://gruppoautoma.it/blog/adottare-ai-azienda-metodo-shopify/": "f623e49a862276b919d6bd2312f0314066182ed3a29df1b0c57eb9b63b00ea07",
+    "https://gruppoautoma.it/blog/ai-amministrazione-piccole-imprese/": "7052c53cfe7e1f7e3173f04c54b9ad24992d1d64e41fbe1b41fcacc6160332bf",
+    "https://gruppoautoma.it/blog/automatizzare-raccolta-fatture/": "f73151921729f265296645b6b02440f55f8d2d3918a73c726678520086b8660b",
+    "https://gruppoautoma.it/blog/contenuti-ai-voce-azienda/": "8f92af133fdc2cc4b706c96a87d2d2e9f833dfcd1f4d27c86156ee595573ac8b",
+    "https://gruppoautoma.it/blog/regole-ai-azienda-pmi/": "e75c6469530ecb473db4ee221dccac8cc221859184273ca85f1f4153427cf830",
+    "https://gruppoautoma.it/blog/scegliere-progetto-ai-pmi/": "b736b406d1acfe8b599dcc6cb61ac7954ae3b0523e5a229b8cfa6ea65c6556bb",
+    "https://gruppoautoma.it/chi-siamo/": "2cd22d07ff883ee1812478092c1c8cdb92a39510f549e0dfab5282792346ffad",
+    "https://gruppoautoma.it/contatti/": "6af26a7b2f39c19d716df3dfb99626d92cf9c71d93087cfd014f1b7fb41bc5d2",
+    "https://gruppoautoma.it/progetti/": "f419057bae89e86817f02ccbf7c33be91a6d4a5393f64a51ca8432c22e692c61",
+    "https://gruppoautoma.it/servizi/": "c26daff2ed150c4faf9c21fed9b6bc06e5044ef58f5542f1b86acb4355058125"
   },
   "version": 1
 }
