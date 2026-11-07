@@ -10,7 +10,7 @@ Testo delle pagine pubbliche di gruppoautoma.it, estratto dall'HTML pubblicato.
 
 URL: https://gruppoautoma.it/
 Titolo: Gruppo Automa — Software, AI e automazioni su misura · Aversa
-Aggiornato: 2026-11-06
+Aggiornato: 2026-11-07
 
 Software e AI su misura · Aversa (CE)
 
@@ -274,7 +274,7 @@ Preferisci chiamarci? +39 349 233 1446
 
 URL: https://gruppoautoma.it/servizi/
 Titolo: Servizi software, AI e automazioni ad Aversa — Gruppo Automa
-Aggiornato: 2026-11-06
+Aggiornato: 2026-11-07
 
 Home / Servizi
 
@@ -558,7 +558,7 @@ Parliamone ↗
 
 URL: https://gruppoautoma.it/chi-siamo/
 Titolo: Chi siamo: il team ad Aversa — Gruppo Automa
-Aggiornato: 2026-11-06
+Aggiornato: 2026-11-07
 
 Home / Chi siamo
 
@@ -622,7 +622,7 @@ Prenota una call ↗
 
 URL: https://gruppoautoma.it/contatti/
 Titolo: Contatti — telefono e appuntamenti — Gruppo Automa
-Aggiornato: 2026-11-06
+Aggiornato: 2026-11-07
 
 Home / Contatti
 
