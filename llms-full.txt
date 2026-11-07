@@ -2,7 +2,7 @@
 
 > Gruppo Automa sviluppa software, agenti AI e automazioni su misura per aziende e professionisti. Creatori di CheAI, l'assistente AI che risponde come faresti tu. Sede ad Aversa (CE).
 
-Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center, 81031 Aversa (CE). Sito e contenuti in italiano.
+Gruppo Automa S.r.l.s., P.IVA 04963130614, sede in Piazza Bernini, Bernini Center snc, 81031 Aversa (CE). Sito e contenuti in italiano.
 
 Testo delle pagine pubbliche di gruppoautoma.it, estratto dall'HTML pubblicato.
 
@@ -402,7 +402,7 @@ CheAI è il prodotto di Gruppo Automa per le conversazioni con i clienti e l’o
 
 **Dove lavorate e come possiamo incontrarci?**
 
-La nostra sede è ad Aversa, in Piazza Bernini, Bernini Center. Lavoriamo anche da remoto con aziende in tutta Italia. Puoi contattarci al +39 349 233 1446, scrivere a info@gruppoautoma.it o prenotare una call dal sito.
+La nostra sede è ad Aversa, in Piazza Bernini, Bernini Center snc. Lavoriamo anche da remoto con aziende in tutta Italia. Puoi contattarci al +39 349 233 1446, scrivere a info@gruppoautoma.it o prenotare una call dal sito.
 
 ## Hai un progetto in mente?
 
@@ -656,7 +656,7 @@ LA NOSTRA SEDE
 
 ## Ci trovi ad Aversa.
 
-Piazza Bernini, Bernini Center 81031 Aversa (CE)
+Piazza Bernini, Bernini Center snc 81031 Aversa (CE)
 
 Conosciamoci in una call ↗
 
