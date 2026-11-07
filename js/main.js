@@ -121,142 +121,9 @@
       .to(scribble, { strokeDashoffset: 0, ease: "power2.out", duration: 0.6 }, 1.1)
       .to({}, { duration: 0.3 });
 
-    const panes = $$(".how__pane"), steps = $$(".how__steps li");
-    gsap.set(panes, { autoAlpha: 0 });
-    gsap.set(panes[0], { autoAlpha: 1 });
-    let hi = 0, swap = null;
-    const showPane = (i) => {
-      const dir = i > hi ? 1 : -1, from = panes[hi], to = panes[i];
-      hi = i;
-      swap?.progress(1).kill();
-      panes.forEach((p, k) => p.classList.toggle("is-active", k === i));
-      steps.forEach((s, k) => s.classList.toggle("is-active", k === i));
-      swap = gsap.timeline()
-        .to(from, { autoAlpha: 0, y: -16 * dir, duration: 0.22, ease: "power2.in" })
-        .fromTo(to, { autoAlpha: 0, y: 22 * dir }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" })
-        .fromTo($$(".ui > *", to), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.05, ease: "power2.out" }, "<0.05");
-    };
-    ScrollTrigger.create({
-      trigger: "#how-pin", start: "top top", end: "bottom bottom",
-      onUpdate: (st) => {
-        const i = Math.min(panes.length - 1, Math.floor(st.progress * panes.length));
-        if (i !== hi) showPane(i);
-      },
-    });
   });
   mm.add("(max-width: 860px)", () => {
     ScrollTrigger.create({ trigger: "#ba-after", start: "top 70%", once: true, onEnter: () => gsap.to(scribble, { strokeDashoffset: 0, duration: 1, ease: "power2.out" }) });
-    // all panes visible on mobile: animate each timeline when it enters
-    $$(".how__pane").forEach((p) => {
-      p.classList.remove("is-active");
-      ScrollTrigger.create({ trigger: p, start: "top 80%", once: true, onEnter: () => p.classList.add("is-active") });
-    });
-  });
-
-  // SERVICES: native vertical reading on mobile/reduced motion; scroll scenes on desktop.
-  const utexts = $$(".utext"), screens = $$(".phone-wrap .scr");
-  // Reuse each existing illustration next to its service, without duplicating the copy.
-  utexts.forEach((text, i) => {
-    const example = document.createElement("div");
-    example.className = "uses__example";
-    example.setAttribute("aria-hidden", "true");
-    const phone = $(".phone-wrap .phone").cloneNode(true);
-    $$(".scr", phone).forEach((screen, k) => {
-      if (k !== i) screen.remove();
-      else screen.classList.add("is-active");
-    });
-    // The chart uses an SVG paint server: give the copy its own ID.
-    const gradient = $("#ga", phone);
-    if (gradient) {
-      gradient.id = "ga-service-example";
-      $('[fill="url(#ga)"]', phone).setAttribute("fill", "url(#ga-service-example)");
-    }
-    example.append(phone);
-    text.append(example);
-  });
-  mm.add("(min-width: 861px) and (prefers-reduced-motion: no-preference)", () => {
-    const pLabel = $("#phone-label"), pCount = $("#phone-count"), pBar = $("#phone-bar");
-    const labels = [T("u1L", "Consulenza e strategia AI"), T("u2L", "Software e web app su misura"), T("u3L", "Automazioni e agenti AI"), T("u4L", "Siti e landing che vendono")];
-    gsap.set([...screens, ...utexts], { autoAlpha: 0 });
-    gsap.set([screens[0], utexts[0]], { autoAlpha: 1 });
-    let ui = 0, uswap = null;
-    const buildScreen = (scr) => {
-      const items = $$("[data-a]", scr);
-      const lock = scr.classList.contains("scr--lock");
-      return gsap.fromTo(items, { autoAlpha: 0, y: 14, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: "power3.out", stagger: lock ? 0.32 : 0.06 });
-    };
-    ScrollTrigger.create({ trigger: "#uses-pin", start: "top 60%", once: true, onEnter: () => buildScreen(screens[0]) });
-    ScrollTrigger.create({
-      trigger: "#uses-pin", start: "top top", end: "bottom bottom",
-      onUpdate: (st) => {
-        const n = utexts.length, f = st.progress * n;
-        const i = Math.min(n - 1, Math.floor(f));
-        pBar.style.width = `${Math.min(1, f - i) * 100}%`;
-        if (i === ui) return;
-        const dir = i > ui ? 1 : -1, prevS = screens[ui], prevT = utexts[ui];
-        ui = i;
-        uswap?.progress(1).kill();
-        screens.forEach((s, k) => s.classList.toggle("is-active", k === i));
-        utexts.forEach((t, k) => t.classList.toggle("is-active", k === i));
-        pLabel.textContent = labels[i];
-        pCount.textContent = `${i + 1}/${n}`;
-        gsap.set($$("[data-a]", screens[i]), { autoAlpha: 0 });
-        uswap = gsap.timeline()
-          .to([prevS, prevT], { autoAlpha: 0, y: -18 * dir, duration: 0.22, ease: "power2.in" })
-          .set(prevS, { y: 0 })
-          .fromTo(utexts[i], { autoAlpha: 0, y: 26 * dir }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" })
-          .fromTo(screens[i], { autoAlpha: 0, y: 18 * dir }, { autoAlpha: 1, y: 0, duration: 0.45, ease: "power3.out" }, "<")
-          .add(buildScreen(screens[i]), "<0.1");
-      },
-    });
-
-    return () => {
-      uswap?.kill();
-      gsap.killTweensOf([...screens, ...utexts]);
-      gsap.set([...screens, ...utexts], { clearProps: "transform,opacity,visibility" });
-      screens.forEach((screen, i) => screen.classList.toggle("is-active", i === 0));
-      utexts.forEach((text, i) => text.classList.toggle("is-active", i === 0));
-      pLabel.textContent = labels[0];
-      pCount.textContent = "1/4";
-      pBar.style.width = "0%";
-    };
-  });
-
-  const frameMarkup = '<svg class="scroll-frame" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><rect class="scroll-frame__track" x="1" y="1" width="98" height="98" rx="4"/><rect class="scroll-frame__line" x="1" y="1" width="98" height="98" rx="4" pathLength="1"/></svg>';
-  const frameTargets = [...utexts, ...$$(".how__pane")];
-  frameTargets.forEach((el) => el.insertAdjacentHTML("beforeend", frameMarkup));
-  // Match the SVG coordinate system to the box: uniform strokes and accurate dash lengths.
-  const frameObserver = new ResizeObserver((entries) => {
-    entries.forEach(({target}) => {
-      const svg = $(".scroll-frame", target);
-      const {width, height} = svg.getBoundingClientRect();
-      if (!width || !height) return;
-      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-      $$("rect", svg).forEach((rect) => {
-        rect.setAttribute("width", Math.max(0, width - 2));
-        rect.setAttribute("height", Math.max(0, height - 2));
-        rect.setAttribute("rx", "20");
-      });
-    });
-  });
-  frameTargets.forEach((el) => frameObserver.observe(el));
-  $$(".uses__hint, .how__hint").forEach((el) => {
-    el.innerHTML = '<span class="scroll-orbit" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle class="scroll-orbit__progress" cx="22" cy="22" r="19" pathLength="1"/></svg><span>↓</span></span><span>Scorri per esplorare</span>';
-  });
-  mm.add({mobile: "(max-width: 860px)", desktop: "(min-width: 861px)", motion: "(prefers-reduced-motion: no-preference)"}, (context) => {
-    if (!context.conditions.motion) return;
-    const mobile = matchMedia("(max-width: 860px)").matches;
-    frameTargets.forEach((el) => {
-      gsap.fromTo($(".scroll-frame__line", el), {strokeDashoffset: 1}, {
-        strokeDashoffset: 0, ease: "none", scrollTrigger: {
-          trigger: mobile ? el : el.closest(".uses__pin, .how__pin"),
-          start: mobile ? "top 85%" : "top 75%", end: mobile ? "top 15%" : "top top", scrub: .35,
-        },
-      });
-    });
-    [[".uses__hint", "#uses-pin"], [".how__hint", "#how-pin"]].forEach(([hint, section]) => {
-      gsap.fromTo($(hint + " .scroll-orbit__progress"), {strokeDashoffset: 1}, {strokeDashoffset: 0, ease:"none", scrollTrigger:{trigger:section,start:"top 70%",end:"bottom bottom",scrub:.25}});
-    });
   });
 
   /* ---------------- integrations ---------------- */
@@ -610,7 +477,6 @@
   reveal(".ba__head .lead, .uses__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
 
   // lime band opens from a rounded card to full bleed; integrations card grows in
-  gsap.fromTo(".uses__sticky", { clipPath: "inset(2.5% 3.5% round 40px)" }, { clipPath: "inset(0% 0% round 0px)", ease: "none", scrollTrigger: { trigger: "#uses-pin", start: "top 90%", end: "top top", scrub: true } });
   gsap.fromTo(".integ", { scale: 0.9, borderRadius: 48 }, { scale: 1, borderRadius: 30, ease: "none", scrollTrigger: { trigger: ".integ", start: "top 95%", end: "top 45%", scrub: true } });
 
   // hero chips drift at different speeds (yPercent, so the idle bobbing on y keeps working)
@@ -645,9 +511,9 @@
       scale: 0.9, opacity: 0.55, ease: "none",
       scrollTrigger: { trigger: cards[k + 1], start: "top 92%", end: "top 30%", scrub: true },
     }));
-    const tweens = [...stack([$("#ba-before"), $("#ba-after")]), ...stack($$(".how__pane"))];
+    const tweens = stack([$("#ba-before"), $("#ba-after")]);
 
-    return () => { navST.kill(); navEl.classList.remove("is-hidden"); tweens.forEach((t) => { t.scrollTrigger?.kill(); t.kill(); }); gsap.set([$("#ba-before"), ...$$(".how__pane")], { clearProps: "scale,opacity,transform" }); };
+    return () => { navST.kill(); navEl.classList.remove("is-hidden"); tweens.forEach((t) => { t.scrollTrigger?.kill(); t.kill(); }); gsap.set([$("#ba-before")], { clearProps: "scale,opacity,transform" }); };
   });
 
   // carousels: progress bar + counter, neighbours shrink (no auto-scroll: they move only when the user swipes)
