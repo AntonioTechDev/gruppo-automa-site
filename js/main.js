@@ -10,6 +10,7 @@
   const T = (k, fallback) => window.I18N?.t(k) ?? fallback;
   const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k]);
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.documentElement.classList.toggle("scroll-scenes", !reduceMotion);
   const touchMotion = matchMedia("(hover: none) and (pointer: coarse)").matches;
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const nf = new Intl.NumberFormat(LOCALE);
@@ -83,7 +84,7 @@
       .fromTo(".shot", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2 }, .5);
   }
 
-  $$("main section:not(.hero) [data-split]:not(#uses-title):not(#how-title)").forEach((h) => {
+  $$("main section:not(.hero) [data-split]").forEach((h) => {
     const words = $$(".w > span", h);
     gsap.set(words, { yPercent: 110 });
     ScrollTrigger.create({ trigger: h, start: "top 86%", once: true, onEnter: () => gsap.to(words, { yPercent: 0, duration: 1, stagger: 0.035, ease: "power4.out" }) });
@@ -121,9 +122,91 @@
       .to(scribble, { strokeDashoffset: 0, ease: "power2.out", duration: 0.6 }, 1.1)
       .to({}, { duration: 0.3 });
 
+    const panes = $$(".how__pane"), steps = $$(".how__steps li");
+    gsap.set(panes, { autoAlpha: 0 });
+    gsap.set(panes[0], { autoAlpha: 1 });
+    panes.forEach((p, i) => { p.inert = i !== 0; p.classList.toggle("is-active", i === 0); });
+    steps.forEach((s, i) => s.classList.toggle("is-active", i === 0));
+    let hi = 0, swap = null;
+    const showPane = (i) => {
+      const dir = i > hi ? 1 : -1, from = panes[hi], to = panes[i];
+      hi = i;
+      swap?.progress(1).kill();
+      panes.forEach((p, k) => { p.classList.toggle("is-active", k === i); p.inert = k !== i; });
+      steps.forEach((s, k) => s.classList.toggle("is-active", k === i));
+      swap = gsap.timeline()
+        .to(from, { autoAlpha: 0, y: -16 * dir, duration: 0.22, ease: "power2.in" })
+        .fromTo(to, { autoAlpha: 0, y: 22 * dir }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" })
+        .fromTo($$(".ui > *", to), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.05, ease: "power2.out" }, "<0.05");
+    };
+    ScrollTrigger.create({
+      trigger: "#how-pin", start: "top top", end: "bottom bottom",
+      onUpdate: (st) => {
+        const i = Math.min(panes.length - 1, Math.floor(st.progress * panes.length));
+        if (i !== hi) showPane(i);
+      },
+    });
+    return () => {
+      swap?.kill();
+      gsap.set(panes, { clearProps: "opacity,visibility,transform" });
+      gsap.set($$(".how__pane .ui > *"), { clearProps: "opacity,visibility,transform" });
+      panes.forEach(p => { p.inert = false; });
+    };
   });
   mm.add("(max-width: 860px)", () => {
     ScrollTrigger.create({ trigger: "#ba-after", start: "top 70%", once: true, onEnter: () => gsap.to(scribble, { strokeDashoffset: 0, duration: 1, ease: "power2.out" }) });
+    // all panes visible on mobile: animate each timeline when it enters
+    $$(".how__pane").forEach((p) => {
+      p.inert = false;
+      p.classList.remove("is-active");
+      ScrollTrigger.create({ trigger: p, start: "top 80%", once: true, onEnter: () => p.classList.add("is-active") });
+    });
+  });
+
+  const phoneStage = $(".phone-stage");
+  const fitPhone = () => {
+    const scale = Math.min(1, phoneStage.clientWidth / 300, phoneStage.clientHeight / 600);
+    phoneStage.style.setProperty("--phone-scale", Math.max(0, scale));
+  };
+  new ResizeObserver(fitPhone).observe(phoneStage);
+  fitPhone();
+
+  // SERVICES: pinned lime band — one screen leaves, the next arrives, its items build in order
+  const utexts = $$(".utext"), screens = $$(".scr");
+  const pLabel = $("#phone-label"), pCount = $("#phone-count"), pBar = $("#phone-bar");
+  const labels = [T("u1L", "Consulenza e strategia AI"), T("u2L", "Software e web app su misura"), T("u3L", "Automazioni e agenti AI"), T("u4L", "Siti e landing che vendono")];
+  gsap.set([...screens, ...utexts], { autoAlpha: 0 });
+  gsap.set([screens[0], utexts[0]], { autoAlpha: 1 });
+  utexts.forEach((t, i) => { t.inert = i !== 0; });
+  let ui = 0, uswap = null;
+  const buildScreen = (scr) => {
+    const items = $$("[data-a]", scr);
+    const lock = scr.classList.contains("scr--lock");
+    return gsap.fromTo(items, { autoAlpha: 0, y: 14, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: "power3.out", stagger: lock ? 0.32 : 0.06 });
+  };
+  ScrollTrigger.create({ trigger: "#uses-pin", start: "top 60%", once: true, onEnter: () => buildScreen(screens[0]) });
+  ScrollTrigger.create({
+    trigger: "#uses-pin", start: "top top", end: "bottom bottom",
+    onUpdate: (st) => {
+      const n = utexts.length, f = st.progress * n;
+      const i = Math.min(n - 1, Math.floor(f));
+      pBar.style.width = `${Math.min(1, f - i) * 100}%`;
+      if (i === ui) return;
+      const dir = i > ui ? 1 : -1, prevS = screens[ui], prevT = utexts[ui];
+      ui = i;
+      uswap?.progress(1).kill();
+      screens.forEach((s, k) => s.classList.toggle("is-active", k === i));
+      utexts.forEach((t, k) => { t.classList.toggle("is-active", k === i); t.inert = k !== i; });
+      pLabel.textContent = labels[i];
+      pCount.textContent = `${i + 1}/${n}`;
+      gsap.set($$("[data-a]", screens[i]), { autoAlpha: 0 });
+      uswap = gsap.timeline()
+        .to([prevS, prevT], { autoAlpha: 0, y: -18 * dir, duration: 0.22, ease: "power2.in" })
+        .set(prevS, { y: 0 })
+        .fromTo(utexts[i], { autoAlpha: 0, y: 26 * dir }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" })
+        .fromTo(screens[i], { autoAlpha: 0, y: 18 * dir }, { autoAlpha: 1, y: 0, duration: 0.45, ease: "power3.out" }, "<")
+        .add(buildScreen(screens[i]), "<0.1");
+    },
   });
 
   /* ---------------- integrations ---------------- */
@@ -474,9 +557,10 @@
   gsap.to("#progress", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: 0.3 } });
 
   // extra reveals for supporting copy
-  reveal(".ba__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
+  reveal(".ba__head .lead, .uses__head .lead, .cases .tag, .gal__head, .cases__note, .faq .lead, .qa, .cta .lead");
 
   // lime band opens from a rounded card to full bleed; integrations card grows in
+  gsap.fromTo(".uses__sticky", { clipPath: "inset(2.5% 3.5% round 40px)" }, { clipPath: "inset(0% 0% round 0px)", ease: "none", scrollTrigger: { trigger: "#uses-pin", start: "top 90%", end: "top top", scrub: true } });
   gsap.fromTo(".integ", { scale: 0.9, borderRadius: 48 }, { scale: 1, borderRadius: 30, ease: "none", scrollTrigger: { trigger: ".integ", start: "top 95%", end: "top 45%", scrub: true } });
 
   // hero chips drift at different speeds (yPercent, so the idle bobbing on y keeps working)
@@ -648,6 +732,7 @@
     ScrollTrigger.create({ trigger: el, start: "top 95%", once: true, onEnter: () => gsap.to(o, { v: end, duration: 1.6, ease: "power3.out", onUpdate: () => { el.textContent = Math.round(o.v) + suf; } }) });
   });
   if (reduceMotion) {
+    $$(".utext, .how__pane").forEach(el => { el.inert = false; });
     // Complete existing reveals once, then leave a readable static layout.
     gsap.globalTimeline.getChildren(true, true, true).forEach((animation) => {
       if (animation.repeat() !== -1) animation.totalProgress(1);

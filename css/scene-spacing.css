@@ -1,0 +1,69 @@
+/* Original service/method presentation, with room for navigation and booking. */
+.uses__sticky { height: 100svh; padding-block: 92px 28px; }
+.uses__grid { height: 100%; min-height: 0; padding-top: 0; }
+.uses__texts { min-height: 0; }
+.uses__hint, .how__hint { display: flex; align-items: center; gap: 10px; font: 500 .75rem/1.5 var(--mono); }
+.uses__hint { margin: 0 0 18px; }
+.uses__hint > span, .how__hint > span { font-size: 1.2rem; }
+.utext > h3 { line-height: 1.07; max-width: 16ch; }
+.utext > .utext__n { margin: 0 0 10px; font-size: .85rem; }
+.uses__copy > .btn { margin-top: 26px; }
+.phone-wrap { width: 100%; height: 100%; max-height: 655px; align-self: center; min-height: 0; grid-template-rows: minmax(0, 1fr) auto; gap: 12px; }
+.phone-stage { position: relative; width: 100%; height: 100%; min-height: 0; }
+.phone-stage > .phone { position: absolute; left: 50%; top: 50%; width: 300px; height: 600px; padding: 12px; border-radius: 46px; transform: translate(-50%, -50%) scale(var(--phone-scale, 1)); }
+.phone-stage .phone__screen { font-size: 13px; border-radius: 36px; }
+.phone-stage .phone__island { top: 20px; width: 86px; height: 25px; }
+.phone-label { width: min(300px, 100%); }
+.how__sticky { padding-block: 100px 40px; }
+.how__hint { margin: 20px 0 0; }
+@media (min-width: 861px) and (max-height: 780px) {
+  .utext > h3 { font-size: 2.6rem; }
+  .how__sticky { padding-block: 86px 24px; gap: 32px; }
+  .how__copy h2 { font-size: 2.3rem; }
+  .how__copy .lead { font-size: 1rem; }
+  .how__steps { margin-top: 16px; }
+  .how__card { padding: 18px; }
+  .how__pane { gap: 14px; }
+  .how__text h3 { font-size: 1.4rem; }
+  .how__text p { font-size: .92rem; }
+}
+@media (max-width: 860px) {
+  .uses__sticky { padding-top: 82px; padding-bottom: calc(var(--automa-dock-height, 58px) + 30px + env(safe-area-inset-bottom)); }
+  .uses__grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); align-items: stretch; gap: 18px; }
+  .uses__hint { margin-bottom: 12px; font-size: .68rem; }
+  .utext > h3 { font-size: clamp(1.6rem, 7vw, 2rem); max-width: 22ch; }
+  .utext > p { font-size: .94rem; line-height: 1.5; margin-top: 12px; max-width: 55ch; }
+  .utext > .utext__n { margin: 0 0 6px; font-size: .75rem; }
+  .phone-wrap { gap: 10px; }
+  .phone-label { width: min(300px, calc(100% - 68px)); justify-self: start; padding: 8px 11px; font-size: .7rem; }
+  .how__sticky { padding-top: 64px; padding-bottom: calc(var(--automa-dock-height, 58px) + 34px + env(safe-area-inset-bottom)); gap: 30px; }
+  .how__card .how__pane { position: relative; top: auto; padding: 20px; margin-bottom: 24px; }
+  .how__card .how__pane:last-child { margin-bottom: 0; }
+}
+@media (max-width: 860px) and (max-height: 700px) {
+  .uses__sticky { padding-top: 74px; }
+  .uses__grid { gap: 12px; }
+  .uses__hint { margin-bottom: 8px; }
+  .utext > h3 { font-size: 1.5rem; }
+  .utext > p { margin-top: 8px; font-size: .88rem; }
+}
+@media (max-width: 860px) and (max-height: 500px) {
+  .uses__grid { grid-template-columns: 1.25fr 1fr; grid-template-rows: minmax(0, 1fr); align-items: center; gap: 20px; }
+  .uses__sticky { padding-top: 68px; }
+  .utext > h3 { font-size: 1.4rem; }
+  .utext > .utext__n { display: none; }
+  .utext > p { font-size: .85rem; }
+}
+/* No JS / reduced motion: the original content remains available as ordinary text. */
+html:not(.scroll-scenes) .uses__pin, html:not(.scroll-scenes) .how__pin { height: auto; }
+html:not(.scroll-scenes) .uses__sticky, html:not(.scroll-scenes) .how__sticky { position: static; height: auto; }
+html:not(.scroll-scenes) .uses__grid { display: block; }
+html:not(.scroll-scenes) .uses__texts { display: grid; gap: 30px; }
+html:not(.scroll-scenes) .utext { grid-area: auto; opacity: 1; visibility: visible; transform: none; }
+html:not(.scroll-scenes) .phone-wrap { display: none; }
+html:not(.scroll-scenes) .how__card { display: grid; gap: 30px; }
+html:not(.scroll-scenes) .how__pane { grid-area: auto; position: static; opacity: 1; visibility: visible; transform: none; }
+html:not(.scroll-scenes) .gt__bar { transform: none; }
+html:not(.scroll-scenes) .gt__ms { opacity: 1; }
+html:not(.scroll-scenes) .chk__b { background: var(--lime); }
+html:not(.scroll-scenes) .chk__b svg { stroke-dashoffset: 0; }
