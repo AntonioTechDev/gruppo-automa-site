@@ -82,6 +82,13 @@ description, canonical corretto, og:image o JSON-LD valido, se ha link locali ma
 dall'indice del Blog. Privacy e cookie restano noindex, fuori dalla sitemap ma
 scansionabili.
 
+Gli indirizzi del vecchio sito ancora presenti nei risultati (`/about-us/`,
+`/contacts/`, `/cheai/`, `/privacy-policy/`) usano un redirect HTML immediato:
+GitHub Pages non offre redirect HTTP per singolo percorso. Canonical e link
+visibile indicano la destinazione. Il generatore verifica che coincidano e
+che le destinazioni locali esistano; esclude queste pagine da sitemap e file
+LLM senza aggiungere `noindex` ai redirect.
+
 `robots.txt` consente tutto a motori di ricerca (Googlebot, Bingbot), ricerca e
 recupero AI (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User,
 PerplexityBot, Perplexity-User) e crawler di addestramento (GPTBot, ClaudeBot,
